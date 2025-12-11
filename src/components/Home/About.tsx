@@ -27,6 +27,7 @@ export default function About ({ id, ...rest }: AboutProps) {
 
     const setInitial = () => {
       paths.forEach((p) => {
+        if (!p) return; // 💥 Prevent null crash
         const length = p.getTotalLength();
         gsap.set(p, {
           strokeDasharray: length,
@@ -60,23 +61,20 @@ export default function About ({ id, ...rest }: AboutProps) {
       strokeDashoffset: 0,
       duration: 1,
       ease: "power2.out",
-    })
-
-      // LEFT + RIGHT start together
-      .to(
-        [leftPath.current, rightPath.current],
-        {
-          strokeDashoffset: 0,
-          duration: 1.2,
-          ease: "power2.out",
-        },
-        "-=0.2" // overlap slightly
-      );
-
+    }).to(
+      [leftPath.current, rightPath.current],
+      {
+        strokeDashoffset: 0,
+        duration: 1.2,
+        ease: "power2.out",
+      },
+      "-=0.2"
+    );
   }, sectionRef);
 
   return () => ctx.revert();
 }, []);
+
 
 
     return (
