@@ -1,6 +1,11 @@
 "use client"
 
-export default function OurExpertise({ id, ...rest }){
+type OurExpertiseProps = {
+  id: string;
+  [key: string]: any;
+};
+
+export default function OurExpertise({ id, ...rest }: OurExpertiseProps){
     return (
         <section {...rest} id={id} className="our-expertise-seciton lg:p-16 md:p-16 p-8 bg-[#0A0A0A] bg-[url('/images/our-expertise-bg.png')] bg-contain bg-right-bottom bg-no-repeat bg-[length:800px]">
             <div className="lg:flex block items-center justify-between w-full">

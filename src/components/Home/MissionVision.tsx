@@ -1,6 +1,11 @@
 "use client"
 
-export default function MissionVision({ id, ...rest }) {
+type MissionVisionProps = {
+  id: string;
+  [key: string]: any;
+};
+
+export default function MissionVision({ id, ...rest }: MissionVisionProps) {
   return (
     <section {...rest} id={id} className="lg:py-16 md:py-16 py-8 top-0 left-0 mission-vision-section w-full h-full bg-[url('/images/mission-vision-bg.png')] bg-no-repeat xl:bg-[25%] bg-center bg-contain ">
 <div className="lg:flex block items-center">

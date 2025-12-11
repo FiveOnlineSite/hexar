@@ -4,7 +4,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function Clients ({ id, ...rest }){
+type ClientsSectionProps = {
+  id: string;
+  [key: string]: any;
+};
+
+export default function Clients ({ id, ...rest }: ClientsSectionProps){
 
 const settings = {
   speed: 1000,

@@ -7,7 +7,12 @@ import { useEffect, useRef, useLayoutEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Solution({ id, ...rest }){
+type SolutionProps = {
+  id: string;
+  [key: string]: any;
+};
+
+export default function Solution({ id, ...rest }:SolutionProps){
 
     const sectionRef = useRef(null);
     const imageRef = useRef(null);

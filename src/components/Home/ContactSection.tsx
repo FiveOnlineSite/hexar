@@ -1,4 +1,9 @@
-export default function ContactSection ({ id, ...rest }){
+type ContactSectionProps = {
+  id: string;
+  [key: string]: any;
+};
+
+export default function ContactSection ({ id, ...rest }: ContactSectionProps){
     return (
    <section id={id} {...rest}
   className="

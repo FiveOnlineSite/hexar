@@ -4,7 +4,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function WhyUs ({ id, ...rest }){
+type WhyUsProps = {
+  id: string;
+  [key: string]: any;
+};
+
+
+export default function WhyUs ({ id, ...rest }: WhyUsProps){
 
     const settings = {
         speed: 1000,

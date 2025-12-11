@@ -2,7 +2,13 @@
 
 import Image from "next/image";
 
-export default function Contribution({ id, ...rest }){
+type ContributionProps = {
+  id: string;
+  [key: string]: any;
+};
+
+
+export default function Contribution({ id, ...rest }: ContributionProps){
     return(
         <section {...rest} id={id} className="contribution-section bg-[#0A0A0A] lg:p-16 md:p-16 p-8 h-full w-full">
             <div className="lg:flex block items-center justify-between w-full">

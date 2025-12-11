@@ -5,7 +5,13 @@ import { useState, useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function FAQSection ({ id, ...rest }) {
+type FAQSectionProps = {
+  id: string;
+  [key: string]: any;
+};
+
+
+export default function FAQSection ({ id, ...rest }: FAQSectionProps) {
     const faqs = [
     {
       question: "What services does Hexar Studios specialize in?",
