@@ -1,9 +1,19 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 
-export default function FAQAccordion({ faq, isOpen, onToggle }) {
+type FAQItem = {
+  question: string;
+  answer: string;
+};
 
+type FAQAccordionProps = {
+  faq: FAQItem;
+  isOpen: boolean;
+  onToggle: () => void;
+};
+
+export default function FAQAccordion({ faq, isOpen, onToggle }: FAQAccordionProps) {
   return (
     <div className="border border-[#FFFFFFCC] rounded-lg overflow-hidden p-4 mb-4">
       <button
@@ -14,16 +24,21 @@ export default function FAQAccordion({ faq, isOpen, onToggle }) {
           {faq.question}
         </span>
 
-        <span className="transition-transform duration-300"
-          style={{ transform: isOpen  ? "rotate(0deg)" : "rotate(180deg)" }}
+        <span
+          className="transition-transform duration-300"
+          style={{ transform: isOpen ? "rotate(0deg)" : "rotate(180deg)" }}
         >
-          <img src="/images/icons/arrow.png" alt="arrow" className="w-[24px] h-[24px] object-cover"/>
+          <img
+            src="/images/icons/arrow.png"
+            alt="arrow"
+            className="w-[24px] h-[24px] object-cover"
+          />
         </span>
       </button>
 
       <div
         className={`pt-2 text-[#ffffffcc] text-[15px] leading-relaxed transition-all duration-700 ease-in-out ${
-          isOpen  ? "max-h-40 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+          isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >
         {faq.answer}
@@ -31,5 +46,3 @@ export default function FAQAccordion({ faq, isOpen, onToggle }) {
     </div>
   );
 }
-
- 
