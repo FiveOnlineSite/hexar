@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import SwordEffects from "../components/SwordCursor";
+import FloatingShield from "../components/FloatingShield";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,8 +31,25 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <SwordEffects />
+        <div
+  id="floating-shield-container"
+  className="fixed inset-0 pointer-events-none z-[9999]"
+>
+  <img
+  id="floating-shield"
+  src="/images/icons/shield.png"
+  className="absolute left-1/2 top-[15%] -translate-x-1/2 
+             w-[120px] opacity-0 pointer-events-none 
+             will-change-transform"
+/>
+
+</div>
+        <FloatingShield/>
         <Navbar/>
+        
         {children}
+        <Footer/>
       </body>
     </html>
   );

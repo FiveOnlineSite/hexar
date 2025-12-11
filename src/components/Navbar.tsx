@@ -1,14 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <>
-      {/* NAVBAR */}
-      <div className="flex items-center justify-between px-16 py-6 w-full absolute top-0 right-0 z-50">
+    <section className="navbar-section">
+      <div className="flex items-center justify-between lg:px-16 md:px-8 px-8 py-6 w-full absolute top-0 right-0 z-50">
         <img src="/images/icons/hexar-logo.png" alt="logo" className="h-[86px] w-auto" />
 
         <button onClick={() => setOpen(true)} className="relative">
@@ -16,7 +16,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* BACKDROP */}
       {open && (
         <div
           className="fixed inset-0 bg-black/50 z-40"
@@ -24,20 +23,19 @@ export default function Navbar() {
         />
       )}
 
-      {/* OFFCANVAS MENU */}
       <div
         className={`fixed top-0 right-0 h-full w-full bg-black shadow-lg z-50 transform transition-transform duration-300
           ${open ? "translate-x-0" : "translate-x-full"}
         `}
       >
-        <div className="px-16 py-6 flex justify-between items-center">
+        <div className="lg:px-16 md:px-8 px-8 py-6 flex justify-between items-center">
            <img src="/images/icons/hexar-logo.png" alt="logo" className="h-[86px] w-auto" />
           <button onClick={() => setOpen(false)} className="text-[30px] font-bold text-white">
             ✕
           </button>
         </div>
 
-        <div className="px-8 space-y-2">
+        <div className="lg:px-16 md:px-8 px-0 space-y-2">
   {[
     "Home",
     "About Us",
@@ -81,8 +79,8 @@ export default function Navbar() {
   ))}
   
 </div>
-<img src="./images/icons/tpn-logo.png" className="width-auto px-16 mt-5"/>
+<img src="/images/icons/tpn-logo.png" alt="tpn-logo" className="lg:mx-16 md:mx-8 mx-8 mt-5 w-[158px] h-[75px] object-cover"/>
       </div>
-    </>
+    </section>
   );
 }
