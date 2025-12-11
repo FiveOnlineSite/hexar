@@ -1,7 +1,7 @@
 type ConnectorRefs = {
-  main: React.RefObject<SVGPathElement>;
-  left: React.RefObject<SVGPathElement>;
-  right: React.RefObject<SVGPathElement>;
+  main: React.RefObject<SVGPathElement | null>;
+  left: React.RefObject<SVGPathElement | null>;
+  right: React.RefObject<SVGPathElement | null>;
 };
 
 export default function BracketConnector({ refs }: { refs: ConnectorRefs }) {
@@ -13,12 +13,14 @@ export default function BracketConnector({ refs }: { refs: ConnectorRefs }) {
         fill="none"
       >
         <path ref={refs.main} d="M240 0 V30" stroke="white" strokeWidth="2" />
+
         <path
           ref={refs.left}
           d="M240 30 H80 Q70 30 70 40 V60"
           stroke="white"
           strokeWidth="2"
         />
+
         <path
           ref={refs.right}
           d="M240 30 H400 Q410 30 410 40 V60"
