@@ -415,7 +415,7 @@ export default function Hero() {
         </a>
 
           {/* Stick image to bottom */}
-          <div className="absolute bottom-0 right-[8%] h-full w-full flex items-end justify-end pointer-events-none">
+          <div className="absolute bottom-0 xl:right-[8%] right-0 h-full w-full flex items-end justify-end pointer-events-none">
   <img ref={(el) => (imageRefs.current[0] = el)}
               src="/images/image-2.png"
               alt="banner"
@@ -483,7 +483,7 @@ export default function Hero() {
         </a>
 
           {/* Stick image to bottom */}
-          <div className="absolute bottom-0 right-[8%] h-full w-full flex items-end justify-end pointer-events-none">
+          <div className="absolute bottom-0 xl:right-[8%] right-0 h-full w-full flex items-end justify-end pointer-events-none">
           <img ref={(el) => (imageRefs.current[1] = el)}
               src="/images/image-2.png"
               alt="banner"

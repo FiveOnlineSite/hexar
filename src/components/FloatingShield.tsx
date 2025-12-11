@@ -11,22 +11,33 @@ export default function FloatingShield() {
     const shield = document.getElementById("floating-shield");
     if (!shield) return;
 
-    // Hide initially
+    const hero = document.querySelector("section.hero-section");
+    const sections = [...document.querySelectorAll("[data-shield-section]")];
+
+    if (!hero || !sections.length) return;
+
+    // hide initially
     gsap.set(shield, { opacity: 0 });
 
-    const sections = [...document.querySelectorAll("[data-shield-section]")];
-    if (!sections.length) return;
+    // 🔹 HIDE inside Hero always
+    ScrollTrigger.create({
+      trigger: hero,
+      start: "top top",
+      end: "bottom top",
+      onEnter: () => gsap.to(shield, { opacity: 0, duration: 0.3 }),
+      onEnterBack: () => gsap.to(shield, { opacity: 0, duration: 0.3 }),
+    });
 
+    // 🔹 ANIMATE shield for each section (1 → 10)
     sections.forEach((section, index) => {
       const isLeft = index % 2 === 0;
 
-      const x = isLeft ? "-20vw" : "20vw";
-      const y = -5 + index * 6; // diagonal drift per section
+      const x = isLeft ? "-18vw" : "18vw";
+      const y = -5 + index * 6;
 
       ScrollTrigger.create({
         trigger: section,
-        start: "top 30%", // shield appears ONLY when About enters
-        end: "top 40%",
+        start: "top center", // appears as section enters viewport
         onEnter: () => {
           gsap.to(shield, {
             opacity: 0.35,
@@ -44,22 +55,26 @@ export default function FloatingShield() {
             duration: 1.2,
             ease: "power3.out",
           });
-        }
+        },
       });
     });
 
-    // HIDE SHIELD BEFORE ABOUT (scrolling up)
-    ScrollTrigger.create({
-      trigger: "#section-1",
-      start: "top 30%",
-      onLeaveBack: () => gsap.to(shield, { opacity: 0 }),
-    });
+    // 🔹 HIDE shield after FAQ (section-10)
+    const faqSection = document.querySelector("#section-10");
 
-    // HIDE SHIELD BEFORE FOOTER
+    if (faqSection) {
+      ScrollTrigger.create({
+        trigger: faqSection,
+        start: "bottom bottom",
+        onEnter: () => gsap.to(shield, { opacity: 0, duration: 0.4 }),
+      });
+    }
+
+    // 🔹 Also hide in footer as extra safety
     ScrollTrigger.create({
       trigger: "footer",
       start: "top bottom",
-      onEnter: () => gsap.to(shield, { opacity: 0 }),
+      onEnter: () => gsap.to(shield, { opacity: 0, duration: 0.4 }),
     });
 
     ScrollTrigger.refresh();
