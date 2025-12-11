@@ -7,7 +7,12 @@ import BracketConnector from "../BracketConnector";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function About ({ id, ...rest }) {
+type AboutProps = {
+  id: string;
+  [key: string]: any;
+};
+
+export default function About ({ id, ...rest }: AboutProps) {
 
   const sectionRef = useRef(null);
   const imageRef = useRef(null);
