@@ -16,35 +16,34 @@ const settings = {
   speed: 600,
   autoplay: true,
   infinite: true,
-  autoplaySpeed: 1500,
+  autoplaySpeed: 1800,
+  slidesToShow: 6,
+  slidesToScroll: 6,
   arrows: false,
   dots: false,
-
-  rows: 2,              // <-- your 2 rows
-  slidesToShow: 6,      // <-- desktop columns
-  slidesToScroll: 1,
+  rows: 2,
 
   responsive: [
     {
       breakpoint: 991,
       settings: {
-        slidesToShow: 4,   // tablet
-        slidesToScroll: 1,
+        slidesToShow: 4,
+        slidesToScroll: 4,
         rows: 2,
       },
     },
     {
       breakpoint: 640,
       settings: {
-        slidesToShow: 2,   // mobile
-        slidesToScroll: 1,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         rows: 2,
       },
     },
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 1,   // very small mobile
+        slidesToShow: 1,
         slidesToScroll: 1,
         rows: 2,
       },
@@ -53,96 +52,123 @@ const settings = {
 };
 
 
-
     return (
         <section {...rest} id={id} className="clients-section lg:p-16 md:p-16 p-8">
                 <h2 className="lg:text-[56px] md:text-[40px] text-[36px] text-center lg:mb-16 mb-8 text-white font-bold leading-tight">Our Clients</h2>
 
              <Slider {...settings} className="h-full">
-  
-  <img 
+  <div>
+    <img 
     src="/images/clients/client-1.png" 
     alt="client" 
     className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
   />
-
+  </div>
+  
+ <div>
   <img 
     src="/images/clients/client-3.png" 
     alt="client" 
     className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
   />
-
+ </div>
+  
+ <div>
   <img 
     src="/images/clients/client-2.png" 
     alt="client" 
     className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
   />
-
-  <img 
+ </div>
+  
+ <div>
+   <img 
     src="/images/clients/client-4.png" 
     alt="client" 
     className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
   />
-
-  <img 
+ </div>
+ 
+ <div>
+   <img 
     src="/images/clients/client-6.png" 
     alt="client" 
     className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
   />
-
+ </div>
+ 
+ <div>
   <img 
     src="/images/clients/client-5.png" 
     alt="client" 
     className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
   />
-
+ </div>
+  
+ <div>
   <img 
     src="/images/clients/client-8.png" 
     alt="client" 
     className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
   />
-
+ </div>
+  
+ <div>
   <img 
     src="/images/clients/client-7.png" 
     alt="client" 
     className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
   />
-
-  <img 
+ </div>
+  
+ <div>
+   <img 
     src="/images/clients/client-10.png" 
     alt="client" 
     className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
   />
-
+ </div>
+ 
+ <div>
   <img 
     src="/images/clients/client-9.png" 
     alt="client" 
     className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
   />
-
+ </div>
+  
+ <div>
   <img 
     src="/images/clients/client-12.png" 
     alt="client" 
     className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
   />
-
+ </div>
+  
+ <div>
   <img 
     src="/images/clients/client-11.png" 
     alt="client" 
     className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
   />
-
+ </div>
+  
+ <div>
   <img 
     src="/images/clients/client-14.png" 
     alt="client" 
     className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
   />
-
+ </div>
+  
+ <div>
   <img 
     src="/images/clients/client-13.png" 
     alt="client" 
     className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
   />
+ </div>
+  
 
 </Slider>
 

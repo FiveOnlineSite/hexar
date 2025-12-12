@@ -119,17 +119,18 @@ export default function About({ id, ...rest }: AboutProps) {
         {/* 🎨 BACKGROUND IMAGE (ONLY THIS IS ANIMATED) */}
         <div
           ref={bgRef}
-          className="absolute inset-0 bg-right bg-no-repeat bg-contain pointer-events-none lg:block hidden"
+          className="absolute inset-0 bg-right bg-no-repeat bg-contain pointer-events-none xl:block lg:block hidden"
           style={{ backgroundImage: "url('/images/about-bg.png')" }}
         ></div>
 
         {/* 📄 CONTENT (STATIC, NOT ANIMATED) */}
-        <div className="relative lg:p-16 md:p-16 p-8 z-[2]">
-          <h2 className="lg:text-[56px] md:text-[40px] text-[36px] font-semibold leading-[40px]">
+        <div className="relative z-[2]">
+          <h2 className="lg:text-[56px] md:text-[40px] text-[36px] font-semibold leading-[40px] lg:px-16 lg:pt-16 lg:pb-8 md:px-16 md:pt-16 pb-4 pt-8 px-8">
             About Hexar Family
           </h2>
+                    <img ref={bgRef} src="/images/about-bg.png" alt="bg" className="xl:hidden lg:hidden block w-full h-full pe-0"/>
 
-          <div className="lg:w-[40%] w-full mb-2 backdrop-blur-md">
+          <div className="lg:w-[40%] w-full mb-2 backdrop-blur-md lg:px-16 lg:pt-16 lg:pb-8 md:px-16 md:pt-16 pb-4 pt-8 px-8">
             <p className="pt-4 pb-2 text-[15px] font-light leading-tight">
               Welcome to Hexar Studios — the unified force created through the strategic integration of Head Hoppers Studios and Ares Visual Effects Studio.
             </p>
@@ -141,7 +142,7 @@ export default function About({ id, ...rest }: AboutProps) {
             </p>
           </div>
 
-          <div className="relative xl:w-[40%] lg:w-[40%] w-full py-20">
+          <div className="relative xl:w-[40%] lg:w-[40%] w-full lg:pb-16 md:pb-16 pb-8 py-20 flex">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 flex flex-col items-center">
               <img
                 src="/images/icons/hexar-logo1.png"
