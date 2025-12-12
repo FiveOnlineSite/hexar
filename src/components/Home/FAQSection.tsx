@@ -10,7 +10,6 @@ type FAQSectionProps = {
   [key: string]: any;
 };
 
-
 export default function FAQSection ({ id, ...rest }: FAQSectionProps) {
     const faqs = [
     {
@@ -30,13 +29,13 @@ export default function FAQSection ({ id, ...rest }: FAQSectionProps) {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState<number | null></number>(0);
   const imageRef = useRef(null);
   const sectionRef = useRef(null);
 
-  const handleToggle = (index) => {
-    setActiveIndex((prev) => (prev === index ? null : index)); 
-  };
+  const handleToggle = (index: number) => {
+  setActiveIndex((prev: number | null) => (prev === index ? null : index));
+};
 
  useLayoutEffect(() => {
   gsap.registerPlugin(ScrollTrigger);
@@ -73,7 +72,6 @@ export default function FAQSection ({ id, ...rest }: FAQSectionProps) {
                 );
             },
 
-            // 👇 RESET when scrolling back up
             onLeaveBack: () => {
                 gsap.set(imageRef.current, { opacity: 0, scale: 0.25, y: 40 });
             },
