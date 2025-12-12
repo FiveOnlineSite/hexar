@@ -3,15 +3,25 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useEffect } from "react";
 
 type WhyUsProps = {
   id: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 };
 
 
 export default function WhyUs ({ id, ...rest }: WhyUsProps){
 
+    useEffect(() => {
+    const trigger = () => window.dispatchEvent(new Event("resize"));
+    setTimeout(trigger, 200);
+    setTimeout(trigger, 600);
+    window.addEventListener("orientationchange", trigger);
+    return () => window.removeEventListener("orientationchange", trigger);
+  }, []);
+  
     const settings = {
         speed: 1000,
         autoplay: false,

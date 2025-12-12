@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
+import { useEffect } from "react";
 
 type BlogSectionProps = {
   id: string;
@@ -57,7 +58,19 @@ function PrevArrow({ onClick }: any) {
   );
 }
 
+
+
 export default function BlogSection({ id, ...rest }: BlogSectionProps) {
+
+  useEffect(() => {
+    const trigger = () => window.dispatchEvent(new Event("resize"));
+    setTimeout(trigger, 200);
+    setTimeout(trigger, 600);
+    window.addEventListener("orientationchange", trigger);
+    return () => window.removeEventListener("orientationchange", trigger);
+  }, []);
+
+  
   const settings = {
     speed: 1000,
     autoplay: false,
