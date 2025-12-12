@@ -118,7 +118,7 @@ export default function About({ id, ...rest }: AboutProps) {
         {/* 🎨 BACKGROUND IMAGE (ONLY THIS IS ANIMATED) */}
         <div
           ref={bgRef}
-          className="absolute inset-0 bg-right bg-no-repeat bg-contain pointer-events-none"
+          className="absolute inset-0 bg-right bg-no-repeat bg-contain pointer-events-none lg:block hidden"
           style={{ backgroundImage: "url('/images/about-bg.png')" }}
         ></div>
 

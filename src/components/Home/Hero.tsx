@@ -369,7 +369,7 @@ export default function Hero() {
             className="absolute inset-0 w-full h-full object-cover blur-md"
           />
 
-          <h1 className="xl:text-[53px] lg:text-[48px] md:text-[40px] text-[36px] font-bold absolute top-[30%] lg:top-1/2 left-0 px-8 lg:px-16 w-full lg:w-[60%] -translate-y-1/2">
+          <h1 className="xl:text-[53px] lg:text-[48px] md:text-[40px] sm:text-[36px] text-[30px] font-bold absolute top-[30%] lg:top-1/2 left-0 px-8 lg:px-16 w-full lg:w-[60%] -translate-y-1/2">
             Predator Hunting Grounds
           </h1>
 
@@ -424,7 +424,7 @@ export default function Hero() {
 
               src="/images/image-2.png"
               alt="banner"
-              className="max-h-[90%] object-contain"
+              className="lg:max-h-[90%] md:max-h-[90%] sm:max-h-[50%] max-h-[50%] object-contain"
             />
           </div>
         </div>
@@ -495,7 +495,7 @@ export default function Hero() {
 
               src="/images/image-2.png"
               alt="banner"
-              className="max-h-[90%] object-contain"
+              className="lg:max-h-[90%] md:max-h-[90%] sm:max-h-[50%] max-h-[50%] object-contain"
             />
           </div>
         </div>
