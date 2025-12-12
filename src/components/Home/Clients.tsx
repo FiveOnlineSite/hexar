@@ -149,14 +149,14 @@ export default function Clients({ id, ...rest }: ClientsSectionProps) {
       >
         {rows.map((pair, index) => (
           <SwiperSlide key={index}>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col">
               {pair.map(
                 (client) =>
                   client && (
-                    <div key={client} className="border border-white/30 p-2">
+                    <div key={client} className="border h-[172px] p-2 border-white/30 p-2 group">
                       <img
                         src={`/images/clients/${client}.png`}
-                        className="h-[120px] w-full object-contain"
+                        className=" w-full h-full object-contain transition-transform duration-700 ease-out group-hover:scale-50"
                         alt={client}
                       />
                     </div>

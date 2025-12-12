@@ -27,8 +27,8 @@ body {
   border: 0.4px solid white;
 }
 
-.why-us-section .slick-slide, .blog-section .slick-slide{
-  padding: 0 10px;
+.clients-section .swiper-wrapper .swiper-slide{
+  margin: 0 !important;
 }
 
 .animate-img-wrapper {
