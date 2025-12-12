@@ -19,9 +19,9 @@ const settings = {
   autoplaySpeed: 1800,
   slidesToShow: 6,
   slidesToScroll: 6,
+  rows: 2,
   arrows: false,
   dots: false,
-  rows: 2,
 
   responsive: [
     {
@@ -50,6 +50,7 @@ const settings = {
     },
   ],
 };
+
 
 
     return (

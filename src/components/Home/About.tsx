@@ -126,18 +126,18 @@ export default function About({ id, ...rest }: AboutProps) {
         ></div>
 
         {/* Mobile Background IMG */}
-        <img
-          ref={bgMobileRef}
-          src="/images/about-bg.png"
-          alt="bg"
-          className="xl:hidden lg:hidden block w-full h-full pe-0"
-        />
-
+        
         {/* Content */}
         <div className="relative z-[2]">
           <h2 className="lg:text-[56px] md:text-[40px] text-[36px] font-semibold leading-[40px] lg:px-16 lg:pt-16 lg:pb-8 md:px-16 md:pt-16 pb-4 pt-8 px-8">
             About Hexar Family
           </h2>
+<img
+          ref={bgMobileRef}
+          src="/images/about-bg.png"
+          alt="bg"
+          className="xl:hidden lg:hidden block w-full h-full pe-0"
+        />
 
           <div className="lg:w-[40%] w-full mb-2 backdrop-blur-md lg:px-16 lg:pt-16 lg:pb-8 md:px-16 md:pt-16 pb-4 pt-8 px-8">
             <p className="pt-4 pb-2 text-[15px] font-light leading-tight">
