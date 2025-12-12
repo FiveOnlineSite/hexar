@@ -17,9 +17,13 @@ const settings = {
   autoplay: true,
   infinite: true,
   autoplaySpeed: 1800,
+
+  rows: 2,
+  slidesPerRow: 1,   // 💥 REQUIRED FIX
+
   slidesToShow: 6,
   slidesToScroll: 6,
-  rows: 2,
+
   arrows: false,
   dots: false,
 
@@ -30,6 +34,7 @@ const settings = {
         slidesToShow: 4,
         slidesToScroll: 4,
         rows: 2,
+        slidesPerRow: 1,
       },
     },
     {
@@ -38,6 +43,7 @@ const settings = {
         slidesToShow: 2,
         slidesToScroll: 2,
         rows: 2,
+        slidesPerRow: 1,
       },
     },
     {
@@ -46,12 +52,11 @@ const settings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         rows: 2,
+        slidesPerRow: 1,
       },
     },
   ],
 };
-
-
 
     return (
         <section {...rest} id={id} className="clients-section lg:p-16 md:p-16 p-8">
