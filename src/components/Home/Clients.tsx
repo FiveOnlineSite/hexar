@@ -17,35 +17,41 @@ const settings = {
   autoplay: true,
   infinite: true,
   autoplaySpeed: 1500,
-  slidesToShow: 6,
-  slidesToScroll: 1,
   arrows: false,
-  dots:false,
-  rows: 2,
+  dots: false,
+
+  rows: 2,              // <-- your 2 rows
+  slidesToShow: 6,      // <-- desktop columns
+  slidesToScroll: 1,
+
   responsive: [
     {
       breakpoint: 991,
       settings: {
-        slidesToShow: 4,
+        slidesToShow: 4,   // tablet
+        slidesToScroll: 1,
         rows: 2,
       },
     },
     {
       breakpoint: 640,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 2,   // mobile
+        slidesToScroll: 1,
         rows: 2,
       },
     },
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 1,
-        rows: 2, // <-- KEEP rows consistent
+        slidesToShow: 1,   // very small mobile
+        slidesToScroll: 1,
+        rows: 2,
       },
     },
   ],
 };
+
 
 
     return (

@@ -17,11 +17,11 @@ export default function Contribution({ id, ...rest }: ContributionProps){
             <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-5 md:gap-6 gap-5 mb-5">
                <a href="#" className="relative group my-2 block lg:overflow-visible md:overflow-visible overflow-hidden">
 
-                <div className="overflow-hidden py-[40px] -my-[40px] relative rounded">
+                <div className="overflow-hidden lg:py-[40px] lg:-my-[40px] relative rounded">
                     <img 
                     src="/images/contributions/contribution-1.png"
                     alt="realtime-hair"
-                    className="rounded-xl object-contain w-full xl:h-[373px] lg:h-[365px] md:h-[420px] h-[480px] relative z-20"
+                   className="rounded-xl object-contain w-full contrib-height relative z-20"
                     />
                 </div>
 
@@ -52,9 +52,9 @@ export default function Contribution({ id, ...rest }: ContributionProps){
                     -bottom-[10px] 
                     group-hover:bottom-0 opacity-0 group-hover:opacity-100
                     transition-all duration-700 
-                    z-20 xl:h-[373px] lg:h-[365px] md:h-[390px] h-[480px] overflow-hidden
+                    z-20 contrib-height overflow-hidden
                 ">
-                    <div className="bg-[#00000099] w-full xl:h-[373px] lg:h-[365px] md:h-[390px] h-[480px] rounded-xl"></div>
+                    <div className="bg-[#00000099] w-full contrib-height rounded-xl"></div>
 
                     <div className="group/button flex items-center text-[20px] text-white leading-tight font-semibold absolute bottom-6 left-6">
 
@@ -90,11 +90,11 @@ export default function Contribution({ id, ...rest }: ContributionProps){
 
                  <a href="#" className="relative group my-2 block lg:overflow-visible md:overflow-visible overflow-hidden">
 
-                <div className="overflow-hidden py-[40px] -my-[40px] relative rounded">
+                <div className="overflow-hidden lg:py-[40px] lg:-my-[40px] relative rounded">
                     <img 
                     src="/images/contributions/contribution-1.png"
                     alt="realtime-hair"
-                    className="rounded-xl object-contain w-full xl:h-[373px] lg:h-[365px] md:h-[420px] h-[480px] relative z-20"
+                   className="rounded-xl object-contain w-full contrib-height relative z-20"
                     />
                 </div>
 
@@ -125,82 +125,9 @@ export default function Contribution({ id, ...rest }: ContributionProps){
                     -bottom-[10px] 
                     group-hover:bottom-0 opacity-0 group-hover:opacity-100
                     transition-all duration-700 
-                    z-20 xl:h-[373px] lg:h-[365px] md:h-[390px] h-[480px] overflow-hidden
+                    z-20 contrib-height overflow-hidden
                 ">
-                    <div className="bg-[#00000099] w-full xl:h-[373px] lg:h-[365px] md:h-[390px] h-[480px] rounded-xl"></div>
-
-                    <div className="group/button flex items-center text-[20px] text-white leading-tight font-semibold absolute bottom-6 left-6">
-
-                <span className="
-                    flex items-center transition-all duration-500 ease-out
-                    group-hover/button:-translate-x-10">
-                    <span className="
-                        inline-block w-[28px] h-px bg-white me-1
-                        transition-all duration-300
-                        group-hover/button:opacity-0
-                    "></span>
-
-                    <span className="transition-all duration-500 ease-out">
-                    Take A Look
-                    </span>
-                </span>
-
-                <span className="
-                    relative inline-flex items-center
-                    w-[30px] h-px bg-white
-                    opacity-0 -translate-x-0
-                    transition-all duration-500 ease-out ms-1
-                    group-hover/button:opacity-100 group-hover/button:-translate-x-10
-                    after:content-['.']
-                    after:absolute after:-right-0
-                    after:-top-1 after:-translate-y-1/2
-                    after:text-white after:text-[18px] after:leading-none
-                "></span>
-
-                    </div>
-                </div>
-                </a>    
-
-                  <a href="#" className="relative group my-2 block lg:overflow-visible md:overflow-visible overflow-hidden">
-
-                <div className="overflow-hidden py-[40px] -my-[40px] relative rounded">
-                    <img 
-                    src="/images/contributions/contribution-1.png"
-                    alt="realtime-hair"
-                    className="rounded-xl object-contain w-full xl:h-[373px] lg:h-[365px] md:h-[420px] h-[480px] relative z-20"
-                    />
-                </div>
-
-                <div className="xl:block lg:block md:block hidden absolute inset-0 overflow-hidden py-[40px] -my-[40px] z-10 pointer-events-none">
-
-                    <div className="
-                    absolute top-1/2 left-1/2 
-                    -translate-x-1/2 -translate-y-1/2 
-                    bg-[linear-gradient(145.81deg,#D50000_0.47%,#400000_40.83%,#000000_99.53%)]
-                    rounded-xl xl:h-[370px] lg:h-[365px] md:h-[410px] sm:h-[550px] xs:h-[430px] w-full
-                    transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]
-                    group-hover:-rotate-[8deg]
-                    "></div>
-
-                    <div className="
-                    absolute top-1/2 left-1/2 
-                    -translate-x-1/2 -translate-y-1/2
-                    bg-[linear-gradient(145.81deg,#D50000_0.47%,#400000_40.83%,#000000_99.53%)]
-                    rounded-xl xl:h-[370px] lg:h-[365px] md:h-[410px] sm:h-[550px] xs:h-[430px] w-full
-                    transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]
-                    group-hover:rotate-[8deg]
-                    "></div>
-
-                </div>
-
-                <div className="
-                    absolute left-0 right-0 
-                    -bottom-[10px] 
-                    group-hover:bottom-0 opacity-0 group-hover:opacity-100
-                    transition-all duration-700 
-                    z-20 xl:h-[373px] lg:h-[365px] md:h-[390px] h-[480px] overflow-hidden
-                ">
-                    <div className="bg-[#00000099] w-full xl:h-[373px] lg:h-[365px] md:h-[390px] h-[480px] rounded-xl"></div>
+                    <div className="bg-[#00000099] w-full contrib-height rounded-xl"></div>
 
                     <div className="group/button flex items-center text-[20px] text-white leading-tight font-semibold absolute bottom-6 left-6">
 
@@ -234,13 +161,13 @@ export default function Contribution({ id, ...rest }: ContributionProps){
                 </div>
                 </a>
 
-                 <a href="#" className="relative group my-2 block lg:overflow-visible md:overflow-visible overflow-hidden">
+                <a href="#" className="relative group my-2 block lg:overflow-visible md:overflow-visible overflow-hidden">
 
-                <div className="overflow-hidden py-[40px] -my-[40px] relative rounded">
+                <div className="overflow-hidden lg:py-[40px] lg:-my-[40px] relative rounded">
                     <img 
                     src="/images/contributions/contribution-1.png"
                     alt="realtime-hair"
-                    className="rounded-xl object-contain w-full xl:h-[373px] lg:h-[365px] md:h-[420px] h-[480px] relative z-20"
+                   className="rounded-xl object-contain w-full contrib-height relative z-20"
                     />
                 </div>
 
@@ -271,9 +198,9 @@ export default function Contribution({ id, ...rest }: ContributionProps){
                     -bottom-[10px] 
                     group-hover:bottom-0 opacity-0 group-hover:opacity-100
                     transition-all duration-700 
-                    z-20 xl:h-[373px] lg:h-[365px] md:h-[390px] h-[480px] overflow-hidden
+                    z-20 contrib-height overflow-hidden
                 ">
-                    <div className="bg-[#00000099] w-full xl:h-[373px] lg:h-[365px] md:h-[390px] h-[480px] rounded-xl"></div>
+                    <div className="bg-[#00000099] w-full contrib-height rounded-xl"></div>
 
                     <div className="group/button flex items-center text-[20px] text-white leading-tight font-semibold absolute bottom-6 left-6">
 
@@ -307,13 +234,13 @@ export default function Contribution({ id, ...rest }: ContributionProps){
                 </div>
                 </a>
 
-                 <a href="#" className="relative group my-2 block lg:overflow-visible md:overflow-visible overflow-hidden">
+                <a href="#" className="relative group my-2 block lg:overflow-visible md:overflow-visible overflow-hidden">
 
-                <div className="overflow-hidden py-[40px] -my-[40px] relative rounded">
+                <div className="overflow-hidden lg:py-[40px] lg:-my-[40px] relative rounded">
                     <img 
                     src="/images/contributions/contribution-1.png"
                     alt="realtime-hair"
-                    className="rounded-xl object-contain w-full xl:h-[373px] lg:h-[365px] md:h-[420px] h-[480px] relative z-20"
+                   className="rounded-xl object-contain w-full contrib-height relative z-20"
                     />
                 </div>
 
@@ -344,9 +271,9 @@ export default function Contribution({ id, ...rest }: ContributionProps){
                     -bottom-[10px] 
                     group-hover:bottom-0 opacity-0 group-hover:opacity-100
                     transition-all duration-700 
-                    z-20 xl:h-[373px] lg:h-[365px] md:h-[390px] h-[480px] overflow-hidden
+                    z-20 contrib-height overflow-hidden
                 ">
-                    <div className="bg-[#00000099] w-full xl:h-[373px] lg:h-[365px] md:h-[390px] h-[480px] rounded-xl"></div>
+                    <div className="bg-[#00000099] w-full contrib-height rounded-xl"></div>
 
                     <div className="group/button flex items-center text-[20px] text-white leading-tight font-semibold absolute bottom-6 left-6">
 
@@ -380,13 +307,13 @@ export default function Contribution({ id, ...rest }: ContributionProps){
                 </div>
                 </a>
 
-                 <a href="#" className="relative group my-2 block lg:overflow-visible md:overflow-visible overflow-hidden">
+                <a href="#" className="relative group my-2 block lg:overflow-visible md:overflow-visible overflow-hidden">
 
-                <div className="overflow-hidden py-[40px] -my-[40px] relative rounded">
+                <div className="overflow-hidden lg:py-[40px] lg:-my-[40px] relative rounded">
                     <img 
                     src="/images/contributions/contribution-1.png"
                     alt="realtime-hair"
-                    className="rounded-xl object-contain w-full xl:h-[373px] lg:h-[365px] md:h-[420px] h-[480px] relative z-20"
+                   className="rounded-xl object-contain w-full contrib-height relative z-20"
                     />
                 </div>
 
@@ -417,9 +344,9 @@ export default function Contribution({ id, ...rest }: ContributionProps){
                     -bottom-[10px] 
                     group-hover:bottom-0 opacity-0 group-hover:opacity-100
                     transition-all duration-700 
-                    z-20 xl:h-[373px] lg:h-[365px] md:h-[390px] h-[480px] overflow-hidden
+                    z-20 contrib-height overflow-hidden
                 ">
-                    <div className="bg-[#00000099] w-full xl:h-[373px] lg:h-[365px] md:h-[390px] h-[480px] rounded-xl"></div>
+                    <div className="bg-[#00000099] w-full contrib-height rounded-xl"></div>
 
                     <div className="group/button flex items-center text-[20px] text-white leading-tight font-semibold absolute bottom-6 left-6">
 
@@ -451,7 +378,7 @@ export default function Contribution({ id, ...rest }: ContributionProps){
 
                     </div>
                 </div>
-                </a>   
+                </a>
             </div>
         </section>
     )
