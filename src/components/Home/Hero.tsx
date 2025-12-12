@@ -240,6 +240,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function NextArrow({ onClick }: any) {
   return (
     <button
@@ -263,6 +264,7 @@ function NextArrow({ onClick }: any) {
   );
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function PrevArrow({ onClick }: any) {
   return (
     <button

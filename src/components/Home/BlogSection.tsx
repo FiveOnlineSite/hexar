@@ -7,9 +7,11 @@ import Image from "next/image";
 
 type BlogSectionProps = {
   id: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function NextArrow({ onClick }: any) {
   return (
     <button
@@ -32,6 +34,7 @@ function NextArrow({ onClick }: any) {
   );
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function PrevArrow({ onClick }: any) {
   return (
     <button
@@ -95,9 +98,7 @@ export default function BlogSection({ id, ...rest }: BlogSectionProps) {
 
       <div className="lg:w-[60%] w-full lg:pt-2 pt-20">
         <Slider {...settings}>
-          {[1, 2, 3].map((i) => (
             <div
-              key={i}
               className="hover:shadow-[0_2px_20px_0_#FFFFFF40] group transition-all duration-700 rounded-xl overflow-hidden m-2"
             >
               <div className="h-[250px] overflow-hidden">
@@ -115,7 +116,44 @@ export default function BlogSection({ id, ...rest }: BlogSectionProps) {
                 </h4>
               </div>
             </div>
-          ))}
+
+             <div
+              className="hover:shadow-[0_2px_20px_0_#FFFFFF40] group transition-all duration-700 rounded-xl overflow-hidden m-2"
+            >
+              <div className="h-[250px] overflow-hidden">
+                <img
+                  src="/images/news-blogs-1.png"
+                  className="bg-contain scale-100 h-[250px] group-hover:scale-125 transition-all duration-700"
+                />
+              </div>
+              <div className="flex items-start justify-center">
+                <h3 className="p-3 lg:text-[22px] text-[20px] font-base leading-base w-[75%]">
+                  How AI is Changing the Gaming World
+                </h3>
+                <h4 className="w-[25%] p-3 text-[18px] font-light text-[#FFFFFFCC]">
+                  24 Nov
+                </h4>
+              </div>
+            </div>
+
+             <div
+              className="hover:shadow-[0_2px_20px_0_#FFFFFF40] group transition-all duration-700 rounded-xl overflow-hidden m-2"
+            >
+              <div className="h-[250px] overflow-hidden">
+                <img
+                  src="/images/news-blogs-1.png"
+                  className="bg-contain scale-100 h-[250px] group-hover:scale-125 transition-all duration-700"
+                />
+              </div>
+              <div className="flex items-start justify-center">
+                <h3 className="p-3 lg:text-[22px] text-[20px] font-base leading-base w-[75%]">
+                  How AI is Changing the Gaming World
+                </h3>
+                <h4 className="w-[25%] p-3 text-[18px] font-light text-[#FFFFFFCC]">
+                  24 Nov
+                </h4>
+              </div>
+            </div>
         </Slider>
       </div>
     </section>

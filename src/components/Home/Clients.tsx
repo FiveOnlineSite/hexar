@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 type ClientsSectionProps = {
   id: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 };
 
