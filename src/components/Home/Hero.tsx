@@ -289,9 +289,9 @@ function PrevArrow({ onClick }: any) {
 export default function Hero() {
    const heroRef = useRef(null);
    const sliderRef = useRef(null);
-  const imageRefs = useRef([]);
+  const imageRefs = useRef<HTMLImageElement[]>([]);
 
-  const animateImage = (index) => {
+  const animateImage = (index: number) => {
     const img = imageRefs.current[index];
     if (!img) return;
 
@@ -308,7 +308,7 @@ export default function Hero() {
     );
   };
 
-  const waitForSlide = (callback) => {
+  const waitForSlide = (callback: () => void) => {
     let tries = 0;
 
     const check = () => {
