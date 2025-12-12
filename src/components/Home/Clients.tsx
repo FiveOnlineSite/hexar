@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import useSlickFix from "@/src/app/hooks/useSlickFix";
 
 type ClientsSectionProps = {
   id: string;
@@ -13,59 +14,54 @@ type ClientsSectionProps = {
 
 export default function Clients({ id, ...rest }: ClientsSectionProps) {
 
-  // 🔥 Fix for real mobile devices (Safari / Chrome)
-  useEffect(() => {
-    const trigger = () => window.dispatchEvent(new Event("resize"));
-    setTimeout(trigger, 200);
-    setTimeout(trigger, 600);
-    window.addEventListener("orientationchange", trigger);
-    return () => window.removeEventListener("orientationchange", trigger);
-  }, []);
+  useSlickFix();
 
   const settings = {
-  infinite: true,
-  autoplay: true,
-  autoplaySpeed: 1800,
-  speed: 600,
-  rows: 2,
-  slidesPerRow: 1,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    speed: 600,
+    rows: 2,
+    slidesPerRow: 1,
 
-  slidesToShow: 6,
-  slidesToScroll: 6,
-  arrows: false,
-  dots: false,
+    slidesToShow: 6,
+    slidesToScroll: 6,
 
-  responsive: [
-    {
-      breakpoint: 1200, // <= 1200px
-      settings: {
-        slidesToShow: 6,
-        slidesToScroll: 6,
+    arrows: false,
+    dots: false,
+
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
       },
-    },
-    {
-      breakpoint: 991, // <= 991px
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 4,
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
       },
-    },
-    {
-      breakpoint: 640, // <= 640px
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
       },
-    },
-    {
-      breakpoint: 480, // <= 480px
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
       },
-    },
-  ],
-};
+    ],
+  };
+
 
 
   return (

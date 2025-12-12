@@ -13,32 +13,25 @@ type WhyUsProps = {
 export default function WhyUs({ id, ...rest }: WhyUsProps) {
   const settings = {
     infinite: false,
-    speed: 700,
-    autoplay: false,
-    mobileFirst: true, 
+    speed: 600,
+    slidesToShow: 2.5,
+    slidesToScroll: 1,
     arrows: false,
     dots: false,
-    
-    slidesToShow: 2.2,      
-    slidesToScroll: 1,
 
     responsive: [
       {
-        breakpoint: 480, // Small phones
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 770, // Tablets / mid screens
+        breakpoint: 768,
         settings: {
           slidesToShow: 1.5,
+          slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 1024, // Laptops / desktops
+        breakpoint: 480,
         settings: {
-          slidesToShow: 2.5,
+          slidesToShow: 1.1,
+          slidesToScroll: 1,
         },
       },
     ],

@@ -173,54 +173,34 @@ import { useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import useSlickFix from "@/src/app/hooks/useSlickFix";
 
 export default function GallerySlider() {
 
-  // 🔥 Fix: Force recalculation on real mobile devices
-  useEffect(() => {
-    const trigger = () => {
-      window.dispatchEvent(new Event("resize"));
-    };
-
-    setTimeout(trigger, 200);
-    setTimeout(trigger, 600);
-
-    window.addEventListener("orientationchange", trigger);
-    return () => window.removeEventListener("orientationchange", trigger);
-  }, []);
+  useSlickFix();
 
   const settings = {
     infinite: true,
     autoplay: true,
+    speed: 3000,
     autoplaySpeed: 0,
-    speed: 4000,
     cssEase: "linear",
-    pauseOnHover: false,
-    arrows: false,
-    dots: false,
 
-    mobileFirst: true, // 🔥 IMPORTANT FIX
-
-    slidesToShow: 7,   // mobile
+    slidesToShow: 7,
     slidesToScroll: 1,
+    arrows: false,
 
     responsive: [
       {
-        breakpoint: 300,  // tablet
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 640,  // tablet
+        breakpoint: 1024,
         settings: {
           slidesToShow: 4,
         },
       },
       {
-        breakpoint: 1024, // desktop
+        breakpoint: 640,
         settings: {
-          slidesToShow: 7,
+          slidesToShow: 2,
         },
       },
     ],
