@@ -18,13 +18,9 @@ function NextArrow({ onClick }: any) {
     <button
       onClick={onClick}
       className="
-        absolute bottom-4 right-6 
-        z-20 rounded-full 
-        transition-all duration-700
-        hover:shadow-[0_2px_20px_0_#FFFFFF40]
-      "
+        absolute xl:top-[65%] lg:top-[85%] -top-[15%] xl:-left-[50%] lg:-left-[45%] left-[18%] rounded-full transition-all duration-700 hover:shadow-[0_2px_20px_0_#FFFFFF40]"
     >
-      <Image src="/images/icons/right-arrow.png" alt="right-arrow" width={40} height={40} />
+      <Image src="/images/icons/right-arrow.png" alt="right-arrow" width={48} height={48} className="w-8 h-8 lg:w-12 lg:h-12 md:w-12 md:h-12 sm:w-10 sm:h-10" />
     </button>
   );
 }
@@ -35,13 +31,10 @@ function PrevArrow({ onClick }: any) {
     <button
       onClick={onClick}
       className="
-        absolute bottom-4 right-20 
-        z-20 rounded-full
-        transition-all duration-700
-        hover:shadow-[0_2px_20px_0_#FFFFFF40]
+        absolute xl:top-[65%] lg:top-[85%] -top-[15%] xl:-left-[50%] lg:-left-[45%] left-[18%] rounded-full transition-all duration-700 hover:shadow-[0_2px_20px_0_#FFFFFF40]
       "
     >
-      <Image src="/images/icons/left-arrow.png" alt="left-arrow" width={40} height={40} />
+      <Image src="/images/icons/left-arrow.png" alt="left-arrow" width={48} height={48} className="w-8 h-8 lg:w-12 lg:h-12 md:w-12 md:h-12 sm:w-10 sm:h-10" />
     </button>
   );
 }

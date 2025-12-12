@@ -23,46 +23,50 @@ export default function Clients({ id, ...rest }: ClientsSectionProps) {
   }, []);
 
   const settings = {
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 1800,
-    speed: 600,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 1800,
+  speed: 600,
+  rows: 2,
+  slidesPerRow: 1,
 
-    rows: 2,
-    slidesPerRow: 1,
+  slidesToShow: 6,
+  slidesToScroll: 6,
+  arrows: false,
+  dots: false,
 
-    mobileFirst: true,  // 🔥 REQUIRED FOR REAL RESPONSIVE
-
-    slidesToShow: 1,  // mobile default
-    slidesToScroll: 1,
-
-    arrows: false,
-    dots: false,
-
-    responsive: [
-      {
-        breakpoint: 640,  // Tablets
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
+  responsive: [
+    {
+      breakpoint: 1200, // <= 1200px
+      settings: {
+        slidesToShow: 6,
+        slidesToScroll: 6,
       },
-      {
-        breakpoint: 991, // Small laptops
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
-        },
+    },
+    {
+      breakpoint: 991, // <= 991px
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4,
       },
-      {
-        breakpoint: 1200, // Desktop
-        settings: {
-          slidesToShow: 6,
-          slidesToScroll: 6,
-        },
+    },
+    {
+      breakpoint: 640, // <= 640px
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
       },
-    ],
-  };
+    },
+    {
+      breakpoint: 480, // <= 480px
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
+
 
   return (
     <section {...rest} id={id} className="clients-section px-0 lg:px-16 md:px-16 p-8 overflow-hidden">

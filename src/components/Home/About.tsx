@@ -162,12 +162,12 @@ export default function About({ id, ...rest }: AboutProps) {
               <p className="text-[10px] font-light text-center">The Parent Organisation</p>
             </div>
 
-            <div className="lg:pt-[65px] md:pt-[35px] pt-0 flex w-full justify-center">
+            <div className="lg:pt-[65px] md:pt-[35px] pt-0 flex w-full justify-center lg:pb-0 pb-4">
               <BracketConnector refs={{ main: mainPath, left: leftPath, right: rightPath }} />
             </div>
 
-            <div className="flex justify-between absolute bottom-0 w-full px-8">
-              <div className="flex flex-col items-center">
+            <div className="flex lg:justify-between md:justify-evenly justify-between absolute bottom-0 w-full px-8">
+              <div className="flex flex-col items-center justify-center">
                 <img
                   src="/images/icons/head-hoppers-logo.png"
                   className="lg:h-[53px] lg:w-[137px] md:h-[40px] md:w-[100px] h-[30px] w-[70px]"
@@ -177,7 +177,7 @@ export default function About({ id, ...rest }: AboutProps) {
                 </p>
               </div>
 
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center justify-center">
                 <img
                   src="/images/icons/ares-logo.png"
                   className="lg:h-[37px] lg:w-[137px] md:h-[30px] md:w-[100px] h-[25px] w-[80px]"

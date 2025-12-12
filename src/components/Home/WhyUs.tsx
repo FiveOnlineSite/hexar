@@ -12,14 +12,14 @@ type WhyUsProps = {
 
 export default function WhyUs({ id, ...rest }: WhyUsProps) {
   const settings = {
-    infinite: true,
+    infinite: false,
     speed: 700,
     autoplay: false,
     mobileFirst: true, 
     arrows: false,
     dots: false,
-
-    slidesToShow: 1,      
+    
+    slidesToShow: 2.2,      
     slidesToScroll: 1,
 
     responsive: [
@@ -116,11 +116,10 @@ export default function WhyUs({ id, ...rest }: WhyUsProps) {
           </div>
         </div>
 
-        {/* CARD 3 */}
         <div className="group bg-black rounded-lg overflow-hidden mx-3">
           <div className="overflow-hidden">
             <img
-              src="/images/why-us-3.png"
+              src="/images/why-us-2.png"
               className="
                 w-full object-cover
                 h-[320px] lg:h-[420px]
@@ -132,13 +131,14 @@ export default function WhyUs({ id, ...rest }: WhyUsProps) {
 
           <div className="p-4">
             <h2 className="lg:text-[28px] md:text-[24px] text-[20px] font-semibold text-white">
-              Reliable Production Pipeline
+              Artistic Mastery
             </h2>
             <p className="lg:text-[18px] md:text-[16px] text-[14px] text-white/80 mt-2">
-              Precision workflows that ensure on-time, polished deliverables.
+              Stunning visuals backed by deep technical production expertise.
             </p>
           </div>
         </div>
+
       </Slider>
     </section>
   );

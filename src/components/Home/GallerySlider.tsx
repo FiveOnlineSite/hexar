@@ -201,10 +201,16 @@ export default function GallerySlider() {
 
     mobileFirst: true, // 🔥 IMPORTANT FIX
 
-    slidesToShow: 2,   // mobile
+    slidesToShow: 7,   // mobile
     slidesToScroll: 1,
 
     responsive: [
+      {
+        breakpoint: 300,  // tablet
+        settings: {
+          slidesToShow: 2,
+        },
+      },
       {
         breakpoint: 640,  // tablet
         settings: {
