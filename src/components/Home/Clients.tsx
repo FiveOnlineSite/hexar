@@ -59,7 +59,7 @@ const settings = {
 };
 
     return (
-        <section {...rest} id={id} className="clients-section lg:p-16 md:p-16 p-8">
+        <section {...rest} id={id} className="clients-section px-0 lg:px-16 md:px-16 p-8">
                 <h2 className="lg:text-[56px] md:text-[40px] text-[36px] text-center lg:mb-16 mb-8 text-white font-bold leading-tight">Our Clients</h2>
 
              <Slider {...settings} className="h-full">
