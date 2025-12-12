@@ -246,7 +246,7 @@ function NextArrow({ onClick }: any) {
     <button
       onClick={onClick}
       className="
-        absolute xl:bottom-[15%] lg:bottom-[15%] md:bottom-[15%] bottom-[50%]
+        absolute xl:bottom-[15%] lg:bottom-[15%] md:bottom-[15%] bottom-[57%]
         xl:left-[5%] lg:left-[7%] md:left-[7%] left-[70%]
         lg:mx-16 mx-8 rounded-full
         transition-all duration-700 z-20
@@ -258,7 +258,7 @@ function NextArrow({ onClick }: any) {
         alt="right-arrow"
         width={48}
         height={48}
-        className="w-10 h-10 lg:w-12 lg:h-12"
+        className="w-8 h-8 lg:w-12 lg:h-12 md:w-12 md:h-12 sm:w-10 sm:h-10"
       />
     </button>
   );
@@ -270,7 +270,7 @@ function PrevArrow({ onClick }: any) {
     <button
       onClick={onClick}
       className="
-        absolute xl:bottom-[15%] lg:bottom-[15%] md:bottom-[15%] bottom-[50%]
+        absolute xl:bottom-[15%] lg:bottom-[15%] md:bottom-[15%] bottom-[57%]
         xl:left-[0%] lg:left-[0%] md:left-[0%] left-[55%]
         lg:mx-16 mx-8 rounded-full
         transition-all duration-700 z-20
@@ -282,7 +282,7 @@ function PrevArrow({ onClick }: any) {
         alt="left-arrow"
         width={48}
         height={48}
-        className="w-10 h-10 lg:w-12 lg:h-12"
+        className="w-8 h-8 lg:w-12 lg:h-12 md:w-12 md:h-12 sm:w-10 sm:h-10"
       />
     </button>
   );
@@ -369,13 +369,13 @@ export default function Hero() {
             className="absolute inset-0 w-full h-full object-cover blur-md"
           />
 
-          <h1 className="xl:text-[53px] lg:text-[48px] md:text-[40px] sm:text-[36px] text-[30px] font-bold absolute top-[30%] lg:top-1/2 left-0 px-8 lg:px-16 w-full lg:w-[60%] -translate-y-1/2">
+          <h1 className="xl:text-[53px] lg:text-[48px] md:text-[40px] sm:text-[36px] text-[30px] leading-tight font-bold absolute top-[30%] lg:top-1/2 left-0 px-8 lg:px-16 w-full lg:w-[60%] -translate-y-1/2">
             Predator Hunting Grounds
           </h1>
 
                <a
               href="#"
-              className="group flex items-center text-[22px] text-white leading-tight font-semibold absolute xl:bottom-[32%] lg:bottom-[32%] md:bottom-[32%] bottom-[58%] left-0 lg:px-16 px-8 overflow-hidden"
+              className="group flex items-center xl:text-[22px] lg:text-[22px] md:text-[22px] sm:text-[20px] text-[18px] text-white leading-tight font-semibold absolute xl:bottom-[32%] lg:bottom-[32%] md:bottom-[32%] bottom-[58%] left-0 lg:px-16 px-8 overflow-hidden"
             >
           <span
             className="
@@ -440,13 +440,13 @@ export default function Hero() {
             className="absolute inset-0 w-full h-full object-cover blur-md"
           />
 
-          <h1 className="xl:text-[53px] lg:text-[48px] md:text-[40px] text-[36px] font-bold absolute top-[30%] lg:top-1/2 left-0 px-8 lg:px-16 w-full lg:w-[60%] -translate-y-1/2">
+          <h1 className="xl:text-[53px] lg:text-[48px] md:text-[40px] sm:text-[36px] text-[30px] leading-tight font-bold absolute top-[30%] lg:top-1/2 left-0 px-8 lg:px-16 w-full lg:w-[60%] -translate-y-1/2">
             Predator Hunting Grounds
           </h1>
 
                <a
               href="#"
-              className="group flex items-center text-[22px] text-white leading-tight font-semibold absolute xl:bottom-[32%] lg:bottom-[32%] md:bottom-[32%] bottom-[58%] left-0 lg:px-16 px-8 overflow-hidden"
+              className="group flex items-center xl:text-[22px] lg:text-[22px] md:text-[22px] sm:text-[20px] text-[18px] text-white leading-tight font-semibold absolute xl:bottom-[32%] lg:bottom-[32%] md:bottom-[32%] bottom-[58%] left-0 lg:px-16 px-8 overflow-hidden"
             >
           <span
             className="

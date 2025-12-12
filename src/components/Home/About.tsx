@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 type AboutProps = {
   id: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 };
 
@@ -160,7 +161,7 @@ export default function About({ id, ...rest }: AboutProps) {
                   src="/images/icons/head-hoppers-logo.png"
                   className="lg:h-[53px] lg:w-[137px] md:h-[40px] md:w-[100px] h-[30px] w-[70px]"
                 />
-                <p className="text-[10px] font-light pt-2">Character / Hair Specialist</p>
+                <p className="text-[10px] font-light pt-2 text-center">Character / Hair Specialist</p>
               </div>
 
               <div className="flex flex-col items-center">
@@ -168,7 +169,7 @@ export default function About({ id, ...rest }: AboutProps) {
                   src="/images/icons/ares-logo.png"
                   className="lg:h-[37px] lg:w-[137px] md:h-[30px] md:w-[100px] h-[25px] w-[80px]"
                 />
-                <p className="text-[10px] font-light pt-6">Concept / VFX / Technical Art / Co-dev</p>
+                <p className="text-[10px] font-light lg:pt-6 pt-3 text-center">Concept / VFX / Technical Art / Co-dev</p>
               </div>
             </div>
 

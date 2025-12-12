@@ -76,10 +76,10 @@ export default function Footer () {
 
                     <div className="social-links flex items-center justify-start mt-5">
                         <a href="#" className="w-[30px] h-[30px] bg-[#0A0A0A] rounded-full flex justify-center items-center mr-2">
-                            <img src="./images/icons/instagram.png" alt="instagram" className="w-[20px] h-[20px] object-contain"/>
+                            <img src="./images/icons/Instagram.png" alt="instagram" className="w-[20px] h-[20px] object-contain"/>
                         </a>
                         <a href="#" className="w-[30px] h-[30px] bg-[#0A0A0A] rounded-full flex justify-center items-center mr-2">
-                            <img src="./images/icons/Youtube.png" alt="instagram" className="w-[20px] h-[20px] object-contain"/>
+                            <img src="./images/icons/YouTube.png" alt="instagram" className="w-[20px] h-[20px] object-contain"/>
                         </a>
                         <a href="#" className="w-[30px] h-[30px] bg-[#0A0A0A] rounded-full flex justify-center items-center mr-2">
                             <img src="./images/icons/Facebook.png" alt="instagram" className="w-[20px] h-[20px] object-contain"/>

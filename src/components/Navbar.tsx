@@ -47,7 +47,7 @@ export default function Navbar() {
     <a
       key={item}
       href="#"
-      className="group flex items-center text-white text-[30px] leading-tight font-semibold py-2 overflow-hidden"
+      className="group flex items-center text-white lg:text-[30px] md:text-[28px] text-[20px] leading-tight font-semibold lg:py-2 md:py-2 py-0 overflow-hidden"
     >
       {/* LOGO - slides in from left */}
       <img

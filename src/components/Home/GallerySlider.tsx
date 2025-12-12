@@ -5,42 +5,45 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function GallerySlider() {
-  const settings = {
-    infinite: true,
-    speed: 4000,
-    autoplaySpeed: 0,
-    pauseOnHover: true,
-    cssEase: "linear",
-    autoplay: true,
-    slidesToShow: 8,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: false,
-    useTransform: false,
 
-    responsive: [
-      {
-        breakpoint: 1280,
-        settings: { slidesToShow: 6 },
-      },
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 5 },
-      },
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 4 },
-      },
-      {
-        breakpoint: 640,
-        settings: { slidesToShow: 3 },
-      },
-      {
-        breakpoint: 480,
-        settings: { slidesToShow: 2 },
-      },
-    ],
-  };
+  const settings = {
+  infinite: true,
+  speed: 4000,
+  autoplaySpeed: 0,
+  autoplay: true,
+  cssEase: "linear",
+  pauseOnHover: false,
+  slidesToScroll: 1,
+  arrows: false,
+  dots: false,
+  variableWidth: true,  
+  swipe: false,          
+  touchMove: false,     
+  draggable: false,      
+
+  responsive: [
+    {
+      breakpoint: 1280,
+      settings: { variableWidth: true },
+    },
+    {
+      breakpoint: 1024,
+      settings: { variableWidth: true },
+    },
+    {
+      breakpoint: 768,
+      settings: { variableWidth: true },
+    },
+    {
+      breakpoint: 640,
+      settings: { variableWidth: true },
+    },
+    {
+      breakpoint: 480,
+      settings: { variableWidth: true },
+    },
+  ],
+};
 
   // Tailwind utility for dot bullet
   const dotClass =

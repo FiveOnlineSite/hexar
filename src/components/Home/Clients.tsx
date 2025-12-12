@@ -13,13 +13,12 @@ type ClientsSectionProps = {
 export default function Clients ({ id, ...rest }: ClientsSectionProps){
 
 const settings = {
-  speed: 1000,
+  speed: 600,
   autoplay: true,
   infinite: true,
-  autoplaySpeed: 200,
+  autoplaySpeed: 1500,
   slidesToShow: 6,
   slidesToScroll: 1,
-  loop: true,
   arrows: false,
   dots:false,
   rows: 2,
@@ -28,25 +27,26 @@ const settings = {
       breakpoint: 991,
       settings: {
         slidesToShow: 4,
-        slidesToScroll: 1,
+        rows: 2,
       },
     },
     {
       breakpoint: 640,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 1,
+        rows: 2,
       },
     },
     {
       breakpoint: 480,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1,
+        rows: 2, // <-- KEEP rows consistent
       },
-    }
+    },
   ],
 };
+
 
     return (
         <section {...rest} id={id} className="clients-section lg:p-16 md:p-16 p-8">

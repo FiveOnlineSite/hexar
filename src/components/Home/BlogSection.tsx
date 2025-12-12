@@ -28,7 +28,7 @@ function NextArrow({ onClick }: any) {
         alt="right-arrow"
         width={48}
         height={48}
-        className="w-10 h-10 sm:w-10 sm:h-10 lg:w-12 lg:h-12"
+        className="w-8 h-8 lg:w-12 lg:h-12 md:w-12 md:h-12 sm:w-10 sm:h-10"
       />
     </button>
   );
@@ -51,7 +51,7 @@ function PrevArrow({ onClick }: any) {
         alt="left-arrow"
         width={48}
         height={48}
-        className="w-10 h-10 sm:w-10 sm:h-10 lg:w-12 lg:h-12"
+        className="w-8 h-8 lg:w-12 lg:h-12 md:w-12 md:h-12 sm:w-10 sm:h-10"
       />
     </button>
   );
