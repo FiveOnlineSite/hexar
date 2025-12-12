@@ -3,7 +3,6 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useEffect } from "react";
 
 type WhyUsProps = {
   id: string;
@@ -11,183 +10,136 @@ type WhyUsProps = {
   [key: string]: any;
 };
 
+export default function WhyUs({ id, ...rest }: WhyUsProps) {
+  const settings = {
+    infinite: true,
+    speed: 700,
+    autoplay: false,
+    mobileFirst: true, 
+    arrows: false,
+    dots: false,
 
-export default function WhyUs ({ id, ...rest }: WhyUsProps){
+    slidesToShow: 1,      
+    slidesToScroll: 1,
 
-    useEffect(() => {
-    const trigger = () => window.dispatchEvent(new Event("resize"));
-    setTimeout(trigger, 200);
-    setTimeout(trigger, 600);
-    window.addEventListener("orientationchange", trigger);
-    return () => window.removeEventListener("orientationchange", trigger);
-  }, []);
-  
-    const settings = {
-        speed: 1000,
-        autoplay: false,
-        infinite: false,
-        autoplaySpeed: 200,
-        slidesToShow: 2.5,
-        slidesToScroll: 1,
-        loop: false,
-        arrows: false,
-        dots:false,
-        responsive: [
-            {
-            breakpoint: 770,
-            settings: {
-                slidesToShow: 1.5,
-                slidesToScroll: 1,
-            },
+    responsive: [
+      {
+        breakpoint: 480, // Small phones
+        settings: {
+          slidesToShow: 1,
         },
-        ],
-        };
+      },
+      {
+        breakpoint: 770, // Tablets / mid screens
+        settings: {
+          slidesToShow: 1.5,
+        },
+      },
+      {
+        breakpoint: 1024, // Laptops / desktops
+        settings: {
+          slidesToShow: 2.5,
+        },
+      },
+    ],
+  };
 
-    return (
-        <section {...rest} id={id} className="why-us-section bg-[#0A0A0A] lg:py-16 md:py-16 py-8 h-full w-full bg-[url('/images/why-us-bg.png')] bg-no-repeat bg-right bg-[100%] bg-contain">
-            <div className="lg:px-16 md:px-16 px-8 pb-16">
-                <h2 className="lg:text-[56px] md:text-[40px] text-[36px] text-white font-bold lg:leading-base md:leading-tight leading-[40px] mb-5">Why Us?</h2>
-        <p className="lg:w-[50%] w-full text-[22px] leading-tight font-base">
-            Artistic mastery, reliable delivery, and complete production trust — all in one place.
+  return (
+    <section
+      {...rest}
+      id={id}
+      className="
+        why-us-section
+        bg-[#0A0A0A]
+        lg:py-16 md:py-16 py-8
+        w-full
+        bg-[url('/images/why-us-bg.png')]
+        bg-no-repeat bg-right bg-contain
+      "
+    >
+      <div className="lg:px-16 md:px-16 px-8 pb-16">
+        <h2 className="lg:text-[56px] md:text-[40px] text-[36px] text-white font-bold leading-tight mb-5">
+          Why Us?
+        </h2>
+
+        <p className="lg:w-[50%] w-full text-[22px] leading-tight font-base text-white">
+          Artistic mastery, reliable delivery, and complete production trust — all in one place.
         </p>
-         </div>
-                <Slider {...settings} className="lg:ps-6 md:ps-4 ps-0">
-                    <div className="
-                        group relative bg-[#000] rounded-lg overflow-hidden 
-                        xl:h-[494px] h-full transition-all duration-700 mx-5 block
-                    ">
-                        <div className="overflow-hidden">
-                            <img 
-                                src="./images/why-us-1.png"
-                                className="
-                                    w-full object-cover
-                                    xl:h-[420px] h-full xl:scale-110 scale-100
-                                    xl:group-hover:h-[300px]
-                                    group-hover:scale-100 
-                                    origin-center
-                                    transition-all duration-700 ease-out
-                                "
-                            />
-                        </div>
+      </div>
 
-                        <div className="
-                            xl:absolute relative
-                            xl:-bottom-[21%] bottom-0            
-                            xl:group-hover:bottom-[5%]      
-                            transition-all duration-700 ease-out
-                            py-2 pl-4 pr-8
-                        ">
-                            <h2 className="lg:text-[32px] md:text-[25px] text-[20px] font-semibold leading-tight py-2">
-                                Proven Global Track Record
-                            </h2>
-                            <p className="lg:text-[18px] md:text-[16px] text-[14px] font-light leading-base pb-4">
-                                Trusted by leading studios, game developers, 
-                                and production houses worldwide for consistently high-quality 3D Art.
-                            </p>
-                        </div>
-                    </div>
+      <Slider {...settings} className="px-4">
+        {/* CARD 1 */}
+        <div className="group bg-black rounded-lg overflow-hidden mx-3">
+          <div className="overflow-hidden">
+            <img
+              src="/images/why-us-1.png"
+              className="
+                w-full object-cover
+                h-[320px] lg:h-[420px]
+                transition-all duration-700
+                group-hover:scale-105
+              "
+            />
+          </div>
 
-                    <div className="
-                        group relative bg-[#000] rounded-lg overflow-hidden 
-                        xl:h-[494px] h-full transition-all duration-700 mx-5
-                    ">
-                        <div className="overflow-hidden">
-                            <img 
-                                src="./images/why-us-2.png"
-                                className="
-                                    w-full object-cover
-                                    xl:h-[420px] h-full xl:scale-110 scale-100
-                                    xl:group-hover:h-[300px]
-                                    origin-center
-                                    transition-all duration-700 ease-out
-                                "
-                            />
-                        </div>
+          <div className="p-4">
+            <h2 className="lg:text-[28px] md:text-[24px] text-[20px] font-semibold text-white">
+              Proven Global Track Record
+            </h2>
+            <p className="lg:text-[18px] md:text-[16px] text-[14px] text-white/80 mt-2">
+              Trusted by leading studios worldwide for consistently high-quality 3D art.
+            </p>
+          </div>
+        </div>
 
-                        <div className="
-                            xl:absolute relative
-                            xl:-bottom-[21%] bottom-0            
-                            xl:group-hover:bottom-[5%]     
-                            transition-all duration-700 ease-out
-                            py-2 pl-4 pr-8
-                        ">
-                            <h2 className="lg:text-[32px] md:text-[25px] text-[20px] font-semibold leading-tight py-2">
-                                Artistic Mastery
-                            </h2>
-                            <p className="lg:text-[18px] md:text-[16px] text-[14px] font-light leading-base pb-4">
-                                Our team blends world-class artistry with deep technical expertise, delivering 3D work that is both visually stunning and production-ready.
-                            </p>
-                        </div>
-                    </div>
+        {/* CARD 2 */}
+        <div className="group bg-black rounded-lg overflow-hidden mx-3">
+          <div className="overflow-hidden">
+            <img
+              src="/images/why-us-2.png"
+              className="
+                w-full object-cover
+                h-[320px] lg:h-[420px]
+                transition-all duration-700
+                group-hover:scale-105
+              "
+            />
+          </div>
 
-                    <div className="
-                        group relative bg-[#000] rounded-lg overflow-hidden 
-                        xl:h-[494px] h-full transition-all duration-700 mx-5
-                    ">
-                        <div className="overflow-hidden">
-                            <img 
-                                src="./images/why-us-2.png"
-                                className="
-                                    w-full object-cover
-                                    xl:h-[420px] h-full xl:scale-110 scale-100
-                                    xl:group-hover:h-[300px]
-                                    origin-center
-                                    transition-all duration-700 ease-out
-                                "
-                            />
-                        </div>
+          <div className="p-4">
+            <h2 className="lg:text-[28px] md:text-[24px] text-[20px] font-semibold text-white">
+              Artistic Mastery
+            </h2>
+            <p className="lg:text-[18px] md:text-[16px] text-[14px] text-white/80 mt-2">
+              Stunning visuals backed by deep technical production expertise.
+            </p>
+          </div>
+        </div>
 
-                        <div className="
-                            xl:absolute relative
-                            xl:-bottom-[21%] bottom-0            
-                            xl:group-hover:bottom-[5%]       
-                            transition-all duration-700 ease-out
-                            py-2 pl-4 pr-8
-                        ">
-                            <h2 className="lg:text-[32px] md:text-[25px] text-[20px] font-semibold leading-tight py-2">
-                                Artistic Mastery
-                            </h2>
-                            <p className="lg:text-[18px] md:text-[16px] text-[14px] font-light leading-base pb-4">
-                                Our team blends world-class artistry with deep technical expertise, delivering 3D work that is both visually stunning and production-ready.
-                            </p>
-                        </div>
-                    </div>
+        {/* CARD 3 */}
+        <div className="group bg-black rounded-lg overflow-hidden mx-3">
+          <div className="overflow-hidden">
+            <img
+              src="/images/why-us-3.png"
+              className="
+                w-full object-cover
+                h-[320px] lg:h-[420px]
+                transition-all duration-700
+                group-hover:scale-105
+              "
+            />
+          </div>
 
-                     <div className="
-                        group relative bg-[#000] rounded-lg overflow-hidden 
-                        xl:h-[494px] h-full transition-all duration-700 mx-5
-                    ">
-                        <div className="overflow-hidden">
-                            <img 
-                                src="./images/why-us-2.png"
-                                className="
-                                    w-full object-cover
-                                    xl:h-[420px] h-full xl:scale-110 scale-100
-                                    xl:group-hover:h-[300px]
-                                    origin-center
-                                    transition-all duration-700 ease-out
-                                "
-                            />
-                        </div>
-
-                        <div className="
-                            xl:absolute relative
-                            xl:-bottom-[21%] bottom-0            
-                            xl:group-hover:bottom-[5%]  
-                            transition-all duration-700 ease-out
-                            py-2 pl-4 pr-8
-                        ">
-                            <h2 className="lg:text-[32px] md:text-[25px] text-[20px] font-semibold leading-tight py-2">
-                                Artistic Mastery
-                            </h2>
-                            <p className="lg:text-[18px] md:text-[16px] text-[14px] font-light leading-base pb-4">
-                                Our team blends world-class artistry with deep technical expertise, delivering 3D work that is both visually stunning and production-ready.
-                            </p>
-                        </div>
-                    </div>
-                </Slider>
-
-           
-        </section>
-    )
+          <div className="p-4">
+            <h2 className="lg:text-[28px] md:text-[24px] text-[20px] font-semibold text-white">
+              Reliable Production Pipeline
+            </h2>
+            <p className="lg:text-[18px] md:text-[16px] text-[14px] text-white/80 mt-2">
+              Precision workflows that ensure on-time, polished deliverables.
+            </p>
+          </div>
+        </div>
+      </Slider>
+    </section>
+  );
 }
