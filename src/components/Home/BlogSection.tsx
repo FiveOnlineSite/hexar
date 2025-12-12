@@ -279,7 +279,7 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
           {/* EACH CARD MUST BE A SEPARATE SLIDE */}
           {posts.map((post, i) => (
             <SwiperSlide key={i}>
-              <div className="hover:shadow-[0_2px_20px_0_#FFFFFF40] rounded-xl overflow-hidden m-2 transition-all duration-700">
+              <div className="hover:shadow-[0_2px_20px_0_#FFFFFF40] rounded-xl overflow-hidden m-2 transition-all duration-700 group">
                 <div className="h-[250px] overflow-hidden">
                   <img
                     src={post.img}
