@@ -74,7 +74,7 @@ export default function BlogSection({ id, ...rest }: BlogSectionProps) {
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
+        slidesToScroll: 1,
         },
       },
     ],
