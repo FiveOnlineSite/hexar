@@ -333,9 +333,9 @@ export default function Hero() {
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    beforeChange: (current, next) => {
-      animateImage(next);
-    },
+     beforeChange: (current: number, next: number) => {
+    animateImage(next);
+  },
   };
 
     useEffect(() => {
