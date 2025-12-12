@@ -29,7 +29,7 @@ export default function FAQSection ({ id, ...rest }: FAQSectionProps) {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState<number | null></number>(0);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
   const imageRef = useRef(null);
   const sectionRef = useRef(null);
 
