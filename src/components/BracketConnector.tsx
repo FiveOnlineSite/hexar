@@ -12,17 +12,31 @@ export default function BracketConnector({ refs }: { refs: ConnectorRefs }) {
         viewBox="0 0 480 80"
         fill="none"
       >
-        <path ref={refs.main} d="M240 0 V30" stroke="white" strokeWidth="2" />
+        <path
+          ref={(el) => {
+            // eslint-disable-next-line react-hooks/immutability
+            refs.main.current = el;
+          }}
+          d="M240 0 V30"
+          stroke="white"
+          strokeWidth="2"
+        />
 
         <path
-          ref={refs.left}
+          ref={(el) => {
+            // eslint-disable-next-line react-hooks/immutability
+            refs.left.current = el;
+          }}
           d="M240 30 H80 Q70 30 70 40 V60"
           stroke="white"
           strokeWidth="2"
         />
 
         <path
-          ref={refs.right}
+          ref={(el) => {
+            // eslint-disable-next-line react-hooks/immutability
+            refs.right.current = el;
+          }}
           d="M240 30 H400 Q410 30 410 40 V60"
           stroke="white"
           strokeWidth="2"

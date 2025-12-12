@@ -4,7 +4,7 @@ import { useEffect } from "react";
 export default function SwordEffects() {
   useEffect(() => {
 
-    const createBlast = (x, y) => {
+    const createBlast = (x: number, y: number) => {
       // Flash burst
       const flash = document.createElement("div");
       flash.className = "blast-flash";
@@ -49,7 +49,7 @@ export default function SwordEffects() {
       setTimeout(() => smoke.remove(), 1000);
     };
 
-    const handleClick = (e) => {
+    const handleClick = (e: MouseEvent) => {
       createBlast(e.pageX, e.pageY);
     };
 
