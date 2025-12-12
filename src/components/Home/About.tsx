@@ -162,11 +162,11 @@ export default function About({ id, ...rest }: AboutProps) {
               <p className="text-[10px] font-light text-center">The Parent Organisation</p>
             </div>
 
-            <div className="lg:pt-[65px] md:pt-[35px] pt-0">
+            <div className="lg:pt-[65px] md:pt-[35px] pt-0 flex w-full justify-center">
               <BracketConnector refs={{ main: mainPath, left: leftPath, right: rightPath }} />
             </div>
 
-            <div className="flex justify-evenly absolute bottom-0 w-full">
+            <div className="flex justify-between absolute bottom-0 w-full px-8">
               <div className="flex flex-col items-center">
                 <img
                   src="/images/icons/head-hoppers-logo.png"
