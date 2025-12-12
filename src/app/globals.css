@@ -108,15 +108,6 @@ body {
   100% { opacity: 0; transform: translate(-50%, -50%) scale(1.8); }
 }
 
-.slick-slider,
-.slick-list,
-.slick-track {
-  width: 100% !important;
-  max-width: 100% !important;
-}
-.slick-slide > div {
-  width: 100% !important;
-}
 
 .contrib-height {
   height: 480px; /* base mobile */

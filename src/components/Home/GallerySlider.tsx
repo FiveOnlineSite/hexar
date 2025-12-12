@@ -16,7 +16,6 @@ export default function GallerySlider() {
   slidesToScroll: 1,
   arrows: false,
   dots: false,
-
   variableWidth: true,
   useTransform: false,   // 🔥 REQUIRED for mobile
   swipe: false,
@@ -27,7 +26,6 @@ export default function GallerySlider() {
 };
 
 
-  // Tailwind utility for dot bullet
   const dotClass =
     "relative pl-6 before:content-[''] before:w-2 before:h-2 " +
     "before:bg-white before:rounded-full before:absolute before:left-0 " +
