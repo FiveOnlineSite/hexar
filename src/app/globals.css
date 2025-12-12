@@ -27,9 +27,11 @@ body {
   border: 0.4px solid white;
 }
 
-.clients-section .swiper-wrapper .swiper-slide{
+.clients-section .swiper-wrapper .swiper-slide, .why-us-section .swiper-wrapper .swiper-slide, .blog-section .swiper-wrapper .swiper-slide {
   margin: 0 !important;
 }
+
+
 
 .animate-img-wrapper {
   display: inline-block;

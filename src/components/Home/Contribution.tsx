@@ -12,7 +12,7 @@ export default function Contribution({ id, ...rest }: ContributionProps){
         <section {...rest} id={id} className="contribution-section bg-[#0A0A0A] lg:p-16 md:p-16 p-8 h-full w-full">
             <div className="lg:flex block items-center justify-between w-full">
                 <h2 className="lg:text-[56px] md:text-[40px] text-[36px] lg:mb-16 mb-8 text-white font-bold leading-tight">Our Contribution</h2>
-                <a href="#" className="inline-block text-[18px] leading-tight font-semibold py-4 px-14 mb-8 text-[#D50000] border-[1.8px] rounded-xl border-[#D50000]">Explore</a>
+                <a href="#" className="inline-block lg:text-[18px] md:text-[18px] text-[16px] leading-tight font-semibold lg:py-4 lg:px-14 md:py-14 py-3 px-5 md:px-14 mb-8 text-[#D50000] border-[1.8px] lg:rounded-xl md:rounded-xl rounded-lg border-[#D50000]">Explore</a>
             </div>
             <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-5 md:gap-6 gap-5 mb-5">
                <a href="#" className="relative group my-2 block lg:overflow-visible md:overflow-visible overflow-hidden">

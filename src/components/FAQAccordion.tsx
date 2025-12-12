@@ -20,7 +20,7 @@ export default function FAQAccordion({ faq, isOpen, onToggle }: FAQAccordionProp
         onClick={onToggle}
         className="w-full flex justify-between items-center text-left"
       >
-        <span className="lg:text-[20px] text-[18px] font-base text-white">
+        <span className="lg:text-[20px] md:text-[18px] text-[16px] font-base text-white">
           {faq.question}
         </span>
 
@@ -37,7 +37,7 @@ export default function FAQAccordion({ faq, isOpen, onToggle }: FAQAccordionProp
       </button>
 
       <div
-        className={`pt-2 text-[#ffffffcc] text-[15px] leading-relaxed transition-all duration-700 ease-in-out ${
+        className={`pt-2 text-[#ffffffcc] lg:text-[15px] md:text-[15px] text-[14px] leading-relaxed transition-all duration-700 ease-in-out ${
           isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >

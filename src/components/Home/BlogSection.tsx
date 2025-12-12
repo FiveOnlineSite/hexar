@@ -228,7 +228,7 @@ export default function BlogSection({ id, ...rest }: BlogSectionProps) {
         <button
           id="custom-prev"
           className="absolute xl:top-[65%] lg:top-[85%] top-[5%] 
-lg:-left-[58%] left-[5%]
+lg:-left-[58%] left-[7%]
 rounded-full transition-all duration-700
 hover:shadow-[0_2px_20px_0_#FFFFFF40]"
         >
@@ -238,7 +238,7 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
         <button
           id="custom-next"
           className="absolute xl:top-[65%] lg:top-[85%] top-[5%] 
-   xl:-left-[50%] lg:-left-[45%] left-[18%]
+   xl:-left-[50%] lg:-left-[45%] left-[20%]
   rounded-full transition-all duration-700
    hover:shadow-[0_2px_20px_0_#FFFFFF40]"
         >
@@ -272,6 +272,8 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
             0: { slidesPerView: 1 },
             640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
+            1024: { slidesPerView: 2 },
+
           }}
           className="mySwiper"
         >

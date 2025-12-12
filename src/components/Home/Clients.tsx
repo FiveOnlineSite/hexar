@@ -123,7 +123,7 @@ export default function Clients({ id, ...rest }: ClientsSectionProps) {
     <section
       {...rest}
       id={id}
-      className="clients-section px-0 lg:px-16 md:px-16 p-8 overflow-hidden"
+      className="clients-section px-0 lg:py-16 md:py-16 py-8 overflow-hidden"
     >
       <h2 className="lg:text-[56px] md:text-[40px] text-[36px] text-center lg:mb-16 mb-8 text-white font-bold leading-tight">
         Our Clients
@@ -137,7 +137,7 @@ export default function Clients({ id, ...rest }: ClientsSectionProps) {
         }}
         loop={true}
         speed={900}
-        spaceBetween={10}
+        spaceBetween={0}
         slidesPerView={6}
         breakpoints={{
           1200: { slidesPerView: 6 },

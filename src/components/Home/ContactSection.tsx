@@ -21,7 +21,7 @@ export default function ContactSection ({ id, ...rest }: ContactSectionProps){
             Say <span className="text-[#D50000]">Hello</span>! &<br /> Let’s Create Together
         </h2>
 
-        <a href="#" className="lg:px-10 px-8 lg:py-5 py-4 rounded-xl mt-16 bg-[#D50000] lg:text-[20px] md:text-[18px] leading-base font-semibold">
+        <a href="#" className="lg:px-10 md:px-8 px-6 lg:py-5 md:py-4 py-3 rounded-xl mt-16 bg-[#D50000] lg:text-[20px] md:text-[18px] text-[16px] leading-base font-semibold">
             Contact Us
         </a>
     </div>
