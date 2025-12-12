@@ -227,7 +227,7 @@ export default function BlogSection({ id, ...rest }: BlogSectionProps) {
         {/* CUSTOM ARROWS */}
         <button
           id="custom-prev"
-          className="absolute xl:top-[65%] lg:top-[85%] -top-[15%]
+          className="absolute xl:top-[65%] lg:top-[85%] top-[5%] 
 lg:-left-[58%] left-[5%]
 rounded-full transition-all duration-700
 hover:shadow-[0_2px_20px_0_#FFFFFF40]"
@@ -237,7 +237,7 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
 
         <button
           id="custom-next"
-          className="absolute xl:top-[65%] lg:top-[85%] -top-[15%]
+          className="absolute xl:top-[65%] lg:top-[85%] top-[5%] 
    xl:-left-[50%] lg:-left-[45%] left-[18%]
   rounded-full transition-all duration-700
    hover:shadow-[0_2px_20px_0_#FFFFFF40]"
