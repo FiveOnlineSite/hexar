@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -10,174 +11,84 @@ type ClientsSectionProps = {
   [key: string]: any;
 };
 
-export default function Clients ({ id, ...rest }: ClientsSectionProps){
+export default function Clients({ id, ...rest }: ClientsSectionProps) {
 
-const settings = {
-  speed: 600,
-  autoplay: true,
-  infinite: true,
-  autoplaySpeed: 1800,
+  // 🔥 Fix for real mobile devices (Safari / Chrome)
+  useEffect(() => {
+    const trigger = () => window.dispatchEvent(new Event("resize"));
+    setTimeout(trigger, 200);
+    setTimeout(trigger, 600);
+    window.addEventListener("orientationchange", trigger);
+    return () => window.removeEventListener("orientationchange", trigger);
+  }, []);
 
-  rows: 2,
-  slidesPerRow: 1,   // 💥 REQUIRED FIX
+  const settings = {
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 1800,
+    speed: 600,
 
-  slidesToShow: 6,
-  slidesToScroll: 6,
+    rows: 2,
+    slidesPerRow: 1,
 
-  arrows: false,
-  dots: false,
+    mobileFirst: true,  // 🔥 REQUIRED FOR REAL RESPONSIVE
 
-  responsive: [
-    {
-      breakpoint: 991,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        rows: 2,
-        slidesPerRow: 1,
+    slidesToShow: 1,  // mobile default
+    slidesToScroll: 1,
+
+    arrows: false,
+    dots: false,
+
+    responsive: [
+      {
+        breakpoint: 640,  // Tablets
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
       },
-    },
-    {
-      breakpoint: 640,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        rows: 2,
-        slidesPerRow: 1,
+      {
+        breakpoint: 991, // Small laptops
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
       },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        rows: 2,
-        slidesPerRow: 1,
+      {
+        breakpoint: 1200, // Desktop
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 6,
+        },
       },
-    },
-  ],
-};
+    ],
+  };
 
-    return (
-        <section {...rest} id={id} className="clients-section px-0 lg:px-16 md:px-16 p-8">
-                <h2 className="lg:text-[56px] md:text-[40px] text-[36px] text-center lg:mb-16 mb-8 text-white font-bold leading-tight">Our Clients</h2>
+  return (
+    <section {...rest} id={id} className="clients-section px-0 lg:px-16 md:px-16 p-8 overflow-hidden">
 
-             <Slider {...settings} className="h-full">
-  <div>
-    <img 
-    src="/images/clients/client-1.png" 
-    alt="client" 
-    className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
-  />
-  </div>
-  
- <div>
-  <img 
-    src="/images/clients/client-3.png" 
-    alt="client" 
-    className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
-  />
- </div>
-  
- <div>
-  <img 
-    src="/images/clients/client-2.png" 
-    alt="client" 
-    className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
-  />
- </div>
-  
- <div>
-   <img 
-    src="/images/clients/client-4.png" 
-    alt="client" 
-    className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
-  />
- </div>
- 
- <div>
-   <img 
-    src="/images/clients/client-6.png" 
-    alt="client" 
-    className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
-  />
- </div>
- 
- <div>
-  <img 
-    src="/images/clients/client-5.png" 
-    alt="client" 
-    className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
-  />
- </div>
-  
- <div>
-  <img 
-    src="/images/clients/client-8.png" 
-    alt="client" 
-    className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
-  />
- </div>
-  
- <div>
-  <img 
-    src="/images/clients/client-7.png" 
-    alt="client" 
-    className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
-  />
- </div>
-  
- <div>
-   <img 
-    src="/images/clients/client-10.png" 
-    alt="client" 
-    className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
-  />
- </div>
- 
- <div>
-  <img 
-    src="/images/clients/client-9.png" 
-    alt="client" 
-    className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
-  />
- </div>
-  
- <div>
-  <img 
-    src="/images/clients/client-12.png" 
-    alt="client" 
-    className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
-  />
- </div>
-  
- <div>
-  <img 
-    src="/images/clients/client-11.png" 
-    alt="client" 
-    className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
-  />
- </div>
-  
- <div>
-  <img 
-    src="/images/clients/client-14.png" 
-    alt="client" 
-    className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
-  />
- </div>
-  
- <div>
-  <img 
-    src="/images/clients/client-13.png" 
-    alt="client" 
-    className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
-  />
- </div>
-  
+      <h2 className="lg:text-[56px] md:text-[40px] text-[36px] text-center lg:mb-16 mb-8 text-white font-bold leading-tight">
+        Our Clients
+      </h2>
 
-</Slider>
+      <Slider {...settings} className="h-full">
 
-        </section>
-    )
+        {/* All clients inside <div> wrappers */}
+        {[
+          "client-1","client-3","client-2","client-4","client-6",
+          "client-5","client-8","client-7","client-10","client-9",
+          "client-12","client-11","client-14","client-13",
+        ].map((name, i) => (
+          <div key={i}>
+            <img
+              src={`/images/clients/${name}.png`}
+              alt={name}
+              className="h-[172px] p-2 w-full object-contain transition-transform duration-700 ease-out hover:scale-50"
+            />
+          </div>
+        ))}
+
+      </Slider>
+    </section>
+  );
 }
