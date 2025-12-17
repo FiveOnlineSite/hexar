@@ -9,8 +9,12 @@ export default function Navbar() {
   return (
     <section className="navbar-section w-full block">
       {/* Top Bar */}
-      <div className="flex items-center justify-between lg:px-16 md:px-8 px-6 py-6 w-full fixed top-0 left-0 z-50">
-        <img src="/images/icons/hexar-logo.png" alt="logo" className="h-[70px] w-auto" />
+      <div className="flex items-center justify-between lg:px-16 md:px-8 px-4 py-5 w-full fixed top-0 left-0 z-50">
+        <img
+          src="/images/icons/hexar-logo.png"
+          alt="logo"
+          className="h-[60px] md:h-[70px] w-auto"
+        />
 
         <button onClick={() => setOpen(true)} className="relative z-50">
           <img src="/images/icons/menu-line.png" className="h-8 w-auto" />
