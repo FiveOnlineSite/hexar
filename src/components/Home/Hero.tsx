@@ -356,7 +356,7 @@ export default function Hero() {
   return (
     <section ref={heroRef} className="hero-section w-full h-screen relative overflow-hidden">
 
-      <Slider ref={sliderRef} {...settings} className="h-full relative">
+      <Slider ref={sliderRef} {...settings} className="h-full w-full relative">
 
         {/* ---------------- SLIDE 1 ---------------- */}
         <div className="relative h-screen w-full">

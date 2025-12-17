@@ -68,7 +68,7 @@ export default function Footer () {
 
                 <div className="tpn-logo flex flex-col items-start justify-start">
                     <img src="./images/icons/footer-tpn-logo.png" alt="footer-logo" className="w-[271px] h-full object-contain" />
-                        
+                            
                     <div className="contact-links">
                         <a href="contact@hexarstudios.com" className="text-[15px] font-semibold text-[#0A0A0A] leading-base">contact@hexarstudios.com</a>
                         <div className="text-[15px] font-semibold text-[#0A0A0A] leading-base flex items-center justify-start"><h6>Phone:-</h6><a href="+918008378964">+91 8008378964</a></div>
