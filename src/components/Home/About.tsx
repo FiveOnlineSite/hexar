@@ -26,94 +26,41 @@ export default function About({ id, ...rest }: AboutProps) {
   const rightPath = useRef<SVGPathElement | null>(null);
 
   useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      // Pick whichever background is visible at this breakpoint
-      const bgElement =
-        window.innerWidth >= 1024
-          ? bgDesktopRef.current
-          : bgMobileRef.current;
+  const ctx = gsap.context(() => {
+    const isDesktop = window.innerWidth >= 1024;
+    const bgElement = isDesktop ? bgDesktopRef.current : bgMobileRef.current;
 
-      if (!bgElement) return;
+    if (!bgElement) return;
 
-      gsap.set(bgElement, { opacity: 0, x: 150 });
+    // Initial state
+    gsap.set(bgElement, {
+      opacity: 0,
+      x: 120,
+      willChange: "transform, opacity",
+    });
 
-      const animateBG = () => {
-        gsap.to(bgElement, {
-          opacity: 1,
-          x: 0,
-          duration: 1.3,
-          ease: "power3.out",
-        });
-      };
-
-      const resetBG = () => {
-        gsap.set(bgElement, { opacity: 0, x: 150 });
-      };
-
-      ScrollTrigger.create({
+    // Smooth reversible animation
+    const tl = gsap.timeline({
+      scrollTrigger: {
         trigger: sectionRef.current,
         start: "top 80%",
-        onEnter: () => {
-          resetBG();
-          animateBG();
-        },
-        onEnterBack: () => {
-          resetBG();
-          animateBG();
-        },
-        onLeaveBack: resetBG,
-      });
+        end: "bottom 60%",
+        scrub: 1,              // smooth + reversible
+        invalidateOnRefresh: true,
+      },
+    });
 
-      // --------------------------
-      //   SVG PATH ANIMATIONS
-      // --------------------------
-      const paths = [mainPath.current, leftPath.current, rightPath.current];
+    tl.to(bgElement, {
+      opacity: 1,
+      x: 0,
+      duration: 1,
+      ease: "power2.out",
+    });
+  }, sectionRef);
 
-      const setInitialPaths = () => {
-        paths.forEach((p) => {
-          if (!p) return;
-          const len = p.getTotalLength();
-          gsap.set(p, { strokeDasharray: len, strokeDashoffset: len });
-        });
-      };
+  return () => ctx.revert();
+}, []);
 
-      setInitialPaths();
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          end: "bottom 60%",
-          scrub: 1,
-          onEnter: () => {
-            setInitialPaths();
-            tl.restart();
-          },
-          onEnterBack: () => {
-            setInitialPaths();
-            tl.restart();
-          },
-          onLeaveBack: setInitialPaths,
-        },
-      });
-
-      tl.to(mainPath.current, {
-        strokeDashoffset: 0,
-        duration: 1,
-        ease: "power2.out",
-      }).to(
-        [leftPath.current, rightPath.current],
-        {
-          strokeDashoffset: 0,
-          duration: 1.2,
-          ease: "power2.out",
-        },
-        "-=0.3"
-      );
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
 
   return (
     <section {...rest} id={id} ref={sectionRef} className="about-section h-full">
@@ -137,8 +84,8 @@ export default function About({ id, ...rest }: AboutProps) {
           ref={bgMobileRef}
           src="/images/about-bg.png"
           alt="bg"
-          className="xl:hidden lg:hidden block w-full h-full pe-0"
-        />
+         className="relative top-0 right-0 w-full h-full object-contain xl:hidden lg:hidden block pointer-events-none"
+ />
 
           <div className="lg:w-[40%] w-full mb-2 backdrop-blur-md lg:px-16 lg:pt-16 lg:pb-8 md:px-16 md:pt-16 pb-4 pt-8 px-8">
             <p className="pt-4 pb-2 text-[15px] font-light leading-tight">

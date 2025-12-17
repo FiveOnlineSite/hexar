@@ -50,6 +50,12 @@ export default function SwordEffects() {
     };
 
     const handleClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+
+      // Disable effect for navbar / menu / buttons that have data-no-blast
+      if (target.closest("[data-no-blast]")) return;
+
+      // Run blast
       createBlast(e.pageX, e.pageY);
     };
 

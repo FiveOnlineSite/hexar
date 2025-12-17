@@ -16,45 +16,45 @@ type SolutionProps = {
 export default function Solution({ id, ...rest }:SolutionProps){
 
     const sectionRef = useRef(null);
-    const imageRef = useRef(null);
+    const bgDesktopRef = useRef(null);
+    const bgMobileRef = useRef(null);
 
-  useLayoutEffect(() => {
-  gsap.registerPlugin(ScrollTrigger);
-
+useLayoutEffect(() => {
   const ctx = gsap.context(() => {
-    gsap.set(imageRef.current, {
-  opacity: 0,
-  scale: 0.3,
-  transformOrigin: "100% 100%",  // bottom-right
-});
+    const isDesktop = window.innerWidth >= 1024;
+    const element = isDesktop ? bgDesktopRef.current : bgMobileRef.current;
 
-     gsap.to(imageRef.current, {
-      backgroundPositionX: "100%", // final = right side
+    if (!element) return;
+
+    gsap.set(element, {
+      opacity: 0,
+      scale: 0.7,
+      x: 120,
+      y: 80,
+      willChange: "transform, opacity",
+      transformOrigin: "100% 100%",
+    });
+
+    const tl = gsap.timeline({
+      ease: "power2.out",
+      paused: true,
+    });
+
+    tl.to(element, {
       opacity: 1,
-      duration: 1.8,
-     ease: "sine.out",
-      scrollTrigger: {
+      scale: 1,
+      x: 0,
+      y: 0,
+      duration: 1.6,
+    });
+
+    ScrollTrigger.create({
       trigger: sectionRef.current,
       start: "top 80%",
-      end: "bottom 60%",
+      end: "bottom 80%",
       scrub: 1,
-
-      onEnter: () => {
-        gsap.to(imageRef.current, {
-        opacity: 1,
-        scale: 1,
-        duration: 1.8,
-        ease: "back.out(1.7)",
-        transformOrigin: "100% 100%",  // bottom-right
-        });
-      },
-      onLeaveBack: () => {
-        gsap.set(imageRef.current, {
-          opacity: 0,
-          scale: 0.3,
-        });
-      },
-    },
+      animation: tl,
+      invalidateOnRefresh: true,
     });
   }, sectionRef);
 
@@ -62,18 +62,19 @@ export default function Solution({ id, ...rest }:SolutionProps){
   return () => ctx.revert();
 }, []);
 
+
     return(
        <section {...rest} id={id} ref={sectionRef} className="solution-section relative h-full w-full overflow-hidden">
   
-  <div
-    ref={imageRef}
-    className="absolute right-0 top-0 bg-no-repeat bg-right-top bg-contain bg-[length:900px] w-full h-full xl:block lg:block hidden"
-    style={{ backgroundImage: "url('/images/end-to-end-bg.png')" }}
-  ></div>
+  <img
+  ref={bgDesktopRef}
+  src="/images/end-to-end-bg.png"
+  className="absolute right-0 top-0 w-[900px] h-auto object-contain xl:block lg:block hidden"
+/>
   <div className="relative z-10 flex items-center">
                 <div className="lg:w-[65%] w-full lg:pb-16 md:pb-16 pb-8">
                     <h2 className="lg:text-[56px] md:text-[40px] text-[36px] text-white font-bold lg:leading-tight md:leading-tight leading-[40px] lg:px-16 lg:pt-16 lg:pb-8 md:px-16 md:pt-16 pb-4 pt-8 px-8"><span className="text-[#D50000]">End-to-End </span>3D Art Solutions for Film, Games & Beyond</h2>
-                    <img ref={imageRef} src="/images/end-to-end-bg.png" alt="bg" className="xl:hidden lg:hidden block w-full h-full pe-0"/>
+                    <img ref={bgMobileRef} src="/images/end-to-end-bg.png" alt="bg" className="relative top-0 right-0 xl:hidden lg:hidden block w-full h-full pe-0"/>
                     <div className="lg:w-[62%] w-full lg:px-16 md:px-16 px-8">
                         <p className="my-6 text-[15px] font-light leading-base">We partner with leading studios, game developers, and production houses worldwide to craft exceptional 3D art that stands out. From the spark of a 2D concept to high-resolution sculpts, highly detailed VFX assets and fully optimized in-game assets, our pipeline blends artistic passion with technical mastery. </p>
 
