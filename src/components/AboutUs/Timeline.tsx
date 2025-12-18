@@ -22,8 +22,8 @@ export default function Timeline() {
     let animating = false;
 
     const CARD_WIDTH = cards[0].getBoundingClientRect().width;
-    const PEEK = 48;     // visible part of next card
-    const OFFSET = 22;   // depth offset for stacked cards
+    const PEEK = 0;     // visible part of next card
+    const OFFSET = 30;   // depth offset for stacked cards
 
     // 🔹 INITIAL STATE
     cards.forEach((card, i) => {
@@ -161,7 +161,7 @@ export default function Timeline() {
 // 🔹 CARD COMPONENT
 function Card({ title, text }: { title: string; text: string }) {
   return (
-    <div className="absolute top-0 left-0 min-w-[70vw] bg-[#0A0A0A] border border-white rounded-2xl p-10 flex justify-between items-center">
+    <div className="absolute mx-6 top-0 left-0 min-w-[70vw] bg-[#0A0A0A] border border-white rounded-2xl p-10 flex justify-between items-center">
       <div className="w-[60%]">
         <h2 className="text-white text-[42px] font-bold mb-6">{title}</h2>
         <p className="text-white/80 text-[16px] leading-relaxed">{text}</p>
