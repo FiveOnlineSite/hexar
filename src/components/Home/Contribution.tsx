@@ -31,7 +31,7 @@ export default function Contribution({ id, ...rest }: ContributionProps){
                     absolute top-1/2 left-1/2 
                     -translate-x-1/2 -translate-y-1/2 
                     bg-[linear-gradient(145.81deg,#D50000_0.47%,#400000_40.83%,#000000_99.53%)]
-                    rounded-xl xl:h-[370px] lg:h-[365px] md:h-[410px] sm:h-[550px] xs:h-[430px] w-full
+                    rounded-xl contrib-height w-[75%]
                     transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]
                     group-hover:-rotate-[8deg]
                     "></div>
@@ -40,7 +40,7 @@ export default function Contribution({ id, ...rest }: ContributionProps){
                     absolute top-1/2 left-1/2 
                     -translate-x-1/2 -translate-y-1/2
                     bg-[linear-gradient(145.81deg,#D50000_0.47%,#400000_40.83%,#000000_99.53%)]
-                    rounded-xl xl:h-[370px] lg:h-[365px] md:h-[410px] sm:h-[550px] xs:h-[430px] w-full
+                    rounded-xl contrib-height w-[75%]
                     transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]
                     group-hover:rotate-[8deg]
                     "></div>
@@ -51,10 +51,10 @@ export default function Contribution({ id, ...rest }: ContributionProps){
                     absolute left-0 right-0 
                     -bottom-[10px] 
                     group-hover:bottom-0 opacity-0 group-hover:opacity-100
-                    transition-all duration-700 
-                    z-20 contrib-height overflow-hidden
+                    transition-all duration-700 flex items-center justify-center
+                    z-20 contrib-height overflow-hidden 
                 ">
-                    <div className="bg-[#00000099] w-full contrib-height rounded-xl"></div>
+                    <div className="bg-[#00000099] w-[75%] contrib-height rounded-xl"></div>
 
                     <div className="group/button flex items-center text-[20px] text-white leading-tight font-semibold absolute bottom-6 left-6">
 
@@ -94,7 +94,7 @@ export default function Contribution({ id, ...rest }: ContributionProps){
                     <img 
                     src="/images/contributions/contribution-1.png"
                     alt="realtime-hair"
-                   className="rounded-xl object-contain w-full contrib-height relative z-20"
+                   className="rounded-xl object-contain w-full h-full contrib-height relative z-20"
                     />
                 </div>
 

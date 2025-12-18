@@ -8,9 +8,9 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+/* * {
   cursor: url('/images/icons/sword.png'), auto !important;
-}
+} */
 
 html, body, #__next {
   height: 100%;
@@ -113,22 +113,23 @@ body {
   100% { opacity: 0; transform: translate(-50%, -50%) scale(1.8); }
 }
 
-
 .contrib-height {
-  height: 480px; /* base mobile */
+  height: 480px; 
 
   /* xs */
   @media (max-width: 480px) { height: 420px; }
 
   /* xxs */
-  @media (max-width: 400px) { height: 400px; }
+   @media (max-width: 400px) { height: 400px; } 
 
   /* mini screens */
-  @media (max-width: 350px) { height: 380px; }
+ @media (max-width: 350px) { height: 380px; }
 
   /* tailwind breakpoints */
-  @media (min-width: 640px) { height: 550px; }   /* sm */
-  @media (min-width: 768px) { height: 420px; }   /* md */
-  @media (min-width: 1024px) { height: 365px; }  /* lg */
-  @media (min-width: 1280px) { height: 373px; }  /* xl */
-}
+  @media (min-width: 640px) { height: 550px; }  
+  @media (min-width: 768px) { height: 420px; }   
+  @media (min-width: 1024px) { height: 365px; } 
+  @media (min-width: 1280px) { height: 378px; } 
+  @media (max-width: 1280px) { height: 500px; } 
+
+} 

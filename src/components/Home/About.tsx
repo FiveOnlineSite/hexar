@@ -63,7 +63,7 @@ export default function About({ id, ...rest }: AboutProps) {
 
 
   return (
-    <section {...rest} id={id} ref={sectionRef} className="about-section h-full">
+    <section {...rest} id={id} ref={sectionRef} className="about-section h-full inline-block w-full border-white border-b">
       <div className="relative w-full h-full">
 
         {/* Desktop Background */}
@@ -99,7 +99,7 @@ export default function About({ id, ...rest }: AboutProps) {
             </p>
           </div>
 
-          <div className="relative xl:w-[40%] lg:w-[40%] w-full lg:pb-16 md:pb-16 pb-8 py-20 flex">
+          <div className="relative xl:w-[40%] lg:w-[40%] w-full lg:pb-16 md:pb-16 mb-4 py-16 inline-block">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 flex flex-col items-center">
               <img
                 src="/images/icons/hexar-logo1.png"

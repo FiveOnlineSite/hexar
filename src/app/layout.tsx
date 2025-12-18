@@ -34,8 +34,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <SwordEffects />
-        <div
+        {/* <SwordEffects /> */}
+        {/* <div
   id="floating-shield-container"
   className="fixed inset-0 pointer-events-none z-[9999]"
 >
@@ -47,8 +47,8 @@ export default function RootLayout({
              will-change-transform"
 />
 
-</div>
-        <FloatingShield/>
+</div> */}
+        {/* <FloatingShield/> */}
         <Navbar/>
         
         {children}

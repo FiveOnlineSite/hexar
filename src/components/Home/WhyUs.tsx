@@ -159,7 +159,7 @@ export default function WhyUs({ id, ...rest }: WhyUsProps) {
         lg:py-16 md:py-16 py-8
         w-full
         bg-[url('/images/why-us-bg.png')]
-        bg-no-repeat bg-right bg-contain
+        bg-no-repeat bg-right bg-contain border-white border-t
       "
     >
       {/* Heading + Paragraph */}

@@ -239,7 +239,7 @@ export default function GallerySlider() {
     "relative pl-6 before:content-[''] before:w-2 before:h-2 before:bg-white before:rounded-full before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2";
 
   return (
-    <section className="gallery-slider-section w-full overflow-hidden">
+    <section className="gallery-slider-section w-full overflow-hidden border-white border-b">
       <Swiper
         modules={[Autoplay]}
         autoplay={{

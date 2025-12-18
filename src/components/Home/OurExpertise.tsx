@@ -26,7 +26,7 @@ export default function OurExpertise({ id, ...rest }: OurExpertiseProps){
                         className="
                         bg-[#000000CC]
                         absolute -top-1/2 -left-1/2
-                        h-[800px] w-[800px]
+                        h-[120vw] w-[120vw]
                         -rotate-[22deg]
                         translate-x-0 translate-y-0
                         transition-transform duration-[600ms] ease-[cubic-bezier(0.75,0,0.25,1)]
@@ -37,18 +37,18 @@ export default function OurExpertise({ id, ...rest }: OurExpertiseProps){
                     {/* TEXT SLIDES DOWN SMOOTHLY */}
                     <h2
                         className="
-                        text-white text-2xl font-bold text-center
+                       text-white text-2xl font-bold text-center
                         absolute top-1/2 left-1/2
                         -translate-x-1/2 -translate-y-1/2
-                        transition-all duration-[650ms] ease-[cubic-bezier(0.75,0,0.25,1)]
-                        group-hover:translate-y-60
+                        transition-all duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]
+                        group-hover:translate-y-[380px]
                         "
                     >
                         Realtime Hair
                     </h2>
                 </div>
 
-                <div className="border border-white hover:border-transparent transition-all duration-700 rounded-2xl relative overflow-hidden group">
+                 <div className="border border-white hover:border-transparent transition-all duration-500 rounded-2xl relative overflow-hidden group">
                     <img 
                         src="/images/realtime-hair.png" 
                         alt="realtime-hair" 
@@ -59,7 +59,7 @@ export default function OurExpertise({ id, ...rest }: OurExpertiseProps){
                         className="
                         bg-[#000000CC]
                         absolute -top-1/2 -left-1/2
-                        h-[800px] w-[800px]
+                        h-[120vw] w-[120vw]
                         -rotate-[22deg]
                         translate-x-0 translate-y-0
                         transition-transform duration-[600ms] ease-[cubic-bezier(0.75,0,0.25,1)]
@@ -70,85 +70,18 @@ export default function OurExpertise({ id, ...rest }: OurExpertiseProps){
                     {/* TEXT SLIDES DOWN SMOOTHLY */}
                     <h2
                         className="
-                        text-white text-2xl font-bold text-center
+                       text-white text-2xl font-bold text-center
                         absolute top-1/2 left-1/2
                         -translate-x-1/2 -translate-y-1/2
                         transition-all duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]
-                        group-hover:translate-y-60
+                        group-hover:translate-y-[380px]
                         "
                     >
                         Realtime Hair
                     </h2>
                 </div>
 
-                <div className="border border-white hover:border-transparent transition-all duration-700 rounded-2xl relative overflow-hidden group">
-                    <img 
-                        src="/images/realtime-hair.png" 
-                        alt="realtime-hair" 
-                        className="rounded-2xl object-cover w-full h-full" 
-                    />
-
-                    <div
-                        className="
-                        bg-[#000000CC]
-                        absolute -top-1/2 -left-1/2
-                        h-[800px] w-[800px]
-                        -rotate-[22deg]
-                        translate-x-0 translate-y-0
-                        transition-transform duration-[600ms] ease-[cubic-bezier(0.75,0,0.25,1)]
-                        group-hover:translate-x-[120%] group-hover:translate-y-[120%]
-                        "
-                    ></div>
-
-                    {/* TEXT SLIDES DOWN SMOOTHLY */}
-                    <h2
-                        className="
-                        text-white text-2xl font-bold text-center
-                        absolute top-1/2 left-1/2
-                        -translate-x-1/2 -translate-y-1/2
-                        transition-all duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]
-                        group-hover:translate-y-60
-                        "
-                    >
-                        Realtime Hair
-                    </h2>
-                </div>
-
-                <div className="border border-white hover:border-transparent transition-all duration-700 rounded-2xl relative overflow-hidden group">
-                    <img 
-                        src="/images/realtime-hair.png" 
-                        alt="realtime-hair" 
-                        className="rounded-2xl object-cover w-full h-full" 
-                    />
-
-                    {/* SMOOTH OVERLAY */}
-                   <div
-                        className="
-                        bg-[#000000CC]
-                        absolute -top-1/2 -left-1/2
-                        h-[800px] w-[800px]
-                        -rotate-[22deg]
-                        translate-x-0 translate-y-0
-                        transition-transform duration-[600ms] ease-[cubic-bezier(0.75,0,0.25,1)]
-                        group-hover:translate-x-[120%] group-hover:translate-y-[120%]
-                        "
-                    ></div>
-
-                    {/* TEXT SLIDES DOWN SMOOTHLY */}
-                    <h2
-                        className="
-                        text-white text-2xl font-bold text-center
-                        absolute top-1/2 left-1/2
-                        -translate-x-1/2 -translate-y-1/2
-                        transition-all duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]
-                        group-hover:translate-y-60
-                        "
-                    >
-                        Realtime Hair
-                    </h2>
-                </div>
-
-                <div className="border border-white hover:border-transparent transition-all duration-700 rounded-2xl relative overflow-hidden group">
+                 <div className="border border-white hover:border-transparent transition-all duration-500 rounded-2xl relative overflow-hidden group">
                     <img 
                         src="/images/realtime-hair.png" 
                         alt="realtime-hair" 
@@ -160,10 +93,10 @@ export default function OurExpertise({ id, ...rest }: OurExpertiseProps){
                         className="
                         bg-[#000000CC]
                         absolute -top-1/2 -left-1/2
-                        h-[800px] w-[800px]
+                        h-[120vw] w-[120vw]
                         -rotate-[22deg]
                         translate-x-0 translate-y-0
-                        transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]
+                        transition-transform duration-[600ms] ease-[cubic-bezier(0.75,0,0.25,1)]
                         group-hover:translate-x-[120%] group-hover:translate-y-[120%]
                         "
                     ></div>
@@ -171,17 +104,85 @@ export default function OurExpertise({ id, ...rest }: OurExpertiseProps){
                     {/* TEXT SLIDES DOWN SMOOTHLY */}
                     <h2
                         className="
-                        text-white text-2xl font-bold text-center
+                       text-white text-2xl font-bold text-center
                         absolute top-1/2 left-1/2
                         -translate-x-1/2 -translate-y-1/2
                         transition-all duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]
-                        group-hover:translate-y-60
+                        group-hover:translate-y-[380px]
                         "
                     >
                         Realtime Hair
                     </h2>
                 </div>
-                
+
+
+                 <div className="border border-white hover:border-transparent transition-all duration-500 rounded-2xl relative overflow-hidden group">
+                    <img 
+                        src="/images/realtime-hair.png" 
+                        alt="realtime-hair" 
+                        className="rounded-2xl object-cover w-full h-full" 
+                    />
+
+                    {/* SMOOTH OVERLAY */}
+                    <div
+                        className="
+                        bg-[#000000CC]
+                        absolute -top-1/2 -left-1/2
+                        h-[120vw] w-[120vw]
+                        -rotate-[22deg]
+                        translate-x-0 translate-y-0
+                        transition-transform duration-[600ms] ease-[cubic-bezier(0.75,0,0.25,1)]
+                        group-hover:translate-x-[120%] group-hover:translate-y-[120%]
+                        "
+                    ></div>
+
+                    {/* TEXT SLIDES DOWN SMOOTHLY */}
+                    <h2
+                        className="
+                       text-white text-2xl font-bold text-center
+                        absolute top-1/2 left-1/2
+                        -translate-x-1/2 -translate-y-1/2
+                        transition-all duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]
+                        group-hover:translate-y-[380px]
+                        "
+                    >
+                        Realtime Hair
+                    </h2>
+                </div>
+
+                 <div className="border border-white hover:border-transparent transition-all duration-500 rounded-2xl relative overflow-hidden group">
+                    <img 
+                        src="/images/realtime-hair.png" 
+                        alt="realtime-hair" 
+                        className="rounded-2xl object-cover w-full h-full" 
+                    />
+
+                    {/* SMOOTH OVERLAY */}
+                    <div
+                        className="
+                        bg-[#000000CC]
+                        absolute -top-1/2 -left-1/2
+                        h-[120vw] w-[120vw]
+                        -rotate-[22deg]
+                        translate-x-0 translate-y-0
+                        transition-transform duration-[600ms] ease-[cubic-bezier(0.75,0,0.25,1)]
+                        group-hover:translate-x-[120%] group-hover:translate-y-[120%]
+                        "
+                    ></div>
+
+                    {/* TEXT SLIDES DOWN SMOOTHLY */}
+                    <h2
+                        className="
+                       text-white text-2xl font-bold text-center
+                        absolute top-1/2 left-1/2
+                        -translate-x-1/2 -translate-y-1/2
+                        transition-all duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]
+                        group-hover:translate-y-[380px]
+                        "
+                    >
+                        Realtime Hair
+                    </h2>
+                </div>
             </div>
         </section>
     )
