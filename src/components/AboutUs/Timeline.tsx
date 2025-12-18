@@ -23,7 +23,7 @@ export default function Timeline() {
 
     const CARD_WIDTH = cards[0].getBoundingClientRect().width;
     const PEEK = 0;     // visible part of next card
-    const OFFSET = 30;   // depth offset for stacked cards
+    const OFFSET = 50;   // depth offset for stacked cards
 
     // 🔹 INITIAL STATE
     cards.forEach((card, i) => {
