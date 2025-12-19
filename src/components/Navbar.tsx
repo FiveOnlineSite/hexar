@@ -20,7 +20,9 @@ export default function Navbar() {
     <section data-no-blast className="navbar-section">
 
       <div className="fixed top-0 left-0 right-0 z-[60] flex items-center justify-between lg:px-16 px-8 py-6">
+        <a href="#">
         <img src="/images/icons/hexar-logo.png" className="h-[70px]" />
+        </a>
 
         <button onClick={() => setOpen(true)} data-no-blast>
           <img src="/images/icons/menu-line.png" className="h-8" />

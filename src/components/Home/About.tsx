@@ -7,13 +7,7 @@ import BracketConnector from "../BracketConnector";
 
 gsap.registerPlugin(ScrollTrigger);
 
-type AboutProps = {
-  id: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [key: string]: any;
-};
-
-export default function About({ id, ...rest }: AboutProps) {
+export default function About() {
   const sectionRef = useRef<HTMLElement | null>(null);
 
   // Background refs (2 separate)
@@ -63,8 +57,8 @@ export default function About({ id, ...rest }: AboutProps) {
 
 
   return (
-    <section {...rest} id={id} ref={sectionRef} className="about-section h-full inline-block w-full border-white border-b">
-      <div className="relative w-full h-full">
+    <section ref={sectionRef} className="about-section inline-block w-full border-white border-b">
+      <div className="relative w-full inline-block">
 
         {/* Desktop Background */}
         <div
@@ -99,7 +93,8 @@ export default function About({ id, ...rest }: AboutProps) {
             </p>
           </div>
 
-          <div className="relative xl:w-[40%] lg:w-[40%] w-full lg:pb-16 md:pb-16 mb-4 py-16 inline-block">
+          <div className="relative xl:w-[40%] lg:w-[40%] w-full
+                pb-16 pt-16">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 flex flex-col items-center">
               <img
                 src="/images/icons/hexar-logo1.png"
@@ -113,7 +108,7 @@ export default function About({ id, ...rest }: AboutProps) {
               <BracketConnector refs={{ main: mainPath, left: leftPath, right: rightPath }} />
             </div>
 
-            <div className="flex lg:justify-between md:justify-evenly justify-between absolute bottom-0 w-full px-8">
+            <div className="flex lg:justify-between md:justify-evenly justify-between w-full lg:px-8 md:px-8 px-2">
               <div className="flex flex-col items-center justify-center">
                 <img
                   src="/images/icons/head-hoppers-logo.png"

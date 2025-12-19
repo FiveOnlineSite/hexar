@@ -16,7 +16,7 @@ export default function HomePage () {
         <>
         <Hero/>
         <GallerySlider/>
-        <About id="section-1" data-shield-section/>
+        <About/>
         <MissionVision id="section-2" data-shield-section/>
         <Solution id="section-3" data-shield-section/>
         <OurExpertise id="section-4" data-shield-section/>

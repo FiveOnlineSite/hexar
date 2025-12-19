@@ -113,6 +113,10 @@ body {
   100% { opacity: 0; transform: translate(-50%, -50%) scale(1.8); }
 }
 
+.arc-content {
+  clip-path: ellipse(120% 70% at 50% 50%);
+}
+
 .contrib-height {
   height: 480px; 
 
