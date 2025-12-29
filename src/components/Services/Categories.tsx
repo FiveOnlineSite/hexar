@@ -4,7 +4,7 @@ import { useState } from "react";
 import CategoriesCard from "../CategoriesCard";
 
 export default function CategoriesSection() {
-  const [activeCard, setActiveCard] = useState(null);
+  const [activeCard, setActiveCard] = useState<number | null>(null);
 
   const cards = [
     { id: 1, title: "3D Character", image: "./images/services-category1.png" },

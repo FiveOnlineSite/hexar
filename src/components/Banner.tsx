@@ -1,4 +1,10 @@
-export default function Banner ({title}) {
+type BannerProp = {
+  title: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
+};
+
+export default function Banner ({title}:BannerProp) {
     return (
         <section className="banner-section">
             <div className="relative h-screen w-full">

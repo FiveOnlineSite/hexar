@@ -1,12 +1,24 @@
 "use client";
 
+type CategoriesCardProps = {
+  id: number;
+  title: string;
+  image: string;
+  isOpen: boolean;
+  onToggle: () => void;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
+};
+
 export default function CategoriesCard({
   id,
   title,
   image,
   isOpen,
-  onToggle,
-}) {
+  onToggle
+}: CategoriesCardProps) {
+
+
   return (
     <div className="category-card border-[#FFFFFF14] border-[3px] rounded-2xl relative group mt-16 mb-32">
       <div className="p-4 bg-[#0A0A0A]  group-hover:bg-[#000] rounded-2xl transition-all duration-500 shadow-none group-hover:shadow-[0_16px_20px_#00000040]">

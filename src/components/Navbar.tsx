@@ -8,11 +8,6 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  // ✅ CLOSE MENU ON ROUTE CHANGE
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
-
   const menuItems = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about-us" },
