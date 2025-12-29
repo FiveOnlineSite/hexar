@@ -4,7 +4,6 @@ import { useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Timeline() {
@@ -73,7 +72,7 @@ const scrollPerCard = window.innerHeight * 0.9;
 }, []);
 
   return (
-    <section ref={sectionRef} className="our-timeline-sectionbg-[#0A0A0A] w-full flex items-center justify-center overflow-visible py-16" style={{ height: "100vh" }} >
+    <section ref={sectionRef} className="our-timeline-section bg-[#0A0A0A] w-full flex items-center justify-center overflow-visible py-16" style={{ height: "100vh" }} >
       
         <div className="relative w-[75vw] h-[450px] overflow-visible">
         <div className="card1 absolute inset-0 bg-[#0A0A0A] border border-white rounded-2xl flex p-10 justify-between items-center shadow-[0px_16px_20px_0px_#D500001A]">

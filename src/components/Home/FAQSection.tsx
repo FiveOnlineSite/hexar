@@ -87,7 +87,7 @@ export default function FAQSection ({ id, ...rest }: FAQSectionProps) {
     }, []);
 
     return (
-        <section {...rest} id={id} ref={sectionRef} className="faq-section p-8 lg:p-16">
+        <section {...rest} id={id} ref={sectionRef} className="faq-section p-8 lg:p-16 border-white border-t">
             <div className="lg:flex block items-start justify-center">
                 <div className="lg:w-[40%] w-full">
                     <h2 className="lg:text-[56px] md:text-[40px] text-[36px] lg:mb-8 mb-4 text-white font-bold leading-tight">Frequently Asked Question</h2>

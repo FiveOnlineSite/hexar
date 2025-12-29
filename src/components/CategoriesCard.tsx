@@ -26,7 +26,7 @@ export default function CategoriesCard({
         {/* HEADER */}
         <div className="lg:w-[45%] w-full pl-8 py-8">
           <h2 className="text-[40px] pb-5 font-bold leading-base">{title}</h2>
-          <p className="text-[18px] pb-10 mb-10 font-normal leading-base">
+          <p className="3xl:text-[22px] 2xl:text-[20px] xl:text-[18px] lg:text-[18px] md:text-[18px] text-[16px] pb-10 mb-10 font-normal leading-base">
             From realistic humans to stylized heroes, we deliver detailed,
             production-ready character models tailored to your project’s style
             and pipeline

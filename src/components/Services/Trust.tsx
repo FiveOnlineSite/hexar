@@ -19,9 +19,9 @@ export default function Trust() {
 
         {/* CUSTOM ARROWS */}
         <button
-          id="custom-prev"
-          className="absolute xl:top-[65%] lg:top-[85%] top-[5%] 
-lg:-left-[58%] left-[7%]
+          id="trust-custom-prev"
+          className="absolute xl:top-0 lg:top-0 md:top-0 top-[5%] 
+lg:right-[10%] md:right-[15%] right-[22%]
 rounded-full transition-all duration-700
 hover:shadow-[0_2px_20px_0_#FFFFFF40]"
         >
@@ -29,9 +29,9 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
         </button>
 
         <button
-          id="custom-next"
-          className="absolute xl:top-[65%] lg:top-[85%] top-[5%] 
-   xl:-left-[50%] lg:-left-[45%] left-[20%]
+          id="trust-custom-next"
+          className="absolute xl:top-0 lg:top-0 md:top-0 top-[5%] 
+   lg:right-[5%] md:right-[8%] right-[9%]
   rounded-full transition-all duration-700
    hover:shadow-[0_2px_20px_0_#FFFFFF40]"
         >
@@ -42,16 +42,16 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
         <Swiper
           modules={[Navigation]}
           navigation={{
-            prevEl: "#custom-prev",
-            nextEl: "#custom-next",
+            prevEl: "#trust-custom-prev",
+            nextEl: "#trust-custom-next",
           }}
           onInit={(swiper) => {
           if (
             swiper.params.navigation &&
             typeof swiper.params.navigation !== "boolean"
           ) {
-            swiper.params.navigation.prevEl = "#custom-prev";
-            swiper.params.navigation.nextEl = "#custom-next";
+            swiper.params.navigation.prevEl = "#trust-custom-prev";
+            swiper.params.navigation.nextEl = "#trust-custom-next";
           }
 
           if (swiper.navigation) {
@@ -68,7 +68,7 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
             1024: { slidesPerView: 3.4 },
 
           }}
-          className="mySwiper pb-[80px]"
+          className="mySwiper py-[80px]"
         >
         <SwiperSlide>
               <div className="bg-[#000000] p-6 rounded-xl">
@@ -80,11 +80,11 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
                     <img src="./images/icons/full-star-icon.png" alt="" />
                     <img src="./images/icons/empty-star-icon.png" alt="" />
                 </div>
-                <p className="my-4 text-[15px] leading-base font-light">From concept to final render, Hexar exceeded expectations. Their creativity, communication, and technical precision made our project seamless.</p>
+                <p className="my-4 3xl:text-[22px] 2xl:text-[20px] text-[15px] leading-base font-light">From concept to final render, Hexar exceeded expectations. Their creativity, communication, and technical precision made our project seamless.</p>
 
                 <div className="mt-16">
-                    <h6 className="text-[16px] font-semibold leading-base">Rohit Sharma</h6>
-                    <p className="text-[14px] font-light leading-base mt-1">Maharashtra</p>
+                    <h6 className="3xl:text-[24px] 2xl:text-[22px] text-[16px] font-semibold leading-base">Rohit Sharma</h6>
+                    <p className="3xl:text-[22px] 2xl:text-[20px] text-[14px] font-light leading-base mt-1">Maharashtra</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -99,11 +99,11 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
                     <img src="./images/icons/full-star-icon.png" alt="" />
                     <img src="./images/icons/empty-star-icon.png" alt="" />
                 </div>
-                <p className="my-4 text-[15px] leading-base font-light">From concept to final render, Hexar exceeded expectations. Their creativity, communication, and technical precision made our project seamless.</p>
+                <p className="my-4 3xl:text-[22px] 2xl:text-[20px] text-[15px] leading-base font-light">From concept to final render, Hexar exceeded expectations. Their creativity, communication, and technical precision made our project seamless.</p>
 
                 <div className="mt-16">
-                    <h6 className="text-[16px] font-semibold leading-base">Rohit Sharma</h6>
-                    <p className="text-[14px] font-light leading-base mt-1">Maharashtra</p>
+                    <h6 className="3xl:text-[24px] 2xl:text-[22px] text-[16px] font-semibold leading-base">Rohit Sharma</h6>
+                    <p className="3xl:text-[22px] 2xl:text-[20px] text-[14px] font-light leading-base mt-1">Maharashtra</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -118,11 +118,11 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
                     <img src="./images/icons/full-star-icon.png" alt="" />
                     <img src="./images/icons/empty-star-icon.png" alt="" />
                 </div>
-                <p className="my-4 text-[15px] leading-base font-light">From concept to final render, Hexar exceeded expectations. Their creativity, communication, and technical precision made our project seamless.</p>
+                <p className="my-4 3xl:text-[22px] 2xl:text-[20px] text-[15px] leading-base font-light">From concept to final render, Hexar exceeded expectations. Their creativity, communication, and technical precision made our project seamless.</p>
 
                 <div className="mt-16">
-                    <h6 className="text-[16px] font-semibold leading-base">Rohit Sharma</h6>
-                    <p className="text-[14px] font-light leading-base mt-1">Maharashtra</p>
+                    <h6 className="3xl:text-[24px] 2xl:text-[22px] text-[16px] font-semibold leading-base">Rohit Sharma</h6>
+                    <p className="3xl:text-[22px] 2xl:text-[20px] text-[14px] font-light leading-base mt-1">Maharashtra</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -137,11 +137,11 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
                     <img src="./images/icons/full-star-icon.png" alt="" />
                     <img src="./images/icons/empty-star-icon.png" alt="" />
                 </div>
-                <p className="my-4 text-[15px] leading-base font-light">From concept to final render, Hexar exceeded expectations. Their creativity, communication, and technical precision made our project seamless.</p>
+                <p className="my-4 3xl:text-[22px] 2xl:text-[20px] text-[15px] leading-base font-light">From concept to final render, Hexar exceeded expectations. Their creativity, communication, and technical precision made our project seamless.</p>
 
                 <div className="mt-16">
-                    <h6 className="text-[16px] font-semibold leading-base">Rohit Sharma</h6>
-                    <p className="text-[14px] font-light leading-base mt-1">Maharashtra</p>
+                    <h6 className="3xl:text-[24px] 2xl:text-[22px] text-[16px] font-semibold leading-base">Rohit Sharma</h6>
+                    <p className="3xl:text-[22px] 2xl:text-[20px] text-[14px] font-light leading-base mt-1">Maharashtra</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -156,11 +156,11 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
                     <img src="./images/icons/full-star-icon.png" alt="" />
                     <img src="./images/icons/empty-star-icon.png" alt="" />
                 </div>
-                <p className="my-4 text-[15px] leading-base font-light">From concept to final render, Hexar exceeded expectations. Their creativity, communication, and technical precision made our project seamless.</p>
+                <p className="my-4 3xl:text-[22px] 2xl:text-[20px] text-[15px] leading-base font-light">From concept to final render, Hexar exceeded expectations. Their creativity, communication, and technical precision made our project seamless.</p>
 
                 <div className="mt-16">
-                    <h6 className="text-[16px] font-semibold leading-base">Rohit Sharma</h6>
-                    <p className="text-[14px] font-light leading-base mt-1">Maharashtra</p>
+                    <h6 className="3xl:text-[24px] 2xl:text-[22px] text-[16px] font-semibold leading-base">Rohit Sharma</h6>
+                    <p className="3xl:text-[22px] 2xl:text-[20px] text-[14px] font-light leading-base mt-1">Maharashtra</p>
                 </div>
               </div>
             </SwiperSlide>
