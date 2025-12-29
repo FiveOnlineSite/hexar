@@ -247,8 +247,8 @@ function NextArrow({ onClick }: any) {
       onClick={onClick}
       className="
         absolute xl:bottom-[15%] lg:bottom-[15%] md:bottom-[15%] bottom-[57%]
-        xl:left-[5%] lg:left-[7%] md:left-[7%] left-[70%]
-        lg:mx-16 mx-8 rounded-full
+        3xl:left-[6%] xl:left-[10%] lg:left-[15%] md:left-[12%] left-[75%]
+         rounded-full
         transition-all duration-700 z-20
         hover:shadow-[0_2px_20px_0_#FFFFFF40]
       "
@@ -369,14 +369,47 @@ export default function Hero() {
             className="absolute inset-0 w-full h-full object-cover blur-md"
           />
 
-          <h1 className="xl:text-[53px] lg:text-[48px] md:text-[40px] sm:text-[36px] text-[30px] leading-tight font-bold absolute top-[30%] lg:top-1/2 left-0 px-8 lg:px-16 w-full lg:w-[60%] -translate-y-1/2">
-            Predator Hunting Grounds
-          </h1>
+          <h1
+  className="
+    text-[clamp(30px,4vw,85px)]
+    leading-tight
+    font-bold
+    absolute
+    top-[30%]
+    lg:top-1/2
+    left-0
+    px-8
+    lg:px-16
+    w-full
+    lg:w-[60%]
+    -translate-y-1/2
+  "
+>
+  Predator Hunting Grounds
+</h1>
 
-               <a
-              href="#"
-              className="group flex items-center xl:text-[22px] lg:text-[22px] md:text-[22px] sm:text-[20px] text-[18px] text-white leading-tight font-semibold absolute xl:bottom-[32%] lg:bottom-[32%] md:bottom-[32%] bottom-[58%] left-0 lg:px-16 px-8 overflow-hidden"
-            >
+          <a
+  href="#"
+  className="
+    group
+    flex
+    items-center
+    3xl:text-[35px] 2xl:text-[30px] text-[22px]
+    text-white
+    leading-tight
+    font-semibold
+    absolute
+    xl:bottom-[32%]
+    lg:bottom-[32%]
+    md:bottom-[32%]
+    bottom-[58%]
+    left-0
+    lg:px-16
+    px-8
+    overflow-hidden
+  "
+>
+
           <span
             className="
               flex items-center
@@ -405,13 +438,14 @@ export default function Hero() {
           className="
             relative inline-flex items-center
             w-[30px] h-px bg-white
-            opacity-0 -translate-x-0
-            transition-all duration-500 ease-out ms-1
+            opacity-0 transition-all duration-500 ease-out ms-1
             group-hover:opacity-100 group-hover:-translate-x-10
             after:content-['.']
-            after:absolute after:-right-0
-            after:-top-1 after:-translate-y-1/2
-            after:text-white after:text-[18px] after:leading-none
+            after:absolute after:-right-0 after:-top-1
+            after:-translate-y-1/2 
+            after:text-white
+            after:text-[20px]
+            after:leading-none
           "
         ></span>
         </a>
@@ -421,10 +455,9 @@ export default function Hero() {
   <img ref={(el) => {
     imageRefs.current[0] = el!;
   }}
-
               src="/images/image-2.png"
               alt="banner"
-              className="lg:max-h-[90%] md:max-h-[90%] sm:max-h-[50%] max-h-[50%] object-contain"
+              className="3xl:h-[1000px] 2xl:h-[1000px] lg:max-h-[90%] md:max-h-[90%] sm:max-h-[50%] max-h-[50%] object-contain"
             />
           </div>
         </div>
@@ -482,7 +515,7 @@ export default function Hero() {
             after:content-['.']
             after:absolute after:-right-0
             after:-top-1 after:-translate-y-1/2
-            after:text-white after:text-[18px] after:leading-none
+            after:text-white after:lg:text-[18px] after:3xl:text-[25px] after:2xl:text-[20px] after:leading-none
           "
         ></span>
         </a>

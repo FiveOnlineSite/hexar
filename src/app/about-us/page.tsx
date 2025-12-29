@@ -10,7 +10,7 @@ import MissionVision from "@/src/components/Home/MissionVision"
 export default function AboutUsPage () {
     return (
         <>
-        <Banner/>
+        <Banner title="About Us"/>
         <About/>
         <Timeline/>
         <CreativeForce/>

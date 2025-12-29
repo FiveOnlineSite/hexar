@@ -289,12 +289,12 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
                   />
                 </div>
 
-                <div className="flex items-start justify-center">
+                <div className="flex items-start justify-between">
                   <h3 className="p-3 lg:text-[22px] text-[20px] w-[75%]">
                     How AI is Changing the Gaming World
                   </h3>
 
-                  <h4 className="w-[25%] p-3 text-[18px] text-[#FFFFFFCC]">
+                  <h4 className="w-[25%] p-3 text-[18px] text-[#FFFFFFCC] text-right">
                     {post.date}
                   </h4>
                 </div>

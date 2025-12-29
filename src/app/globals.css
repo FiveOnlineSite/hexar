@@ -118,6 +118,39 @@ body {
   clip-path: ellipse(120% 70% at 50% 50%);
 }
 
+.our-timeline-section{
+  will-change: transform;
+}
+
+@keyframes drawLine {
+  from {
+    stroke-dashoffset: 3000; /* Start with the line hidden */
+  }
+  to {
+    stroke-dashoffset: 0; /* End with the line fully drawn */
+  }
+}
+
+.animate-process-line {
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  animation: drawLine 5s ease-in-out forwards;
+  animation-delay: 0.5s; /* Wait for the container to open slightly */
+}
+
+.trust-section .swiper-wrapper{
+  padding-left: 5%
+}
+
+.trust-section .mySwiper .swiper-slide {
+  transition: transform 0.6s ease;
+}
+
+.trust-section .mySwiper .swiper-slide:nth-child(odd) {
+  transform: translateY(40px);
+}
+
+
 .contrib-height {
   height: 480px; 
 
@@ -134,7 +167,8 @@ body {
   @media (min-width: 640px) { height: 550px; }  
   @media (min-width: 768px) { height: 420px; }   
   @media (min-width: 1024px) { height: 365px; } 
-  @media (min-width: 1280px) { height: 378px; } 
-  @media (max-width: 1280px) { height: 500px; } 
+  /* @media (min-width: 1280px) { height: 378px; }  */
+  @media (min-width: 1280px) { height: 796px; } 
+  @media (min-width: 1180px) { height: 696px; } 
 
 } 

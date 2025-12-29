@@ -82,13 +82,13 @@ export default function About() {
  />
 
           <div className="lg:w-[40%] w-full mb-2 backdrop-blur-md lg:px-16 lg:pt-16 lg:pb-8 md:px-16 md:pt-16 pb-4 pt-8 px-8">
-            <p className="pt-4 pb-2 text-[15px] font-light leading-tight">
+            <p className="pt-4 pb-2 3xl:text-[22px] 2xl:text-[20px] lg:text-[15px] md:text-[15px] text-[15px] font-light leading-tight">
               Welcome to Hexar Studios — the unified force created through the strategic integration of Head Hoppers Studios and Ares Visual Effects Studio.
             </p>
-            <p className="pt-4 pb-2 text-[15px] font-light leading-tight">
+            <p className="pt-4 pb-2 3xl:text-[22px] 2xl:text-[20px] lg:text-[15px] md:text-[15px] text-[15px] font-light leading-tight">
               We bring together exceptional creative talent, advanced production pipelines, and world-class IT infrastructure to deliver stunning visuals.
             </p>
-            <p className="pt-4 pb-2 text-[15px] font-light leading-tight">
+            <p className="pt-4 pb-2 3xl:text-[22px] 2xl:text-[20px] lg:text-[15px] md:text-[15px] text-[15px] font-light leading-tight">
               From games to films to immersive experiences — we create impact.
             </p>
           </div>

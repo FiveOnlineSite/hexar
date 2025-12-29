@@ -1,34 +1,41 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
+  // ✅ CLOSE MENU ON ROUTE CHANGE
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const handler = (e: any) => {
-      if (e.target.closest("[data-no-blast]")) return;
-      // blast effect would run here (but NOT on navbar)
-    };
+    setOpen(false);
+  }, [pathname]);
 
-    document.addEventListener("click", handler);
-    return () => document.removeEventListener("click", handler);
-  }, []);
+  const menuItems = [
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about-us" },
+    { label: "Services", href: "/services" },
+    { label: "Portfolio", href: "/portfolio" },
+    { label: "Contact", href: "/contact" },
+    { label: "Blogs", href: "/blogs" },
+  ];
 
   return (
     <section data-no-blast className="navbar-section">
-
+      {/* TOP BAR */}
       <div className="fixed top-0 left-0 right-0 z-[60] flex items-center justify-between lg:px-16 px-8 py-6">
-        <a href="#">
-        <img src="/images/icons/hexar-logo.png" className="h-[70px]" />
-        </a>
+        <Link href="/">
+          <img src="/images/icons/hexar-logo.png" className="h-[70px]" />
+        </Link>
 
         <button onClick={() => setOpen(true)} data-no-blast>
           <img src="/images/icons/menu-line.png" className="h-8" />
         </button>
       </div>
 
+      {/* DRAWER */}
       <div
         className={`
           fixed top-0 right-0 h-full w-full bg-black z-[80]
@@ -37,45 +44,43 @@ export default function Navbar() {
         `}
         data-no-blast
       >
-        <div className="px-8 py-6 flex justify-between items-center" data-no-blast>
-          <img src="/images/icons/hexar-logo.png" className="h-[70px]" />
+        <div className="px-8 py-6 flex justify-between items-center">
+          <Link href="/">
+            <img src="/images/icons/hexar-logo.png" className="h-[70px]" />
+          </Link>
 
           <button
             onClick={() => setOpen(false)}
             className="text-[30px] font-bold text-white"
-            data-no-blast
           >
             ✕
           </button>
         </div>
 
-        <div className="px-8 space-y-4">
-          {["Home","About Us","Services","Portfolio","Contact","Blogs"].map((item) => (
-            <a
-              key={item}
-              href="#"
+        <div className="space-y-4 ps-8">
+          {menuItems.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
               className="group flex items-center text-white text-[20px] font-semibold"
-              data-no-blast
             >
               <img
                 src="/images/icons/hexar-small-logo.png"
                 className="w-[40px] h-[40px] opacity-0 -translate-x-10 
                 group-hover:opacity-100 group-hover:translate-x-6
                 transition-all duration-500"
-                data-no-blast
               />
 
-              <span className="transition-all duration-500 group-hover:translate-x-[35px]" data-no-blast>
-                {item}
+              <span className="transition-all duration-500 group-hover:translate-x-[35px]">
+                {item.label}
               </span>
-            </a>
+            </Link>
           ))}
         </div>
 
         <img
           src="/images/icons/tpn-logo.png"
           className="mx-8 mt-8 w-[140px]"
-          data-no-blast
         />
       </div>
     </section>
