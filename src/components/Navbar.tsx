@@ -57,6 +57,7 @@ export default function Navbar() {
             <Link
               key={item.label}
               href={item.href}
+              onClick={() => setOpen(false)}
               className="group flex items-center text-white text-[20px] font-semibold"
             >
               <img
