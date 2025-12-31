@@ -61,23 +61,25 @@ export default function AlbumsArrow({ categorySlug, albums }: AlbumsArrowProps) 
 
   return (
     <>
-      {/* CLOSED STATE ARROW (viewport right) */}
       {!openAlbums && (
         <button
-          className="fixed top-1/2 right-[2%] z-30 -translate-y-1/2"
+          className="absolute top-1/2 right-[2%] z-30 -translate-y-1/2"
           onClick={() => setOpenAlbums(true)}
         >
+            <div className="relative bg-[#666666CC] w-10 h-10 p-2 rounded-full">
+
           <img
-            src="/images/icons/albums-arrow.png"
+            src="/images/icons/left-arrow1.png"
             alt="albums-arrow"
-            className="w-10 h-10"
+            className="w-[12px] h-[12px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-contain"
           />
+          </div>
         </button>
       )}
 
       {/* PANEL */}
       <div
-        className={`fixed top-0 right-0 h-screen z-20 transition-all duration-500
+        className={`absolute top-0 right-0 h-[90vh] z-20 transition-all duration-500
         ${openAlbums ? "w-[50%] bg-[#666666CC]" : "w-0 overflow-hidden"}`}
       >
         {/* OPEN STATE ARROW (panel left edge) */}
@@ -86,16 +88,21 @@ export default function AlbumsArrow({ categorySlug, albums }: AlbumsArrowProps) 
             className="absolute top-1/2 -left-[2%] -translate-y-1/2 z-30"
             onClick={() => setOpenAlbums(false)}
           >
+        <div className="relative bg-black w-10 h-10 p-2 rounded-full">
+
             <img
-              src="/images/icons/albums-arrow.png"
+              src="/images/icons/left-arrow1.png"
               alt="albums-arrow"
-              className="w-10 h-10 rotate-180 transition-transform duration-300"
-            />
+              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[12px] h-[12px] object-contain transition-transform duration-300 ${
+            openAlbums ? "rotate-180" : ""
+          }`} />
+            </div>
           </button>
+
         )}
 
         {/* PANEL CONTENT */}
-        <div className="grid grid-cols-2 gap-2 w-[70%] pt-16 ps-16">
+        <div className="grid grid-cols-2 gap-2 w-[70%] pt-16 ps-16 overflow-hidden">
           <AlbumsBox categorySlug={categorySlug} albums={albums} />
         </div>
       </div>

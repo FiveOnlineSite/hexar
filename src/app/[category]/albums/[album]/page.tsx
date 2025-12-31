@@ -28,14 +28,18 @@ export default async function CategoriesPage({ params }: AlbumsPageProps) {
 
   return (
     <>
-      <ImagesSlider images={currentAlbum.images} />
+    <div className="album-banner-section lg:py-16 md:py-16 py-8 relative">
+<ImagesSlider images={currentAlbum.images} />
 
       <AlbumsArrow
         categorySlug={currentCategory.slug}
         albums={currentCategory.albums}
       />
-
-      <CategoriesArrow/>
-    </>
+      
+      <CategoriesArrow categorySlug={currentCategory.slug}/>
+    
+    </div>
+      
+</>
   );
 }

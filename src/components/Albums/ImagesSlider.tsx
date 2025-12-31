@@ -13,7 +13,7 @@ interface AlbumSliderProps{
 export default function AlbumSlider({images}: AlbumSliderProps){
 
     return (
-          <section className="album-banner-section lg:py-16 md:py-16 py-8 relative">
+          <section className="relative">
             <Swiper
             modules={[Mousewheel]}
             direction="horizontal"
@@ -26,7 +26,7 @@ export default function AlbumSlider({images}: AlbumSliderProps){
             thresholdDelta: 30
           }}
           speed={1000}  
-          className="mySwiper h-[90vh]"
+          className="mySwiper h-[90vh] relative"
         >
             {images.map((image, index)=> (
                 <SwiperSlide key={index} className="py-2">

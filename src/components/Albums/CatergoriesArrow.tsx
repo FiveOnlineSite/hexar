@@ -14,29 +14,49 @@ export default function CategoriesArrow({ categorySlug }: CategoriesArrowProps) 
   return (
     <>
       {/* TOGGLE BUTTON */}
+      {!openCategories && (
       <button
-        className="absolute left-1/2 bottom-[2%] z-20"
+        className="absolute left-1/2 bottom-[10%] z-20"
         onClick={() => setOpenCategories((prev) => !prev)}
       >
-        <img
-          src="/images/icons/categories-arrow.png"
+        <div className="relative bg-[#666666CC] w-10 h-10 p-2 rounded-full">
+
+          <img
+            src="/images/icons/down-arrow.png"
+            alt="albums-arrow"
+            className="w-[12px] h-[12px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-contain"
+          />
+          </div>
+      </button>
+      )}
+
+    <div
+        className={`absolute bottom-0 left-0 w-screen z-20 transition-all duration-500
+        ${openCategories ? "h-[70%] bg-[#666666CC]" : "h-0 overflow-hidden"}`}
+      >
+      {openCategories && (
+      <button
+        className="absolute left-1/2 -top-[4.5%] z-20"
+        onClick={() => setOpenCategories((prev) => !prev)}
+      >
+        <div className="relative bg-black w-10 h-10 p-2 rounded-full">
+            <img
+          src="/images/icons/down-arrow.png"
           alt="categories-arrow"
-          className={`w-10 h-10 object-contain transition-transform duration-300 ${
+          className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[12px] h-[12px] object-contain transition-transform duration-300 ${
             openCategories ? "rotate-180" : ""
           }`}
         />
+        </div>
+        
       </button>
-
-      {/* OVERLAY */}
-      {openCategories && (
-        <div className="bg-[#666666CC] h-[70%] w-screen absolute bottom-0 left-0 z-10 overflow-y-auto">
-          <div className="mx-auto lg:p-16 md:p-16 p-8 grid lg:grid-cols-4 grid-cols-2 gap-2">
+      )}
+        <div className="mx-auto lg:p-16 md:p-16 p-8 h-[70%] grid lg:grid-cols-4 grid-cols-2 gap-2">
             {categories.map((category) => (
 
               <Link
                 key={category.slug}
                 href={`/${category.slug}`}
-                onClick={() => setOpenCategories(false)}
                 className="group h-[230px] relative overflow-hidden rounded-lg border border-[#FFFFFF33] "
               >
                 <div className="overflow-hidden">
@@ -57,8 +77,10 @@ export default function CategoriesArrow({ categorySlug }: CategoriesArrowProps) 
               </Link>
             ))}
           </div>
-        </div>
-      )}
+      </div>
+
+      {/* OVERLAY */}
+  
     </>
   );
 }
