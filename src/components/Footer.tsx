@@ -3,7 +3,7 @@ export default function Footer () {
         <section className="footer-section bg-[#fff] lg:py-16 lg:px-20 p-8">
             <div className="grid lg:grid-cols-4 lg:items-start justify-start md:items-center md:grid-cols-2 grid-cols-1 gap-5">
                 <div className="footer-logo flex flex-col lg:items-center md:items-center items-start justify-start">
-                    <img src="./images/icons/footer-logo.png" alt="footer-logo" className="w-[271px] h-[177px] object-contain" />
+                    <img src="/images/icons/footer-logo.png" alt="footer-logo" className="w-[271px] h-[177px] object-contain" />
                     <p className="text-[15px] text-[#0A0A0A] font-base leading-base mt-4">Hexar Studios is the parent company of Ares and Head Hoppers Studios.</p>
                 </div>
 
@@ -67,7 +67,7 @@ export default function Footer () {
                 </div>
 
                 <div className="tpn-logo flex flex-col items-start justify-start">
-                    <img src="./images/icons/footer-tpn-logo.png" alt="footer-logo" className="w-[271px] h-full object-contain" />
+                    <img src="/images/icons/footer-tpn-logo.png" alt="footer-logo" className="w-[271px] h-full object-contain" />
                             
                     <div className="contact-links">
                         <a href="contact@hexarstudios.com" className="text-[15px] font-semibold text-[#0A0A0A] leading-base">contact@hexarstudios.com</a>

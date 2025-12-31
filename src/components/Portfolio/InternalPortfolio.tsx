@@ -7,14 +7,27 @@ import Image from "next/image";
 // REQUIRED SWIPER CSS
 import "swiper/css";
 import "swiper/css/navigation";
+import Link from "next/link";
+
+const slugify = (text: string) =>
+  text
+    .toLowerCase()
+    .trim()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/-+/g, "-");
+
 
 export default function InternalPortfolio(){
 
      const internalPortfolio = [
-    { img: "/images/internal-portfolio-1.png", title: "Concept Art", link: "/" },
-    { img: "/images/internal-portfolio-2.png", title: "Stylized Art", link: "/"  },
-    { img: "/images/internal-portfolio-1.png", title: "Stylized Art1", link: "/"  }
-  ];
+    { img: "/images/internal-portfolio-1.png", title: "Concept Art"},
+    { img: "/images/internal-portfolio-2.png", title: "Stylized Art"},
+    { img: "/images/internal-portfolio-1.png", title: "Character"}
+  ].map(item => ({
+  ...item,
+  slug: slugify(item.title),
+}));
 
     return (
         <section className="internal-portfolio-section lg:py-16 md:py-16 py-8">
@@ -47,8 +60,8 @@ export default function InternalPortfolio(){
                 <h2 className="3xl:text-[42px] 2xl:text-[38px] lg:text-[32px] md:text-[25px] text-[20px] font-semibold leading-tight py-2">{portfolio.title}</h2> 
                     
                     <div className="w-full">
-                         <a
-                            href="#"
+                         <Link
+                            href={`/${portfolio.slug}`}
                             className="
                                 group/button
                                 flex
@@ -102,7 +115,7 @@ export default function InternalPortfolio(){
                                     >
 
                                 </span>
-                            </a>
+                            </Link>
                         </div>
                 </div>
             </div>
