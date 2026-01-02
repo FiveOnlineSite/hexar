@@ -1,115 +1,298 @@
+// "use client";
+
+// import { useRef, useLayoutEffect } from "react";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// export default function Timeline() {
+//   // const sectionRef = useRef<HTMLDivElement | null>(null);
+
+// //  useLayoutEffect(() => {
+// //   const ctx = gsap.context(() => {
+
+// //     const totalCards = 3;
+// // const scrollPerCard = window.innerHeight * 0.9;
+
+// //     gsap.set(".card1", { xPercent: 0, scale: 1, zIndex: 3 });
+// //     gsap.set(".card2", { xPercent: 100, scale: 0.95, zIndex: 2, opacity: 0 });
+// //     gsap.set(".card3", { xPercent: 120, scale: 0.9, zIndex: 1, opacity: 0 });
+
+// //     const tl = gsap.timeline({
+// //       scrollTrigger: {
+// //         trigger: sectionRef.current,
+// //         start: "top top",
+// //         end: `+=${totalCards * scrollPerCard}`,
+// //         pin: true,
+// //         pinSpacing:  true,
+// //         scrub: true,
+// //         anticipatePin: 1,
+// //         fastScrollEnd: true,
+// //         invalidateOnRefresh: true,
+// //       },
+// //     });
+
+// //     tl.to(".card2", {
+// //       xPercent: 0,
+// //       scale: 1,
+// //       opacity: 1,
+// //       zIndex: 3,
+// //     })
+// //       .to(
+// //         ".card1",
+// //         {
+// //           xPercent: -12,
+// //           scale: 0.92,
+// //           zIndex: 2,
+// //         },
+// //         "<"
+// //       )
+// //       .to(".card3", {
+// //         xPercent: 0,
+// //         scale: 1,
+// //         opacity: 1,
+// //         zIndex: 3,
+// //       })
+// //       .to(
+// //         ".card2",
+// //         {
+// //           xPercent: -12,
+// //           scale: 0.92,
+// //           zIndex: 2,
+// //         },
+// //         "<"
+// //       );
+      
+// //    ScrollTrigger.refresh();
+// //   }, sectionRef);
+
+
+// //   return () => ctx.revert(); // ✅ kills timeline + ScrollTrigger safely
+
+//   useLayoutEffect(() => {
+//   const ctx = gsap.context(() => {
+//     const cards = gsap.utils.toArray<HTMLElement>(
+//       ".stacking-cards .card"
+//     );
+
+//     if (!cards.length) return;
+
+//     const totalCards = cards.length - 1;
+
+//     const introCard = document.querySelector(
+//       ".stacking-cards .card-intro"
+//     ) as HTMLElement | null;
+
+//     const wrapper = document.querySelector(
+//       ".stacking-cards-wrapper"
+//     ) as HTMLElement | null;
+
+//     const cardWidth = introCard?.offsetWidth ?? 0;
+//     const containerWidth = wrapper?.offsetWidth ?? 0;
+
+//     const gap = 24;
+//     const offset =
+//       totalCards > 1
+//         ? (containerWidth - cardWidth) / (totalCards - 1)
+//         : 0;
+
+//     gsap.set(cards, {
+//   zIndex: (i) => cards.length - i,
+// });
+
+//     gsap.to(cards, {
+//       x: (i) =>
+//         i === 0
+//           ? 0
+//           : -i * cardWidth + i * offset - offset - gap * i,
+//       ease: "none",
+//       scrollTrigger: {
+//         trigger: ".stacking-cards",
+//         pin: true,
+//         scrub: true,
+//         markers: true,
+//         start: "top top",
+//         end: `+=${totalCards * 100}%`,
+//       },
+//     });
+//   });
+
+//   return () => ctx.revert();
+// }, []);
+
+//   return (
+//     // <section ref={sectionRef} className="our-timeline-section bg-[#0A0A0A] w-full flex items-center justify-center overflow-visible py-16" style={{ height: "100vh" }} >
+      
+//     //     <div className="relative w-[75vw] h-[450px] overflow-visible">
+//     //     <div className="card1 absolute inset-0 bg-[#0A0A0A] border border-white rounded-2xl flex p-10 justify-between items-center shadow-[0px_16px_20px_0px_#D500001A]">
+//     //   <div className="lg:w-[60%] w-full">
+//     //     <h2 className="text-white lg:text-[40px] md:text-[35px] text-[25px] font-bold mb-4">1</h2>
+//     //     <p className="text-white lg:text-[20px] md:text-[18px] text-[16px]">Hexar Studios expanded globally...</p>
+//     //     <p className="text-white lg:text-[20px] md:text-[18px] text-[16px] mb-2">Hexar Studios expanded globally...</p>
+//     //   </div>
+//     //   <div className="lg:w-[30%] w-full">
+//     //      <img src="./images/timeline.png" alt="timeline" className="w-full lg:h-[380px] md:h-[300px] h-[250px] object-contain" />
+//     //   </div>
+//     // </div>
+
+//     // <div className="card2 absolute inset-0 bg-[#0A0A0A] border border-white rounded-2xl flex p-10 justify-between items-center shadow-[0px_16px_20px_0px_#D500001A]">
+//     //   <div className="lg:w-[60%] w-full">
+//     //     <h2 className="text-white lg:text-[40px] md:text-[35px] text-[25px] font-bold mb-4">2</h2>
+//     //     <p className="text-white lg:text-[20px] md:text-[18px] text-[16px]">Hexar Studios expanded globally...</p>
+//     //     <p className="text-white lg:text-[20px] md:text-[18px] text-[16px] mb-2">Hexar Studios expanded globally...</p>
+//     //   </div>
+//     //   <div className="lg:w-[30%] w-full">
+//     //      <img src="./images/timeline.png" alt="timeline" className="w-full lg:h-[380px] md:h-[300px] h-[250px] object-contain" />
+//     //   </div>
+//     // </div>
+
+//     // <div className="card3 absolute inset-0 bg-[#0A0A0A] border border-white rounded-2xl flex p-10 justify-between items-center shadow-[0px_16px_20px_0px_#D500001A]">
+//     //   <div className="lg:w-[60%] w-full">
+//     //     <h2 className="text-white lg:text-[40px] md:text-[35px] text-[25px] font-bold mb-4">3</h2>
+//     //     <p className="text-white lg:text-[20px] md:text-[18px] text-[16px]">Hexar Studios expanded globally...</p>
+//     //     <p className="text-white lg:text-[20px] md:text-[18px] text-[16px] mb-2">Hexar Studios expanded globally...</p>
+//     //   </div>
+//     //   <div className="lg:w-[30%] w-full">
+//     //      <img src="./images/timeline.png" alt="timeline" className="w-full lg:h-[380px] md:h-[300px] h-[250px] object-contain" />
+//     //   </div>
+//     // </div>
+//     //     </div>
+      
+//     // </section>
+//     <section className="relative h-screen overflow-hidden stacking-cards">
+//   <div className="stacking-cards-wrapper h-full flex items-center justify-center">
+//     <div className="card-stack relative h-[75%] w-[90vw] max-w-[1200px]">
+      
+//       {/* Intro Card */}
+//       <div className="card card-intro absolute inset-0">
+//         <div className="card-inner h-full rounded-xl border border-white bg-yellow-400 p-16 flex items-center justify-center text-5xl font-bold">
+//           0
+//         </div>
+//       </div>
+
+//       {[1, 2, 3, 4, 5, 6].map((num) => (
+//         <div key={num} className="card card-slide absolute inset-0">
+//           <div className="card-inner h-full rounded-xl border border-white bg-yellow-400 p-16 flex items-center justify-center text-5xl font-bold">
+//             {num}
+//           </div>
+//         </div>
+//       ))}
+
+//     </div>
+//   </div>
+// </section>
+
+//   );
+// }
+
+// "use client";
+
+// import { useEffect, useRef } from "react";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// export default function Timeline() {
+//   const sectionRef = useRef(null);
+//   const triggerRef = useRef(null);
+
+//   useEffect(() => {
+//     // gsap.context handles the "double-call" in Strict Mode automatically
+//     const ctx = gsap.context(() => {
+      
+//       gsap.fromTo(
+//         sectionRef.current,
+//         { translateX: 0 },
+//         {
+//           translateX: "-300vw",
+//           ease: "none",
+//           scrollTrigger: {
+//             trigger: triggerRef.current,
+//             start: "top top",
+//             end: "+=2000", // Using a relative end value is more stable
+//             scrub: 0.6,
+//             pin: true,
+//             // AnticipatePin avoids jumps when the pinning starts
+//             anticipatePin: 1, 
+//             // InvalidateOnRefresh ensures calculations reset on window resize
+//             invalidateOnRefresh: true,
+//           },
+//         }
+//       );
+//     });
+
+//     return () => {
+//       // This kills the ScrollTrigger and removes all pinning styles/padding
+//       ctx.revert(); 
+//     };
+//   }, []);
+
+//   return (
+//     <section className="scroll-outer-section">
+//       <div ref={triggerRef}>
+//         <div ref={sectionRef} className="scroll-inner-section">
+//           <div className="scroll-section">
+//             <h3>Section 1</h3>
+//           </div>
+//           <div className="scroll-section">
+//             <h3>Section 2</h3>
+//           </div>
+//           <div className="scroll-section">
+//             <h3>Section 3</h3>
+//           </div>
+//           <div className="scroll-section">
+//             <h3>Section 4</h3>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
 "use client";
 
-import { useRef, useLayoutEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
 export default function Timeline() {
-  const sectionRef = useRef<HTMLDivElement | null>(null);
-
- useLayoutEffect(() => {
-  const ctx = gsap.context(() => {
-
-    const totalCards = 3;
-const scrollPerCard = window.innerHeight * 0.9;
-
-    gsap.set(".card1", { xPercent: 0, scale: 1, zIndex: 3 });
-    gsap.set(".card2", { xPercent: 100, scale: 0.95, zIndex: 2, opacity: 0 });
-    gsap.set(".card3", { xPercent: 120, scale: 0.9, zIndex: 1, opacity: 0 });
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top top",
-        end: `+=${totalCards * scrollPerCard}`,
-        pin: true,
-        pinSpacing:  true,
-        scrub: true,
-        anticipatePin: 1,
-        fastScrollEnd: true,
-        invalidateOnRefresh: true,
-      },
-    });
-
-    tl.to(".card2", {
-      xPercent: 0,
-      scale: 1,
-      opacity: 1,
-      zIndex: 3,
-    })
-      .to(
-        ".card1",
-        {
-          xPercent: -12,
-          scale: 0.92,
-          zIndex: 2,
-        },
-        "<"
-      )
-      .to(".card3", {
-        xPercent: 0,
-        scale: 1,
-        opacity: 1,
-        zIndex: 3,
-      })
-      .to(
-        ".card2",
-        {
-          xPercent: -12,
-          scale: 0.92,
-          zIndex: 2,
-        },
-        "<"
-      );
-      
-   ScrollTrigger.refresh();
-  }, sectionRef);
-
-
-  return () => ctx.revert(); // ✅ kills timeline + ScrollTrigger safely
-}, []);
+  const cards = [
+    { id: 1, title: "1963- “The Beginning”", text: "The merger of two creative houses, Head Hoppers Studios and Ares Visual Effects Studio, laid the foundation of Hexar Studios. Combined legacy of creative talent, production pipelines and technical infrastructure. Unified vision to deliver 3D-art & VFX solutions under one roof." },
+    { id: 2, title: "1970- “The Beginning”", text: "The merger of two creative houses, Head Hoppers Studios and Ares Visual Effects Studio, laid the foundation of Hexar Studios. Combined legacy of creative talent, production pipelines and technical infrastructure. Unified vision to deliver 3D-art & VFX solutions under one roof." },
+    { id: 3, title: "1975- “The Beginning”", text: "The merger of two creative houses, Head Hoppers Studios and Ares Visual Effects Studio, laid the foundation of Hexar Studios. Combined legacy of creative talent, production pipelines and technical infrastructure. Unified vision to deliver 3D-art & VFX solutions under one roof." },
+    { id: 4, title: "1980- “The Beginning”", text: "The merger of two creative houses, Head Hoppers Studios and Ares Visual Effects Studio, laid the foundation of Hexar Studios. Combined legacy of creative talent, production pipelines and technical infrastructure. Unified vision to deliver 3D-art & VFX solutions under one roof." },
+    
+  ];
 
   return (
-    <section ref={sectionRef} className="our-timeline-section bg-[#0A0A0A] w-full flex items-center justify-center overflow-visible py-16" style={{ height: "100vh" }} >
-      
-        <div className="relative w-[75vw] h-[450px] overflow-visible">
-        <div className="card1 absolute inset-0 bg-[#0A0A0A] border border-white rounded-2xl flex p-10 justify-between items-center shadow-[0px_16px_20px_0px_#D500001A]">
-      <div className="lg:w-[60%] w-full">
-        <h2 className="text-white lg:text-[40px] md:text-[35px] text-[25px] font-bold mb-4">1</h2>
-        <p className="text-white lg:text-[20px] md:text-[18px] text-[16px]">Hexar Studios expanded globally...</p>
-        <p className="text-white lg:text-[20px] md:text-[18px] text-[16px] mb-2">Hexar Studios expanded globally...</p>
-      </div>
-      <div className="lg:w-[30%] w-full">
-         <img src="./images/timeline.png" alt="timeline" className="w-full lg:h-[380px] md:h-[300px] h-[250px] object-contain" />
-      </div>
-    </div>
-
-    <div className="card2 absolute inset-0 bg-[#0A0A0A] border border-white rounded-2xl flex p-10 justify-between items-center shadow-[0px_16px_20px_0px_#D500001A]">
-      <div className="lg:w-[60%] w-full">
-        <h2 className="text-white lg:text-[40px] md:text-[35px] text-[25px] font-bold mb-4">2</h2>
-        <p className="text-white lg:text-[20px] md:text-[18px] text-[16px]">Hexar Studios expanded globally...</p>
-        <p className="text-white lg:text-[20px] md:text-[18px] text-[16px] mb-2">Hexar Studios expanded globally...</p>
-      </div>
-      <div className="lg:w-[30%] w-full">
-         <img src="./images/timeline.png" alt="timeline" className="w-full lg:h-[380px] md:h-[300px] h-[250px] object-contain" />
-      </div>
-    </div>
-
-    <div className="card3 absolute inset-0 bg-[#0A0A0A] border border-white rounded-2xl flex p-10 justify-between items-center shadow-[0px_16px_20px_0px_#D500001A]">
-      <div className="lg:w-[60%] w-full">
-        <h2 className="text-white lg:text-[40px] md:text-[35px] text-[25px] font-bold mb-4">3</h2>
-        <p className="text-white lg:text-[20px] md:text-[18px] text-[16px]">Hexar Studios expanded globally...</p>
-        <p className="text-white lg:text-[20px] md:text-[18px] text-[16px] mb-2">Hexar Studios expanded globally...</p>
-      </div>
-      <div className="lg:w-[30%] w-full">
-         <img src="./images/timeline.png" alt="timeline" className="w-full lg:h-[380px] md:h-[300px] h-[250px] object-contain" />
-      </div>
-    </div>
-        </div>
-      
-    </section>
+      <section className="our-timeline-section relative h-auto lg:p-16 md:p-16 p-8 flex flex-col items-center">
+        {cards.map((card, index) => (
+          <div
+            key={card.id}
+            className={`
+              sticky top-20 
+              lg:p-16 md:p-16 p-8
+              w-[95%] h-full bg-black
+              rounded-3xl border border-white shadow-[0_16px_20px_0_#D500001A]
+              flex items-center justify-center
+              lg:mb-[5vh] md:mb-[10vh] mb:[10vh]
+            `}
+            style={{
+              // Higher z-index ensures newer cards appear on TOP of older ones
+              zIndex: index + 1,
+              // Optional: adds a slight downward offset to see the edges of previous cards
+              top: `${80 + (index * 20)}px` 
+            }}
+          >
+            <div className="w-full flex items-center justify-between">
+              <div className="lg:w-[80%] w-full">
+    <h2 className="text-white lg:text-[40px] md:text-[35px] text-[25px] font-bold lg:mb-16 md:mb-10 mb-8">{card.title}</h2>
+     <p className="text-white lg:text-[20px] md:text-[18px] text-[16px]">{card.text}</p>
+ </div>
+  <div className="lg:w-[20%] w-full">
+  <img src="./images/timeline.png" alt="timeline" className="w-full lg:h-[380px] md:h-[300px] h-[250px] object-contain" />
+  </div>
+              </div>
+          </div>
+        ))}
+      </section>
   );
 }
-

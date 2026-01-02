@@ -26,12 +26,12 @@ export default function AlbumSlider({images}: AlbumSliderProps){
             thresholdDelta: 30
           }}
           speed={1000}  
-          className="mySwiper h-[90vh] relative"
+          className="mySwiper h-[100vh] relative"
         >
             {images.map((image, index)=> (
                 <SwiperSlide key={index} className="py-2">
             <div >
-                <img src={image} className="h-[90vh] w-full object-contain z-0" alt={`Album-${index}`}  />
+                <img src={image} className="h-[100vh] w-full object-contain z-0" alt={`Album-${index}`}  />
 
             </div>
             </SwiperSlide>

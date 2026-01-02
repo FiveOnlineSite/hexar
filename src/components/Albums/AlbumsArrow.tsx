@@ -79,7 +79,7 @@ export default function AlbumsArrow({ categorySlug, albums }: AlbumsArrowProps) 
 
       {/* PANEL */}
       <div
-        className={`absolute top-0 right-0 h-[90vh] z-20 transition-all duration-500
+        className={`absolute top-0 right-0 h-screen z-20 transition-all duration-500
         ${openAlbums ? "w-[50%] bg-[#666666CC]" : "w-0 overflow-hidden"}`}
       >
         {/* OPEN STATE ARROW (panel left edge) */}
