@@ -273,7 +273,7 @@ export default function Timeline() {
               w-[95%] h-full bg-black
               rounded-3xl border border-white shadow-[0_16px_20px_0_#D500001A]
               flex items-center justify-center
-              lg:mb-[5vh] md:mb-[10vh] mb:[10vh]
+              lg:mb-[5vh] md:mb-[10vh] mb-[5vh]
             `}
             style={{
               // Higher z-index ensures newer cards appear on TOP of older ones
@@ -282,12 +282,12 @@ export default function Timeline() {
               top: `${80 + (index * 20)}px` 
             }}
           >
-            <div className="w-full flex items-center justify-between">
-              <div className="lg:w-[80%] w-full">
+            <div className="w-full flex lg:flex-row md:flex-row flex-col-reverse items-center justify-between">
+              <div className="lg:w-[80%] md:w-[80%] w-full">
     <h2 className="text-white lg:text-[40px] md:text-[35px] text-[25px] font-bold lg:mb-16 md:mb-10 mb-8">{card.title}</h2>
      <p className="text-white lg:text-[20px] md:text-[18px] text-[16px]">{card.text}</p>
  </div>
-  <div className="lg:w-[20%] w-full">
+  <div className="lg:w-[20%] md:w-[20%] w-full lg:mb-0 md:mb-0 mb-5 inline-block">
   <img src="./images/timeline.png" alt="timeline" className="w-full lg:h-[380px] md:h-[300px] h-[250px] object-contain" />
   </div>
               </div>
