@@ -58,7 +58,6 @@ export default function FAQSection ({ id, ...rest }: FAQSectionProps) {
             scrub: false,
             once: false,
 
-            // 👇 PLAY when entering section
             onEnter: () => {
                 gsap.fromTo(
                 imageRef.current,

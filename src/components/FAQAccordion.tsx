@@ -20,7 +20,7 @@ export default function FAQAccordion({ faq, isOpen, onToggle }: FAQAccordionProp
         onClick={onToggle}
         className="w-full flex justify-between items-center text-left"
       >
-        <span className="3xl:text-[25px] 2xl:text-[23spx] lg:text-[20px] md:text-[18px] text-[16px] font-base text-white">
+        <span className="3xl:text-[25px] 2xl:text-[23px] lg:text-[20px] md:text-[18px] text-[16px] font-base text-white">
           {faq.question}
         </span>
 

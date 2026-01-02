@@ -11,12 +11,15 @@ interface CategoriesArrowProps {
 export default function CategoriesArrow({ categorySlug }: CategoriesArrowProps) {
   const [openCategories, setOpenCategories] = useState(false);
 
+  const filteredCategories = categories.filter(
+  (category) => category.slug !== categorySlug
+);
   return (
     <>
       {/* TOGGLE BUTTON */}
       {!openCategories && (
       <button
-        className="absolute left-1/2 bottom-[10%] z-20"
+        className="absolute left-1/2 bottom-[10%] z-10"
         onClick={() => setOpenCategories((prev) => !prev)}
       >
         <div className="relative bg-[#666666CC] w-10 h-10 p-2 rounded-full">
@@ -31,7 +34,7 @@ export default function CategoriesArrow({ categorySlug }: CategoriesArrowProps) 
       )}
 
     <div
-        className={`absolute bottom-0 left-0 w-screen z-20 transition-all duration-500
+        className={`absolute bottom-0 left-0 w-screen z-30 transition-all duration-500
         ${openCategories ? "h-[70%] bg-[#666666CC]" : "h-0 overflow-hidden"}`}
       >
       {openCategories && (
@@ -52,24 +55,22 @@ export default function CategoriesArrow({ categorySlug }: CategoriesArrowProps) 
       </button>
       )}
         <div className="mx-auto lg:p-16 md:p-16 p-8 h-[70%] grid lg:grid-cols-4 grid-cols-2 gap-2">
-            {categories.map((category) => (
+            {filteredCategories.map((category) => (
 
               <Link
                 key={category.slug}
                 href={`/${category.slug}`}
-                className="group h-[230px] relative overflow-hidden rounded-lg border border-[#FFFFFF33] "
+                className="group h-[250px] relative overflow-hidden rounded-lg border border-[#FFFFFF33] "
               >
                 <div className="overflow-hidden">
                     <img
                   src={category.category_img}
                   alt={category.title}
-                  className="w-full object-contain transition-transform duration-500 origin-center scale-100 group-hover:scale-110"
+                  className="w-full h-full object-contain transition-transform duration-500 origin-center scale-100 group-hover:scale-110 relative"
                 />
                 </div>
                 
-
-                {/* OVERLAY TITLE */}
-                <div className="w-full bg-[#000000] flex items-end">
+                <div className="w-full bg-[#000000] flex items-end absolute bottom-0">
                   <h6 className="text-white text-[18px] font-base p-2">
                     {category.title}
                   </h6>

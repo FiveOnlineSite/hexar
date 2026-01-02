@@ -54,16 +54,18 @@ interface Album {
 interface AlbumsArrowProps {
   categorySlug: string;
   albums: Album[];
+  currentAlbumSlug?: string;
 }
 
-export default function AlbumsArrow({ categorySlug, albums }: AlbumsArrowProps) {
+export default function AlbumsArrow({ categorySlug, albums, currentAlbumSlug }: AlbumsArrowProps) {
   const [openAlbums, setOpenAlbums] = useState(false);
 
+  
   return (
     <>
       {!openAlbums && (
         <button
-          className="absolute top-1/2 right-[2%] z-30 -translate-y-1/2"
+          className="absolute top-1/2 right-[2%] z-20 -translate-y-1/2"
           onClick={() => setOpenAlbums(true)}
         >
             <div className="relative bg-[#666666CC] w-10 h-10 p-2 rounded-full">
@@ -78,34 +80,38 @@ export default function AlbumsArrow({ categorySlug, albums }: AlbumsArrowProps) 
       )}
 
       {/* PANEL */}
-      <div
-        className={`absolute top-0 right-0 h-screen z-20 transition-all duration-500
-        ${openAlbums ? "w-[50%] bg-[#666666CC]" : "w-0 overflow-hidden"}`}
-      >
-        {/* OPEN STATE ARROW (panel left edge) */}
-        {openAlbums && (
-          <button
-            className="absolute top-1/2 -left-[2%] -translate-y-1/2 z-30"
-            onClick={() => setOpenAlbums(false)}
-          >
-        <div className="relative bg-black w-10 h-10 p-2 rounded-full">
-
-            <img
-              src="/images/icons/left-arrow1.png"
-              alt="albums-arrow"
-              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[12px] h-[12px] object-contain transition-transform duration-300 ${
-            openAlbums ? "rotate-180" : ""
-          }`} />
-            </div>
-          </button>
-
-        )}
-
-        {/* PANEL CONTENT */}
-        <div className="grid grid-cols-2 gap-2 w-[70%] pt-16 ps-16 overflow-hidden">
-          <AlbumsBox categorySlug={categorySlug} albums={albums} />
-        </div>
+      <div className="absolute top-0 right-0 h-full z-20">
+  
+  {/* CLOSE ARROW — NOT CLIPPED */}
+  {openAlbums && (
+    <button
+      className="absolute top-1/2 -left-5 -translate-y-1/2 z-20"
+      onClick={() => setOpenAlbums(false)}
+    >
+      <div className="bg-black w-10 h-10 rounded-full flex items-center justify-center">
+        <img
+          src="/images/icons/left-arrow1.png"
+          className="w-[12px] h-[12px] rotate-180 object-contain"
+        />
       </div>
+    </button>
+  )}
+
+  {/* PANEL */}
+  <div
+    className={`h-full transition-all duration-500 overflow-y-scroll z-30
+    ${openAlbums ? "w-[50vw] bg-[#666666CC]" : "w-0"}`}
+  >
+    <div className="grid grid-cols-2 gap-2 pt-16 px-16 w-[80%]">
+     <AlbumsBox
+  categorySlug={categorySlug}
+  albums={albums}
+  currentAlbumSlug={currentAlbumSlug}
+/>
+    </div>
+  </div>
+</div>
+
     </>
   );
 }

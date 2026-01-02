@@ -34,6 +34,7 @@ export default async function CategoriesPage({ params }: AlbumsPageProps) {
       <AlbumsArrow
         categorySlug={currentCategory.slug}
         albums={currentCategory.albums}
+        currentAlbumSlug={album} 
       />
       
       <CategoriesArrow categorySlug={currentCategory.slug}/>

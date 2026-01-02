@@ -3,7 +3,7 @@ export const categories = [
         title: "Concept Art",
         slug: "concept-art",
         description: "Concept art is visual design used to inspire media development and storytelling.",
-        category_img: "/images/category1.png",
+        category_img: "/images/internal-portfolio-1.png",
         albums: [
             {
                 id: 1,
@@ -103,7 +103,7 @@ export const categories = [
         description: "Stylized art is visual design used to inspire media development and storytelling.",
         
         slug: "stylized-art",
-        category_img: "/images/category2.png",
+        category_img: "/images/internal-portfolio-2.png",
         albums: [
             {
                 id: 1,
@@ -116,7 +116,7 @@ export const categories = [
         },
         {
                 id: 2,
-            album_img: "/images/albums/album.png",
+            album_img: "/images/album.png",
             slug: "album-2",
             images: [
                 "/images/album.png",
@@ -129,7 +129,7 @@ export const categories = [
         description: "Character is visual design used to inspire media development and storytelling.",
         
         slug: "character",
-        category_img: "/images/category3.png",
+        category_img: "/images/internal-portfolio-1.png",
         albums: [
             {
                 id: 1,
