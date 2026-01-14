@@ -3,7 +3,7 @@ export default function CreativeForce() {
     <section className="our-creative-force-section bg-[#0A0A0A] lg:px-16 lg:py-16 md:px-16 md:py-8 px-16 py-8 border-white border-t">
     
         <div className="">
-            <h2 className="lg:text-[56px] md:text-[40px] text-[36px] text-center lg:mb-16 mb-8 text-white font-bold leading-tight">
+            <h2 className="reveal lg:text-[56px] md:text-[40px] text-[36px] text-center lg:mb-16 mb-8 text-white font-bold leading-tight">
         The <span className="text-[#D50000]">Creative Force</span>
       </h2>
         </div>
@@ -26,7 +26,7 @@ export default function CreativeForce() {
         </svg>
 
 
-        <div className="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-4 grid-col-1 gap-4">
+        <div className="reveal-stagger grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-4 grid-col-1 gap-4">
             <div className="relative overflow-hidden group transition-all duration-500">
 
                 <img src="./images/team/member1.jpg" className="h-full w-full object-contain relative lg:brightness-50 lg:group-hover:brightness-100 transition-all duration-500" />

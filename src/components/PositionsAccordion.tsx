@@ -8,6 +8,7 @@ type PositionsAccordionProps = {
   isOpen: boolean;
   onToggle: () => void;
 };
+
 export default function PositonsAccordion({ position, isOpen, onToggle }: PositionsAccordionProps) {
     return (
         <div className="border-b border-[#FFFFFFCC] overflow-hidden py-2 mb-2">
@@ -41,7 +42,7 @@ export default function PositonsAccordion({ position, isOpen, onToggle }: Positi
 
         </div>
         <div className="inline-flex justify-end w-full mb-5">
-        <a href="#" className="text-[20px] inline-block font-semibold leading-base py-3 px-12 bg-[#D50000] rounded-lg mt-5">Apply Now</a>
+        <a href="#" className="text-[20px] inline-block font-semibold leading-base py-3 px-12 bg-[#D50000] rounded-lg lg:mt-5 md:mt-5 mt-2">Apply Now</a>
 
         </div>
       </div>

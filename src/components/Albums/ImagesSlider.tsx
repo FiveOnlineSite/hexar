@@ -22,16 +22,16 @@ export default function AlbumSlider({images}: AlbumSliderProps){
             mousewheel={{
             forceToAxis: false,          // prevents diagonal scroll issues
             sensitivity: 1,             // scroll strength
-            releaseOnEdges: true,       // allow page scroll after last slide
+            releaseOnEdges: false,       // allow page scroll after last slide
             thresholdDelta: 30
           }}
           speed={1000}  
-          className="mySwiper h-[90vh] relative"
+          className="mySwiper 3xl:h-[90vh] 2xl:h-[90vh] xl:h-[85vh] lg:h-[90vh] md:h-[90vh] h-screen relative"
         >
             {images.map((image, index)=> (
-                <SwiperSlide key={index} className="py-2">
+                <SwiperSlide key={index}>
             <div >
-                <img src={image} className="h-[90vh] w-full object-contain z-0" alt={`Album-${index}`}  />
+                <img src={image} className="3xl:h-[90vh] 2xl:h-[90vh] xl:h-[90vh] lg:h-[90vh] md:h-[90vh] h-screen w-full object-contain z-0" alt={`Album-${index}`}  />
 
             </div>
             </SwiperSlide>

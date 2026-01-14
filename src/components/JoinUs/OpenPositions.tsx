@@ -31,9 +31,9 @@ export default function OpenPosition() {
     return (
         <section className="open-positions-section p-8 lg:p-16 md:p-16">
                     <div className="">
-                    <h2 className="lg:text-[56px] md:text-[40px] text-[36px] lg:mb-8 mb-4 text-white font-bold leading-tight">Open Positions</h2>
+                    <h2 className="reveal lg:text-[56px] md:text-[40px] text-[36px] lg:mb-8 mb-4 text-white font-bold leading-tight">Open Positions</h2>
                         
-                        <div className="w-full px-4">
+                        <div className="w-full px-4 reveal-stagger">
                             {positions.map((position, i) => (
                     <PositonsAccordion position={position} key={i} isOpen={activeIndex === i}
                     onToggle={() => handleToggle(i)} />

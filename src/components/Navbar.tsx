@@ -6,21 +6,43 @@ import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  
+  useEffect(() => {
+    const sentinel = document.getElementById("navbar-sentinel");
+    if (!sentinel) return;
 
-  const menuItems = [
-    { label: "Home", href: "/" },
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // when sentinel is NOT visible → user scrolled down
+        setScrolled(!entry.isIntersecting);
+      },
+      {
+        root: null, // viewport
+        threshold: 0,
+      }
+    );
+
+    observer.observe(sentinel);
+
+    return () => observer.disconnect();
+  }, []);
+
+  const menuItems = [  { label: "Home", href: "/" },
     { label: "About Us", href: "/about-us" },
     { label: "Services", href: "/services" },
     { label: "Portfolio", href: "/portfolio" },
-    { label: "Contact", href: "/contact" },
+    { label: "Contact Us", href: "/contact-us" },
     { label: "Blogs", href: "/blogs" },
   ];
 
   return (
-    <section data-no-blast className="navbar-section">
+    <section data-no-blast className={`navbar-section relative z-20`}>
       {/* TOP BAR */}
-      <div className="fixed top-0 left-0 right-0 z-[60] flex items-center justify-between lg:px-16 px-8 py-6">
+      <div className={`fixed top-0 left-0 right-0 z-[60] flex items-center justify-between lg:px-16 px-8 py-6
+        ${scrolled ? "bg-black/80 backdrop-blur-md shadow-lg" : "bg-transparent"}`}>
         <Link href="/">
           <img src="/images/icons/hexar-logo.png" className="h-[70px]" />
         </Link>

@@ -183,6 +183,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 import Image from "next/image";
 
@@ -211,11 +212,11 @@ export default function BlogSection({ id, ...rest }: BlogSectionProps) {
     >
       {/* LEFT TEXT */}
       <div className="lg:w-[40%] w-full px-8 lg:ps-16">
-        <h2 className="lg:text-[56px] md:text-[40px] text-[36px] lg:mb-8 mb-4 text-white font-bold leading-tight">
+        <h2 className="reveal lg:text-[56px] md:text-[40px] text-[36px] lg:mb-8 mb-4 text-white font-bold leading-tight">
           News & <span className="text-[#D50000]">Blogs</span>
         </h2>
 
-        <p className="lg:text-[22px] text-[20px] text-white">
+        <p className="reveal lg:text-[22px] text-[20px] text-white">
           Stay tuned for the latest company news, current trends from the world
           of game development
         </p>
@@ -227,7 +228,7 @@ export default function BlogSection({ id, ...rest }: BlogSectionProps) {
         {/* CUSTOM ARROWS */}
         <button
           id="custom-prev"
-          className="absolute xl:top-[65%] lg:top-[85%] top-[5%] 
+          className="reveal absolute xl:top-[65%] lg:top-[85%] top-[5%] 
 lg:-left-[58%] left-[7%]
 rounded-full transition-all duration-700
 hover:shadow-[0_2px_20px_0_#FFFFFF40]"
@@ -237,7 +238,7 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
 
         <button
           id="custom-next"
-          className="absolute xl:top-[65%] lg:top-[85%] top-[5%] 
+          className="reveal absolute xl:top-[65%] lg:top-[85%] top-[5%] 
    xl:-left-[50%] lg:-left-[45%] left-[20%]
   rounded-full transition-all duration-700
    hover:shadow-[0_2px_20px_0_#FFFFFF40]"
@@ -247,7 +248,13 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
 
         {/* SWIPER */}
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        speed={900}
           navigation={{
             prevEl: "#custom-prev",
             nextEl: "#custom-next",
@@ -275,7 +282,7 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
             1024: { slidesPerView: 2 },
 
           }}
-          className="mySwiper"
+          className="mySwiper reveal-stagger"
         >
 
           {/* EACH CARD MUST BE A SEPARATE SLIDE */}

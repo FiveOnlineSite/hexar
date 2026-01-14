@@ -141,6 +141,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Autoplay } from "swiper/modules";
 
 type WhyUsProps = {
   id: string;
@@ -159,22 +160,27 @@ export default function WhyUs({ id, ...rest }: WhyUsProps) {
         lg:py-16 md:py-16 py-8
         w-full
         bg-[url('/images/why-us-bg.png')]
-        bg-no-repeat bg-right bg-contain border-white border-t
+        bg-no-repeat bg-right bg-contain border-white border-t 
       "
     >
       {/* Heading + Paragraph */}
       <div className="lg:px-16 md:px-16 px-8 pb-16">
-        <h2 className="lg:text-[56px] md:text-[40px] text-[36px] text-white font-bold leading-tight mb-5">
+        <h2 className="reveal lg:text-[56px] md:text-[40px] text-[36px] text-white font-bold leading-tight mb-5">
           Why Us?
         </h2>
 
-        <p className="lg:w-[50%] w-full text-[22px] leading-tight font-base text-white">
+        <p className="reveal lg:w-[50%] w-full text-[22px] leading-tight font-base text-white">
           Artistic mastery, reliable delivery, and complete production trust — all in one place.
         </p>
       </div>
 
       {/* Swiper Slider */}
       <Swiper
+      modules={[Autoplay]}
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
+        }}
         spaceBetween={20}
         slidesPerView={2.5}
         breakpoints={{
@@ -182,11 +188,23 @@ export default function WhyUs({ id, ...rest }: WhyUsProps) {
           480: { slidesPerView: 1.5},
           0: { slidesPerView: 1.5 },
         }}
-        className="px-4"
+        className="px-4 reveal-stagger"
       >
         {/* CARD 1 */}
         <SwiperSlide>
-        <div className=" group relative bg-[#000] rounded-lg overflow-hidden xl:h-[494px] h-full transition-all duration-700 mx-2 "> <div className="overflow-hidden"> <img src="./images/why-us-2.png" className=" w-full object-cover xl:h-[420px] h-full xl:scale-110 scale-100 xl:group-hover:h-[300px] origin-center transition-all duration-700 ease-out " /> </div> <div className=" xl:absolute relative 3xl:-bottom-[25%] 2xl:-bottom-[23%] xl:-bottom-[21%] bottom-0 3xl:group-hover:bottom-[1%] 2xl:group-hover:bottom-[1%] xl:group-hover:bottom-[5%] transition-all duration-700 ease-out py-2 pl-4 lg:pr-8 md:pr-6 pr-4"> <h2 className="3xl:text-[42px] 2xl:text-[38px] lg:text-[32px] md:text-[25px] text-[20px] font-semibold leading-tight py-2"> Artistic Mastery </h2> <p className="3xl:text-[22px] 2xl:text-[20px] lg:text-[18px] md:text-[16px] text-[14px] font-light leading-base pb-4"> Our team blends world-class artistry with deep technical expertise, delivering 3D work that is both visually stunning and production-ready. </p> </div> </div>
+        <div className="group relative bg-[#000] rounded-lg overflow-hidden xl:h-[494px] h-full transition-all duration-700 mx-2 "> 
+          <div className="overflow-hidden"> 
+            <img src="./images/why-us-2.png" className=" w-full object-cover xl:h-[420px] h-full xl:scale-110 scale-100 xl:group-hover:h-[300px] origin-center transition-all duration-700 ease-out " /> 
+          </div> 
+          <div className="xl:absolute relative 3xl:-bottom-[25%] 2xl:-bottom-[23%] xl:-bottom-[21%] bottom-0 3xl:group-hover:bottom-[1%] 2xl:group-hover:bottom-[1%] xl:group-hover:bottom-[5%] transition-all duration-700 ease-out py-2 pl-4 lg:pr-8 md:pr-6 pr-4"> 
+            <h2 className="text-white 3xl:text-[42px] 2xl:text-[38px] lg:text-[32px] md:text-[25px] text-[20px] font-semibold leading-tight py-2"> 
+              Artistic Mastery 
+              </h2> 
+              <p className="3xl:text-[22px] 2xl:text-[20px] lg:text-[18px] md:text-[16px] text-[14px] font-light leading-base pb-4"> 
+                Our team blends world-class artistry with deep technical expertise, delivering 3D work that is both visually stunning and production-ready. 
+                </p> 
+              </div> 
+            </div>
         </SwiperSlide>
 
         {/* CARD 2 */}

@@ -6,9 +6,9 @@ import { Autoplay } from "swiper/modules";
 
 export default function Work(){
     return (
-        <section className="work-section lg:p-16 md:p-16 p-8">
+        <section className="work-section bg-[#1D1D1D] lg:p-16 md:p-16 p-8">
             <div className="">
-                <h2 className="lg:text-[56px] md:text-[40px] text-[36px] lg:mb-8 mb-8 text-white font-bold leading-tight">
+                <h2 className="reveal lg:text-[56px] md:text-[40px] text-[36px] lg:mb-8 mb-8 text-white font-bold leading-tight">
                 Why Work With Us?
                 </h2>
             </div>
@@ -33,7 +33,7 @@ export default function Work(){
           640: { slidesPerView: 2 },
           0: { slidesPerView: 1 },
         }}
-            className="mySwiper w-full"
+            className="mySwiper w-full pb-4 reveal-stagger"
           >
             <SwiperSlide>
               <div className="">

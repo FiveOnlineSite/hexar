@@ -12,9 +12,41 @@
   cursor: url('/images/icons/sword.png'), auto !important;
 } */
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
+}
+
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.4),
+    rgba(255,255,255,0.15)
+  );
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.6),
+    rgba(255,255,255,0.25)
+  );
+}
+
 html, body, #__next {
   height: 100%;
    overflow-x: hidden;
+
 }
 
 body {
@@ -53,6 +85,15 @@ body {
   margin: 0 !important;
 }
 
+.our-culture-slider .swiper-slide{
+  filter: brightness(0.5);
+  transition: all 0.4s ease;
+}
+
+.our-culture-slider .swiper-slide.swiper-slide-active{
+  filter: brightness(1);
+}
+
 .animate-img-wrapper {
   display: inline-block;
   will-change: transform, opacity;
@@ -75,6 +116,24 @@ body {
 @keyframes blast-flash-anim {
   0% { transform: translate(-50%, -50%) scale(0.2); opacity: 1; }
   100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; }
+}
+
+@keyframes side-arrow-jump {
+  0%, 100% { transform: translateY(-50%) translateX(0); }
+  50% { transform: translateY(-50%) translateX(-15px); }
+}
+
+@keyframes down-arrow-jump {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-15px); }
+}
+
+.down-arrow {
+  animation: down-arrow-jump 2s infinite;
+}
+
+.side-arrow {
+  animation: side-arrow-jump 2s infinite;
 }
 
 /* Shockwave ring */

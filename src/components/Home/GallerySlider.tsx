@@ -274,8 +274,8 @@ export default function GallerySlider() {
           "Concept Art 3D",
         ].map((text, i) => (
           <SwiperSlide key={i}>
-            <div className={`p-3 ${dotClass}`}>
-              <h4 className="text-base font-light text-center">{text}</h4>
+            <div className={`p-3 reveal ${dotClass}`}>
+              <h4 className="reveal text-base font-light text-center">{text}</h4>
             </div>
           </SwiperSlide>
         ))}

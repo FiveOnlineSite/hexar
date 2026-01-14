@@ -17,11 +17,11 @@ export default function ContactSection ({ id, ...rest }: ContactSectionProps){
   "
 >
     <div className="w-full flex flex-col items-start justify-center lg:h-[590px] h-full">
-        <h2 className="xl:text-[58px] lg:text-[58px] md:text-[45px] text-[33px] text-white font-bold leading-base">
+        <h2 className="reveal xl:text-[58px] lg:text-[58px] md:text-[45px] text-[33px] text-white font-bold leading-base">
             Say <span className="text-[#D50000]">Hello</span>! &<br /> Let’s Create Together
         </h2>
 
-        <a href="#" className="lg:px-10 md:px-8 px-6 lg:py-5 md:py-4 py-3 rounded-xl mt-16 bg-[#D50000] lg:text-[20px] md:text-[18px] text-[16px] leading-base font-semibold">
+        <a href="#" className="reveal lg:px-10 md:px-8 px-6 lg:py-5 md:py-4 py-3 rounded-xl mt-16 bg-[#D50000] lg:text-[20px] md:text-[18px] text-[16px] leading-base font-semibold">
             Contact Us
         </a>
     </div>

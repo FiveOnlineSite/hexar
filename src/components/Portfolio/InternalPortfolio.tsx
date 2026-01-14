@@ -33,7 +33,7 @@ export default function InternalPortfolio(){
     return (
         <section className="internal-portfolio-section lg:py-16 md:py-16 py-8">
         <div>
-                <h2 className="3xl:text-[62px] 2xl:text-[60px] leading-tight xl:text-[58px] lg:text-[58px] md:text-[52px] text-[35px] text-[#FFFFFF] font-bold text-center w-full mb-8 lg:px-16 md:px-16 px-8">Internal Portfolio</h2>
+                <h2 className="reveal 3xl:text-[62px] 2xl:text-[60px] leading-tight xl:text-[58px] lg:text-[58px] md:text-[52px] text-[35px] text-[#FFFFFF] font-bold text-center w-full mb-8 lg:px-16 md:px-16 px-8">Internal Portfolio</h2>
         </div>
         <Swiper
           spaceBetween={5}
@@ -45,7 +45,7 @@ export default function InternalPortfolio(){
             1024: { slidesPerView: 2.2 },
 
           }}
-          className="mySwiper"
+          className="mySwiper reveal-stagger"
         >
 
           {/* EACH CARD MUST BE A SEPARATE SLIDE */}

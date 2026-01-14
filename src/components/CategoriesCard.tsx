@@ -20,20 +20,21 @@ export default function CategoriesCard({
 
 
   return (
-    <div className="category-card border-[#FFFFFF14] border-[3px] rounded-2xl relative group mt-16 mb-32">
+    <div className="category-card border-[#FFFFFF14] border-[3px] rounded-2xl relative group mt-16 mb-36">
       <div className="p-4 bg-[#0A0A0A]  group-hover:bg-[#000] rounded-2xl transition-all duration-500 shadow-none group-hover:shadow-[0_16px_20px_#00000040]">
 
         {/* HEADER */}
-        <div className="lg:w-[45%] w-full pl-8 py-8">
-          <h2 className="text-[40px] pb-5 font-bold leading-base">{title}</h2>
-          <p className="3xl:text-[22px] 2xl:text-[20px] xl:text-[18px] lg:text-[18px] md:text-[18px] text-[16px] pb-10 mb-10 font-normal leading-base">
+        <div className="relative">
+ <div className="lg:w-[45%] w-full pl-8 py-8">
+          <h2 className="reveal text-[40px] pb-5 font-bold leading-base">{title}</h2>
+          <p className="reveal 3xl:text-[22px] 2xl:text-[20px] xl:text-[18px] lg:text-[18px] md:text-[18px] text-[16px] pb-10 mb-10 font-normal leading-base">
             From realistic humans to stylized heroes, we deliver detailed,
             production-ready character models tailored to your project’s style
             and pipeline
           </p>
 
           <div className="flex items-center w-full mt-6">
-            <a href="#" className="border-[#D50000] border-[2px] px-8 py-3 text-[19px] font-semibold text-[#D50000] rounded-xl transition-all duration-500 bg-[#0A0A0A] group-hover:bg-[#D50000] group-hover:text-[#fff]">View Portfolio</a>
+            <a href="#" className="reveal border-[#D50000] border-[2px] px-8 py-3 text-[19px] font-semibold text-[#D50000] rounded-xl transition-all duration-500 bg-[#0A0A0A] group-hover:bg-[#D50000] group-hover:text-[#fff]">View Portfolio</a>
                     
 
             {/* UP ARROW */}
@@ -44,7 +45,7 @@ export default function CategoriesCard({
       <div className="w-full">
         <button
           onClick={onToggle}
-          className={`absolute bottom-[5%] left-1/2 -translate-x-1/2 transition-opacity z-20 transition-all duration-500 ${
+          className={`absolute bottom-[5%] left-1/2 -translate-x-1/2 z-20 transition-all duration-500 ${
             isOpen ? "opacity-0" : "opacity-100"
           }`}
         >
@@ -53,10 +54,12 @@ export default function CategoriesCard({
         </button>
         </div>
 
-              <div className={`transition-all duration-500 ${isOpen ? "lg:absolute absolute group-hover:lg:right-0 bottom-0 right-0" : "lg:absolute relative lg:group-hover:right-[8%] right-0 bottom-0"} z-10`}>
+              <div className={`transition-all duration-500 ${isOpen ? "3xl:absolute 2xl:absolute xl:absolute lg:absolute md:relative relative group-hover:lg:right-0 bottom-0 right-0" : "lg:absolute relative lg:group-hover:right-[8%] right-0 bottom-0"} z-10`}>
                     <img src={image} className="h-full w-full object-contain" />
             </div>
 
+        </div>
+       
 <div className="w-full">
           <button
               onClick={onToggle}
@@ -79,7 +82,7 @@ export default function CategoriesCard({
           `}
         >
            <svg
-            className="absolute top-[30%] left-1/2 -translate-x-1/2 w-full h-full pointer-events-none z-0"
+            className="absolute 3xl:top-[43%] 2xl:top-[43%] xl:top-[43%] lg:top-[43%] md:top-[51%] top-[60%] left-1/2 -translate-x-1/2 w-full h-full pointer-events-none z-0"
             viewBox="0 0 1000 3200"
             preserveAspectRatio="none"
             >
@@ -100,13 +103,13 @@ export default function CategoriesCard({
             />
             </svg>
 
-                        <h3 className="text-[36px] font-semibold leading-base ms-8">The Process</h3>
-                        <div className="my-16 flex items-center justify-center">
+                        <h3 className="reveal text-[36px] font-semibold leading-base ms-8">The Process</h3>
+                        <div className="my-16 flex items-center justify-center reveal-stagger">
                             <div className="lg:w-[55%] w-full flex lg:items-center md:items-center items-start justify-evenly">
-                                <div className="mx-4 z-10 bg-[#333333] rounded-full flex items-center justify-center lg:w-[190px] lg:h-[190px] md:w-[190px] md:h-[190px] sm:w-[140px] sm:h-[140px] w-[100px] h-[100px]">
+                                <div className="3xl:mx-4 2xl:mx-4 xl:mx-4 lg:mx-4 md:mx-4 mx-0 z-10 bg-[#333333] rounded-full flex items-center justify-center lg:w-[190px] lg:h-[190px] md:w-[190px] md:h-[190px] sm:w-[140px] sm:h-[140px] w-[100px] h-[100px]">
                                 <img src="./images/icons/pre-production-icon.png" alt="pre-production" className="lg:w-[150px] lg:h-[150px] md:w-[150px] md:h-[150px] w-[100px] h-[100px] object-contain"/>
                                 </div>
-                                <div className="px-4 w-[50%]">
+                                <div className="3xl:px-4 2xl:px-4 xl:px-4 lg:px-4 px-0 w-[50%]">
                                     <h6 className="text-[16px] font-light leading-base">Step 01</h6>
                                     <h4 className="text-[20px] font-semibold leading-base py-2">Pre-Production</h4>
                                     <p className="text-[16px] font-light leading-base">Gathering references and defining technical specifications.</p>
@@ -116,7 +119,7 @@ export default function CategoriesCard({
                         </div>
 
 
-                         <div className="my-16 flex items-center justify-center">
+                         <div className="my-16 flex items-center justify-center reveal-stagger">
                             <div className="lg:w-[55%] w-full flex lg:items-center md:items-center items-start justify-evenly">
                                 
                                 <div className="px-4 w-[50%]">
@@ -131,7 +134,7 @@ export default function CategoriesCard({
 
                         </div>
 
-                         <div className="my-16 flex items-center justify-center">
+                         <div className="my-16 flex items-center justify-center reveal-stagger">
                             <div className="lg:w-[55%] w-full flex lg:items-center md:items-center items-start justify-evenly">
                                 <div className="mx-4 z-10 bg-[#333333] rounded-full flex items-center justify-center lg:w-[190px] lg:h-[190px] md:w-[190px] md:h-[190px] sm:w-[140px] sm:h-[140px] w-[100px] h-[100px]">
                                 <img src="./images/icons/texturing-icon.png" alt="pre-production" className="lg:w-[150px] lg:h-[150px] md:w-[150px] md:h-[150px] w-[100px] h-[100px] object-contain"/>
@@ -145,7 +148,7 @@ export default function CategoriesCard({
 
                         </div>
 
-                         <div className="my-16 mb-[400px] flex items-center justify-center">
+                         <div className="my-16 flex items-center justify-center reveal-stagger">
                             <div className="lg:w-[55%] w-full flex lg:items-center md:items-center items-start justify-evenly">
                                 
                                 <div className="px-4 w-[50%]">

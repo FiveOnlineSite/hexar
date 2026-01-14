@@ -65,7 +65,7 @@ export default function AlbumsArrow({ categorySlug, albums, currentAlbumSlug }: 
     <>
       {!openAlbums && (
         <button
-          className="absolute top-1/2 right-[2%] z-20 -translate-y-1/2"
+          className="side-arrow absolute top-1/2 right-[2%] z-20 -translate-y-1/2"
           onClick={() => setOpenAlbums(true)}
         >
             <div className="relative bg-[#666666CC] w-10 h-10 p-2 rounded-full">
@@ -100,9 +100,9 @@ export default function AlbumsArrow({ categorySlug, albums, currentAlbumSlug }: 
   {/* PANEL */}
   <div
     className={`h-full transition-all duration-500 overflow-y-scroll z-30
-    ${openAlbums ? "w-[50vw] bg-[#666666CC]" : "w-0"}`}
+    ${openAlbums ? "3xl:w-[55vw] 2xl:w-[55vw] xl:w-[55vw] lg:w-[55vw] w-[80vw] bg-[#000000cc]" : "w-0"}`}
   >
-    <div className="grid grid-cols-2 gap-2 pt-16 px-16 w-[80%]">
+    <div className="grid grid-cols-2 gap-2 py-16 3xl:px-16 2xl:px-16 xl:px-16 lg:px-16 md-px-8 px-4 3xl:w-[80%] 2xl:w-[80%] xl:w-[80%] w-full">
      <AlbumsBox
   categorySlug={categorySlug}
   albums={albums}

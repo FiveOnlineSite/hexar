@@ -109,8 +109,8 @@ type ClientsSectionProps = {
 export default function Clients({ id, ...rest }: ClientsSectionProps) {
   const clients = [
     "client-1","client-3","client-2","client-4","client-6",
-    "client-5","client-8","client-7","client-10","client-9",
-    "client-12","client-11","client-14","client-13",
+    "client-5","client-8","b820d0133687f283a3aedb2f0e217018a6f2992b","client-10","client-9",
+    "client-12","client-11","fddf469c0967626f76761424d8f583332ba18863","client-13",
   ];
 
   // Split into chunks of 2 (to simulate rows)
@@ -125,7 +125,7 @@ export default function Clients({ id, ...rest }: ClientsSectionProps) {
       id={id}
       className="clients-section px-0 lg:py-16 md:py-16 py-8 overflow-hidden"
     >
-      <h2 className="lg:text-[56px] md:text-[40px] text-[36px] text-center lg:mb-16 mb-8 text-white font-bold leading-tight">
+      <h2 className="reveal lg:text-[56px] md:text-[40px] text-[36px] text-center lg:mb-16 mb-8 text-white font-bold leading-tight">
         Our Clients
       </h2>
 
@@ -145,7 +145,7 @@ export default function Clients({ id, ...rest }: ClientsSectionProps) {
           640: { slidesPerView: 2 },
           0: { slidesPerView: 1 },
         }}
-        className="w-full"
+        className="w-full reveal-stagger"
       >
         {rows.map((pair, index) => (
           <SwiperSlide key={index}>

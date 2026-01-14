@@ -27,8 +27,7 @@ export default async function CategoriesPage({ params }: AlbumsPageProps) {
   }
 
   return (
-    <>
-    <div className="album-banner-section lg:py-16 md:py-16 py-8 relative">
+    <div className="album-banner-section min-h-screen lg:pt-20 md:pt-16 pt-8 relative">
 <ImagesSlider images={currentAlbum.images} />
 
       <AlbumsArrow
@@ -41,6 +40,5 @@ export default async function CategoriesPage({ params }: AlbumsPageProps) {
     
     </div>
       
-</>
   );
 }

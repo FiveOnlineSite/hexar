@@ -270,7 +270,7 @@ function PrevArrow({ onClick }: any) {
     <button
       onClick={onClick}
       className="
-        absolute xl:bottom-[15%] lg:bottom-[15%] md:bottom-[15%] bottom-[57%]
+         absolute xl:bottom-[15%] lg:bottom-[15%] md:bottom-[15%] bottom-[57%]
         xl:left-[0%] lg:left-[0%] md:left-[0%] left-[55%]
         lg:mx-16 mx-8 rounded-full
         transition-all duration-700 z-20
@@ -354,7 +354,7 @@ export default function Hero() {
 
 
   return (
-    <section ref={heroRef} className="hero-section w-full h-screen relative overflow-hidden">
+    <section ref={heroRef} className="hero-section w-full h-screen relative overflow-hidden z-0">
 
       <Slider ref={sliderRef} {...settings} className="h-full w-full relative">
 
@@ -382,7 +382,7 @@ export default function Hero() {
     lg:px-16
     w-full
     lg:w-[60%]
-    -translate-y-1/2
+    -translate-y-1/2 reveal
   "
 >
   Predator Hunting Grounds
@@ -406,7 +406,7 @@ export default function Hero() {
     left-0
     lg:px-16
     px-8
-    overflow-hidden
+    overflow-hidden reveal
   "
 >
 

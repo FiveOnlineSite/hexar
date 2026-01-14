@@ -89,10 +89,10 @@ export default function FAQSection ({ id, ...rest }: FAQSectionProps) {
         <section {...rest} id={id} ref={sectionRef} className="faq-section p-8 lg:p-16 border-white border-t">
             <div className="lg:flex block items-start justify-center">
                 <div className="lg:w-[40%] w-full">
-                    <h2 className="lg:text-[56px] md:text-[40px] text-[36px] lg:mb-8 mb-4 text-white font-bold leading-tight">Frequently Asked Question</h2>
+                    <h2 className="reveal lg:text-[56px] md:text-[40px] text-[36px] lg:mb-8 mb-4 text-white font-bold leading-tight">Frequently Asked Question</h2>
                     <img ref={imageRef} src="./images/faq-bg.png" alt="faq-bg" className="w-full h-[420px] object-contain" />
                 </div>
-                <div className="lg:w-[60%] w-full px-4">
+                <div className="lg:w-[60%] w-full px-4 reveal-stagger">
                     {faqs.map((faq, i) => (
             <FAQAccordion faq={faq} key={i} isOpen={activeIndex === i}
             onToggle={() => handleToggle(i)} />

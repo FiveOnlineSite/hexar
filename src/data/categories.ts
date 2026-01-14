@@ -11,9 +11,10 @@ export const categories = [
             
             slug: "album-1",
              images: [
+                
+                "/images/concept-art.png",
                 "/images/album-img.png",
                 "/images/album.png",
-                "/images/concept-art.png",
 
             ],
         },
@@ -97,6 +98,24 @@ export const categories = [
                 "/images/album.png",
             ],
         },
+        {
+                id: 11,
+            album_img: "/images/album.png",
+            slug: "album-11",
+             images: [
+                "/images/album.png",
+                "/images/album.png",
+            ],
+        },
+        {
+                id: 12,
+            album_img: "/images/album.png",
+            slug: "album-12",
+             images: [
+                "/images/album.png",
+                "/images/album.png",
+            ],
+        },
         ],
        }, {
         title: "Stylized Art",
@@ -129,6 +148,110 @@ export const categories = [
         description: "Character is visual design used to inspire media development and storytelling.",
         
         slug: "character",
+        category_img: "/images/internal-portfolio-1.png",
+        albums: [
+            {
+                id: 1,
+            album_img: "/images/album.png",
+            slug: "album-1",
+             images: [
+                "/images/album.png",
+                "/images/album.png",
+            ],
+        },
+        {
+                id: 2,
+            album_img: "/images/album.png",
+            slug: "album-2",
+            images: [
+                "/images/album.png",
+                "/images/album.png",
+            ],
+            },
+        ],
+       },{
+        title: "Character2",
+        description: "Character is visual design used to inspire media development and storytelling.",
+        
+        slug: "character2",
+        category_img: "/images/internal-portfolio-1.png",
+        albums: [
+            {
+                id: 1,
+            album_img: "/images/album.png",
+            slug: "album-1",
+             images: [
+                "/images/album.png",
+                "/images/album.png",
+            ],
+        },
+        {
+                id: 2,
+            album_img: "/images/album.png",
+            slug: "album-2",
+            images: [
+                "/images/album.png",
+                "/images/album.png",
+            ],
+            },
+        ],
+       }, {
+        title: "Character3",
+        description: "Character is visual design used to inspire media development and storytelling.",
+        
+        slug: "character3",
+        category_img: "/images/internal-portfolio-1.png",
+        albums: [
+            {
+                id: 1,
+            album_img: "/images/album.png",
+            slug: "album-1",
+             images: [
+                "/images/album.png",
+                "/images/album.png",
+            ],
+        },
+        {
+                id: 2,
+            album_img: "/images/album.png",
+            slug: "album-2",
+            images: [
+                "/images/album.png",
+                "/images/album.png",
+            ],
+            },
+        ],
+       }, {
+        title: "Character4",
+        description: "Character is visual design used to inspire media development and storytelling.",
+        
+        slug: "character4",
+        category_img: "/images/internal-portfolio-1.png",
+        albums: [
+            {
+                id: 1,
+            album_img: "/images/album.png",
+            slug: "album-1",
+             images: [
+                "/images/album.png",
+                "/images/album.png",
+            ],
+        },
+        {
+                id: 2,
+            album_img: "/images/album.png",
+            slug: "album-2",
+            images: [
+                "/images/album.png",
+                "/images/album.png",
+            ],
+            },
+        ],
+       },{
+        title: "Character5",
+        description: "Character is visual design used to inspire media development and storytelling.",
+        
+        slug: "character5",
         category_img: "/images/internal-portfolio-1.png",
         albums: [
             {

@@ -2,6 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 import Image from "next/image";
 
@@ -12,7 +13,7 @@ import "swiper/css/navigation";
 export default function Trust() {
     return (
         <section className="trust-section bg-[#0A0A0A] lg-py-16 md:py-16 py-8">
-            <h2 className="lg:text-[56px] md:text-[40px] text-[36px] lg:mb-8 mb-6 text-white font-bold leading-tight text-center">
+            <h2 className="reveal lg:text-[56px] md:text-[40px] text-[36px] lg:mb-8 mb-6 text-white font-bold leading-tight text-center">
                 Voices of <span className="text-[#D50000]">Trust</span>
             </h2>
             <div className="w-full lg:pt-2 pt-20 relative">
@@ -61,6 +62,7 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
         }}
           spaceBetween={20}
           slidesPerView={3.4}
+          
           breakpoints={{
             0: { slidesPerView: 1.5 },
             640: { slidesPerView: 1.5 },
@@ -68,7 +70,7 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
             1024: { slidesPerView: 3.4 },
 
           }}
-          className="mySwiper py-[80px]"
+          className="mySwiper py-[80px] reveal-stagger"
         >
         <SwiperSlide>
               <div className="bg-[#000000] p-6 rounded-xl">

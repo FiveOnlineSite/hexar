@@ -9,7 +9,7 @@ export default function Banner ({title}:BannerProp) {
         <section className="banner-section">
             <div className="relative h-screen w-full">
                 <video src="/videos/bg-video1.mp4" loop muted autoPlay playsInline className="relative w-full h-screen object-cover"></video>
-                <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 3xl:text-[75px] 2xl:text-[65px] xl:text-[53px] lg:text-[48px] md:text-[40px] sm:text-[36px] text-[30px] leading-tight font-bold">{title}</h1>
+                <h1 className="reveal absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 3xl:text-[75px] 2xl:text-[65px] xl:text-[53px] lg:text-[48px] md:text-[40px] sm:text-[36px] text-[30px] leading-tight font-bold">{title}</h1>
             </div>
         </section>
     )

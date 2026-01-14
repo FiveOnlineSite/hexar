@@ -102,13 +102,13 @@ export default function MissionVision({ id, ...rest }: MissionVisionProps) {
 
     <div className="lg:w-[50%] w-full lg:pe-20 md:pe-0 md:px-16 px-8">
         <div className="pb-2">
-            <h2 className="lg:text-[56px] md:text-[40px] text-[36px] font-semibold leading-tight mb-5">Our Mission</h2>
-            <p className="lg:text-[22px] text-[16px] lg:font-base font-light lg:leading-base leading-tight">Our mission is to provide cutting-edge 3D arts solutions with exceptional quality and innovation. We bring creativity to life through immersive visuals, pushing artistic boundaries.</p>
+            <h2 className="reveal lg:text-[56px] md:text-[40px] text-[36px] font-semibold leading-tight mb-5">Our Mission</h2>
+            <p className="reveal lg:text-[16px] text-[16px] lg:font-base font-light lg:leading-[24px] leading-tight">Our mission is to provide cutting-edge 3D arts solutions with exceptional quality and innovation. We bring creativity to life through immersive visuals, pushing artistic boundaries.</p>
         </div>
 
         <div className="lg:pt-10 md:pt-8 pt-6">
-            <h2 className="lg:text-[56px] md:text-[40px] text-[36px] font-semibold leading-tight mb-5">Our Vision</h2>
-            <p className="lg:text-[22px] text-[16px] lg:font-base font-light lg:leading-base leading-tight">Inspire and empower through transformative 3D arts. We aim to be a trusted partner known for our visionary approach, technical expertise, and commitment to excellence. By embracing creativity and staying at the forefront of technology, we shape the future and leave a lasting impact in the industry.</p>
+            <h2 className="reveal lg:text-[56px] md:text-[40px] text-[36px] font-semibold leading-tight mb-5">Our Vision</h2>
+            <p className="reveal lg:text-[16px] text-[16px] lg:font-base font-light lg:leading-[24px] leading-tight">Inspire and empower through transformative 3D arts. We aim to be a trusted partner known for our visionary approach, technical expertise, and commitment to excellence. By embracing creativity and staying at the forefront of technology, we shape the future and leave a lasting impact in the industry.</p>
         </div>
         
     </div>
