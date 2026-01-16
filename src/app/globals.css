@@ -252,9 +252,9 @@ body {
 
 } 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .reveal,
   .reveal-stagger > * {
     will-change: opacity, transform;
   }
-}
+} */

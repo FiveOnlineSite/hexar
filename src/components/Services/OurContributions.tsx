@@ -73,7 +73,7 @@ export default function OurContributions() {
               swiper.navigation?.update();
             }}
             slidesPerView={1}
-            className="mySwiper 3xl:w-[85%] 2xl:w-[85%] xl:w-[85%] lg:w-[85%] w-full reveal-stagger"
+            className="mySwiper 3xl:w-[85%] 2xl:w-[85%] xl:w-[85%] lg:w-[85%] w-full"
           >
             <SwiperSlide>
               <div className="rounded-xl overflow-hidden m-2">

@@ -145,7 +145,7 @@ export default function Clients({ id, ...rest }: ClientsSectionProps) {
           640: { slidesPerView: 2 },
           0: { slidesPerView: 1 },
         }}
-        className="w-full reveal-stagger"
+        className="w-full"
       >
         {rows.map((pair, index) => (
           <SwiperSlide key={index}>
@@ -156,7 +156,7 @@ export default function Clients({ id, ...rest }: ClientsSectionProps) {
                     <div key={client} className="border h-[172px] p-2 border-white/30 p-2 group">
                       <img
                         src={`/images/clients/${client}.png`}
-                        className=" w-full h-full object-contain transition-transform duration-700 ease-out group-hover:scale-50"
+                        className="reveal w-full h-full object-contain transition-transform duration-700 ease-out group-hover:scale-50"
                         alt={client}
                       />
                     </div>

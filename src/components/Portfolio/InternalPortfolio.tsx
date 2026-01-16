@@ -45,7 +45,7 @@ export default function InternalPortfolio(){
             1024: { slidesPerView: 2.2 },
 
           }}
-          className="mySwiper reveal-stagger"
+          className="mySwiper reveal"
         >
 
           {/* EACH CARD MUST BE A SEPARATE SLIDE */}

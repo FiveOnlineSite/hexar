@@ -282,7 +282,7 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
             1024: { slidesPerView: 2 },
 
           }}
-          className="mySwiper reveal-stagger"
+          className="mySwiper"
         >
 
           {/* EACH CARD MUST BE A SEPARATE SLIDE */}
@@ -292,16 +292,16 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
                 <div className="h-[250px] overflow-hidden">
                   <img
                     src={post.img}
-                    className="h-[250px] w-full object-cover group-hover:scale-125 transition-all duration-700"
+                    className="reveal h-[250px] w-full object-cover group-hover:scale-125 transition-all duration-700"
                   />
                 </div>
 
                 <div className="flex items-start justify-between">
-                  <h3 className="p-3 lg:text-[22px] text-[20px] w-[75%]">
+                  <h3 className="reveal p-3 lg:text-[22px] text-[20px] w-[75%]">
                     How AI is Changing the Gaming World
                   </h3>
 
-                  <h4 className="w-[25%] p-3 text-[18px] text-[#FFFFFFCC] text-right">
+                  <h4 className="reveal w-[25%] p-3 text-[18px] text-[#FFFFFFCC] text-right">
                     {post.date}
                   </h4>
                 </div>
