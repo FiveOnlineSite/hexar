@@ -251,3 +251,10 @@ body {
   @media (min-width: 1180px) { height: 696px; } 
 
 } 
+
+@media (max-width: 768px) {
+  .reveal,
+  .reveal-stagger > * {
+    will-change: opacity, transform;
+  }
+}
