@@ -7,7 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// 🔥 Mobile viewport fix
 ScrollTrigger.config({
   ignoreMobileResize: true,
 });
@@ -17,43 +16,40 @@ export default function ScrollAnimation() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // SIMPLE REVEAL
       gsap.utils.toArray<HTMLElement>(".reveal").forEach((el) => {
         gsap.fromTo(
           el,
-          { opacity: 0, y: 30 },
+          { opacity: 0, y: 24 },
           {
             opacity: 1,
             y: 0,
+            duration: 0.6,
             ease: "power2.out",
             scrollTrigger: {
               trigger: el,
-              start: "top 85%",   // ✅ SAFE
-              end: "top 50%",     // ✅ SAFE
-              toggleActions: "play reverse play reverse",
+              start: "top 80%",
+              once: false, // allows reverse
             },
           }
         );
       });
 
-      // STAGGERED REVEAL
       gsap.utils.toArray<HTMLElement>(".reveal-stagger").forEach((container) => {
-        if (!container.children.length) return;
+        const items = Array.from(container.children) as HTMLElement[];
+        if (!items.length) return;
 
         gsap.fromTo(
-          container.children,
-          { opacity: 0, y: 30, scale: 0.95 },
+          items,
+          { opacity: 0, y: 24 },
           {
             opacity: 1,
             y: 0,
-            scale: 1,
             stagger: 0.12,
+            duration: 0.6,
             ease: "power2.out",
             scrollTrigger: {
               trigger: container,
-              start: "top 90%",
-              end: "top 55%",
-              scrub: 0.6,
+              start: "top 85%",
             },
           }
         );
