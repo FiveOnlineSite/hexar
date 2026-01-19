@@ -382,7 +382,7 @@ export default function Hero() {
     lg:px-16
     w-full
     lg:w-[60%]
-    -translate-y-1/2 reveal
+    -translate-y-1/2
   "
 >
   Predator Hunting Grounds
