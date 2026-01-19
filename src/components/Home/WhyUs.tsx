@@ -182,11 +182,11 @@ export default function WhyUs({ id, ...rest }: WhyUsProps) {
           disableOnInteraction: false,
         }}
         spaceBetween={20}
-        slidesPerView={2.5}
+        slidesPerView={2.4}
         breakpoints={{
-          768: { slidesPerView: 2.5},
-          480: { slidesPerView: 1.5},
-          0: { slidesPerView: 1.5 },
+          768: { slidesPerView: 2.4},
+          480: { slidesPerView: 1.1},
+          0: { slidesPerView: 1.1 },
         }}
         className="px-4"
       >

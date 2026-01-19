@@ -273,7 +273,7 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
             swiper.navigation.update();
           }
         }}
-          spaceBetween={20}
+          spaceBetween={0}
           slidesPerView={2}
           breakpoints={{
             0: { slidesPerView: 1 },

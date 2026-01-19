@@ -14,12 +14,15 @@ export default function OurContributions() {
             Our Contribution
           </h2>
           
-          <a
+          <div className="group">
+            <a
             href="#"
-            className="reveal inline-block lg:text-[18px] md:text-[18px] text-[16px] leading-tight font-semibold lg:py-4 lg:px-8 py-3 px-2 mb-8 text-[#D50000] border-[1.8px] rounded-xl border-[#D50000]"
+            className="reveal inline-block lg:text-[18px] md:text-[18px] text-[16px] leading-tight font-semibold lg:py-4 lg:px-8 py-3 px-2 mb-8 group-hover:bg-[#D50000] bg-transparent group-hover:text-white text-[#D50000] border-[1.8px] rounded-xl border-[#D50000] transition-all duration-500 ease-in-out"
           >
             See Our Portfolio
           </a>
+          </div>
+          
         </div>
 
        <div className="relative w-full flex justify-center">
@@ -27,7 +30,7 @@ export default function OurContributions() {
           {/* LEFT ARROW */}
           <button
             id="custom-prev"
-            className="absolute 3xl:left-0 2xl:left-0 xl:left-0 lg:left-0 md:left-[85%] left-[75%] 3xl:top-1/2 2xl:top-1/2 xl:top-1/2 lg:top-1/2 -top-[25%] 3xl:-translate-y-1/2 2xl:-translate-y-1/2 xl:-translate-y-1/2 lg:-translate-y-1/2 z-10
+            className="absolute 3xl:left-0 2xl:left-0 xl:left-0 lg:left-0 md:left-[85%] left-[70%] 3xl:top-1/2 2xl:top-1/2 xl:top-1/2 lg:top-1/2 md:-top-[25%] -top-[50%] 3xl:-translate-y-1/2 2xl:-translate-y-1/2 xl:-translate-y-1/2 lg:-translate-y-1/2 z-10
             rounded-full transition-all duration-700
             hover:shadow-[0_2px_20px_0_#FFFFFF40]"
           >
@@ -42,7 +45,7 @@ export default function OurContributions() {
           {/* RIGHT ARROW */}
           <button
             id="custom-next"
-            className="absolute right-0 3xl:top-1/2 2xl:top-1/2 xl:top-1/2 lg:top-1/2 -top-[25%] 3xl:-translate-y-1/2 2xl:-translate-y-1/2 xl:-translate-y-1/2 lg:-translate-y-1/2 z-10
+            className="absolute right-0 3xl:top-1/2 2xl:top-1/2 xl:top-1/2 lg:top-1/2 md:-top-[25%] -top-[50%] 3xl:-translate-y-1/2 2xl:-translate-y-1/2 xl:-translate-y-1/2 lg:-translate-y-1/2 z-10
             rounded-full transition-all duration-700
             hover:shadow-[0_2px_20px_0_#FFFFFF40]"
           >

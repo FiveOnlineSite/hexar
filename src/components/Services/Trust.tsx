@@ -22,7 +22,7 @@ export default function Trust() {
         <button
           id="trust-custom-prev"
           className="absolute xl:top-0 lg:top-0 md:top-0 top-[5%] 
-lg:right-[10%] md:right-[15%] right-[22%]
+lg:right-[10%] md:right-[15%] right-[22%] z-20
 rounded-full transition-all duration-700
 hover:shadow-[0_2px_20px_0_#FFFFFF40]"
         >
@@ -33,7 +33,7 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
           id="trust-custom-next"
           className="absolute xl:top-0 lg:top-0 md:top-0 top-[5%] 
    lg:right-[5%] md:right-[8%] right-[9%]
-  rounded-full transition-all duration-700
+  rounded-full transition-all duration-700 z-20
    hover:shadow-[0_2px_20px_0_#FFFFFF40]"
         >
           <Image src="/images/icons/right-arrow.png" width={40} height={40} alt="next" />

@@ -41,7 +41,7 @@ export default function Navbar() {
   return (
     <section data-no-blast className={`navbar-section relative z-20`}>
       {/* TOP BAR */}
-      <div className={`fixed top-0 left-0 right-0 z-[60] flex items-center justify-between lg:px-16 px-8 py-6
+      <div className={`absolute top-0 left-0 right-0 z-[60] flex items-center justify-between lg:px-16 px-8 py-6
         ${scrolled ? "bg-black/80 backdrop-blur-md shadow-lg" : "bg-transparent"}`}>
         <Link href="/">
           <img src="/images/icons/hexar-logo.png" className="h-[70px]" />

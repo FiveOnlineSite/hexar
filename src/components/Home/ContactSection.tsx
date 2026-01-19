@@ -21,9 +21,12 @@ export default function ContactSection ({ id, ...rest }: ContactSectionProps){
             Say <span className="text-[#D50000]">Hello</span>! &<br /> Let’s Create Together
         </h2>
 
-        <a href="#" className="reveal lg:px-10 md:px-8 px-6 lg:py-5 md:py-4 py-3 rounded-xl mt-16 bg-[#D50000] lg:text-[20px] md:text-[18px] text-[16px] leading-base font-semibold">
+<div className="group mt-16">
+        <a href="#" className="reveal inline-block lg:px-10 md:px-8 px-6 lg:py-5 md:py-4 py-3 rounded-xl border border-transparent group-hover:bg-transparent bg-[#D50000] group-hover:border-[#D50000] group-hover:text-[#D50000] lg:text-[20px] md:text-[18px] text-[16px] leading-base font-semibold transition-all duration-500 ease-in-out">
             Contact Us
         </a>
+</div>
+        
     </div>
 </section>
 
