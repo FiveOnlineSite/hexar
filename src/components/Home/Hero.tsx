@@ -406,7 +406,7 @@ export default function Hero() {
     left-0
     lg:px-16
     px-8
-    overflow-hidden reveal
+    overflow-hidden
   "
 >
 

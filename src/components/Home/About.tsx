@@ -135,7 +135,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="pt-[80px] flex justify-center">
+            <div className="lg:pt-[80px] md:pt-[80px] pt-[40px] flex justify-center">
               <BracketConnector
                 refs={{
                   main: mainPath,
