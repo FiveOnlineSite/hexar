@@ -8,7 +8,7 @@ export default function Work(){
     return (
         <section className="work-section bg-[#1D1D1D] lg:p-16 md:p-16 p-8">
             <div className="">
-                <h2 className="reveal lg:text-[56px] md:text-[40px] text-[36px] lg:mb-8 mb-8 text-white font-bold leading-tight">
+                <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] lg:mb-8 mb-8 text-white font-bold leading-base">
                 Why Work With Us?
                 </h2>
             </div>
@@ -41,7 +41,7 @@ export default function Work(){
                   src="./images/work.png"
                   className="h-full w-full object-cover"
                 />
-                <h5 className="text-center text-[22px] font-medium ">Innovation First</h5>
+                <h5 className="text-center 3xl:text-[26px] 2xl:text-[24px] xl:text-[22px] lg:text-[22px] md:text-[20px] text-[18px] font-medium ">Innovation First</h5>
               </div>
             </SwiperSlide>
 
@@ -51,7 +51,7 @@ export default function Work(){
                   src="./images/work.png"
                   className="h-full w-full object-cover"
                 />
-                <h5 className="text-center text-[22px] font-medium ">Innovation First</h5>
+                <h5 className="text-center 3xl:text-[26px] 2xl:text-[24px] xl:text-[22px] lg:text-[22px] md:text-[20px] text-[18px] font-medium ">Innovation First</h5>
               </div>
             </SwiperSlide>
 
@@ -61,7 +61,7 @@ export default function Work(){
                   src="./images/work.png"
                   className="h-full w-full object-cover"
                 />
-                <h5 className="text-center text-[22px] font-medium ">Innovation First</h5>
+                <h5 className="text-center 3xl:text-[26px] 2xl:text-[24px] xl:text-[22px] lg:text-[22px] md:text-[20px] text-[18px] font-medium ">Innovation First</h5>
               </div>
             </SwiperSlide>
 
@@ -71,7 +71,7 @@ export default function Work(){
                   src="./images/work.png"
                   className="h-full w-full object-cover"
                 />
-                <h5 className="text-center text-[22px] font-medium ">Innovation First</h5>
+                <h5 className="text-center 3xl:text-[26px] 2xl:text-[24px] xl:text-[22px] lg:text-[22px] md:text-[20px] text-[18px] font-medium ">Innovation First</h5>
               </div>
             </SwiperSlide>
 
@@ -81,7 +81,7 @@ export default function Work(){
                   src="./images/work.png"
                   className="h-full w-full object-cover"
                 />
-                <h5 className="text-center text-[22px] font-medium ">Innovation First</h5>
+                <h5 className="text-center 3xl:text-[26px] 2xl:text-[24px] xl:text-[22px] lg:text-[22px] md:text-[20px] text-[18px] font-medium ">Innovation First</h5>
               </div>
             </SwiperSlide>
 
@@ -91,7 +91,7 @@ export default function Work(){
                   src="./images/work.png"
                   className="h-full w-full object-cover"
                 />
-                <h5 className="text-center text-[22px] font-medium ">Innovation First</h5>
+                <h5 className="text-center 3xl:text-[26px] 2xl:text-[24px] xl:text-[22px] lg:text-[22px] md:text-[20px] text-[18px] font-medium ">Innovation First</h5>
               </div>
             </SwiperSlide>
 
@@ -101,7 +101,7 @@ export default function Work(){
                   src="./images/work.png"
                   className="h-full w-full object-cover"
                 />
-                <h5 className="text-center text-[22px] font-medium ">Innovation First</h5>
+                <h5 className="text-center 3xl:text-[26px] 2xl:text-[24px] xl:text-[22px] lg:text-[22px] md:text-[20px] text-[18px] font-medium ">Innovation First</h5>
               </div>
             </SwiperSlide>
 
@@ -111,7 +111,7 @@ export default function Work(){
                   src="./images/work.png"
                   className="h-full w-full object-cover"
                 />
-                <h5 className="text-center text-[22px] font-medium ">Innovation First</h5>
+                <h5 className="text-center 3xl:text-[26px] 2xl:text-[24px] xl:text-[22px] lg:text-[22px] md:text-[20px] text-[18px] font-medium ">Innovation First</h5>
               </div>
             </SwiperSlide>
           </Swiper>

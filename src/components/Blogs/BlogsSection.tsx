@@ -27,8 +27,8 @@ setVisibleCount(BLOGS_PER_VIEW)
            
         </div>
         {BLOGS_PER_VIEW < blogs.length && (
-            <div className='reveal flex items-center justify-center mt-8'>
-                <button className="inline-block lg:text-[18px] md:text-[18px] text-[16px] leading-tight font-semibold lg:py-4 lg:px-14 py-3 px-5 mb-8 text-[#D50000] border-[1.8px] lg:rounded-xl md:rounded-xl rounded-lg border-[#D50000]" onClick={handleShowMore}>{isAllLoaded ? "Load Less" : "Load More"}</button>
+            <div className='reveal flex items-center justify-center mt-8 group'>
+                <button className="inline-block 3xl:text-[22px] 2xl:text-[20px] xl:text-[18px] lg:text-[18px] md:text-[18px] text-[16px] leading-tight font-semibold lg:py-4 lg:px-14 py-3 px-5 mb-8 text-[#D50000] group-hover:text-white bg-transparent group-hover:bg-[#D50000] border-[1.8px] lg:rounded-xl md:rounded-xl rounded-lg border-[#D50000] transition-all duration-500 ease-in-out" onClick={handleShowMore}>{isAllLoaded ? "Load Less" : "Load More"}</button>
             </div>
         )}
          

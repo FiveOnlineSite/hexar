@@ -23,7 +23,7 @@ export default function BlogContent({ blogSlug }: BlogContentProps) {
       <img
         src={currentBlog.image}
         alt={currentBlog.title}
-        className="h-[90vh] w-full object-cover rounded-xl"
+        className="3xl:h-[90vh] 2xl:h-[90vh] xl:h-[90vh] lg:h-[90vh] md:h-full h-full w-full object-cover rounded-xl"
       />
     </section>
 
@@ -31,12 +31,12 @@ export default function BlogContent({ blogSlug }: BlogContentProps) {
         <div className='3xl:flex 2xl:flex xl:flex lg:flex block justify-start items-start gap-8'>
         <div className="3xl:w-[65%] 2xl:w-[65%] xl:w-[65%] lg:w-[65%] w-full">
             <h6 className='reveal bg-[#808080] py-2 px-2 rounded-lg inline-block text-[20px] leading-base font-light'>{currentBlog.date}</h6>
-            <h1 className='reveal 3xl:text-[53px] 2xl:text-[50px] xl:text-[46px] lg:text-[46px] md:text-[40px] text-[35px] font-bold leading-tight mt-4 pr-6'>
+            <h1 className='reveal 3xl:text-[53px] 2xl:text-[50px] xl:text-[46px] lg:text-[40px] md:text-[36px] text-[30px] font-bold leading-tight mt-4 pr-6'>
                 {currentBlog.title}
             </h1>
            <p className="reveal mt-6 3xl:text-[22px] 2xl:text-[20px] lg:text-[15px] md:text-[15px] text-[15px] font-light leading-base">{currentBlog.content1}</p>
             <p className="reveal mt-6 3xl:text-[22px] 2xl:text-[20px] lg:text-[15px] md:text-[15px] text-[15px] font-light leading-base">{currentBlog.content2}</p>
-            <img src={currentBlog.img1} alt="" className='3xl:w-[80%] 2xl:w-[80%] xl:w-[80%] lg:w-[80%] md:w-[90%] w-full h-[304px] object-cover rounded-lg my-6' />
+            <img src={currentBlog.img1} alt="" className='reveal 3xl:w-[80%] 2xl:w-[80%] xl:w-[80%] lg:w-[80%] md:w-[90%] w-full h-[304px] object-cover rounded-lg my-6' />
             <p className="revealmt-6 3xl:text-[22px] 2xl:text-[20px] lg:text-[15px] md:text-[15px] text-[15px] font-light leading-base">{currentBlog.content3}</p>
         </div>
         

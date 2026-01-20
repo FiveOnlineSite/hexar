@@ -21,9 +21,10 @@ export default function PortfolioShowcase(){
                   ))}
 
             </div>
-            <div className="w-full flex justify-center mt-12 reveal">
-                <a href="#" className="inline-block lg:text-[18px] md:text-[18px] text-[16px] leading-tight font-semibold lg:py-4 lg:px-10 py-3 px-5 mb-4 text-[#D50000] border-[1.8px] lg:rounded-xl md:rounded-xl rounded-lg border-[#D50000]">Explore More</a>
-            </div>
+            <div className="w-full flex justify-center mt-12 reveal group">
+                    <a href="#" className="reveal inline-block 3xl:text-[22px] 2xl:text-[20px] xl:text-[18px] lg:text-[18px] md:text-[18px] text-[16px] leading-tight font-semibold lg:py-4 lg:px-14 py-3 px-5 mb-8 text-[#D50000] group-hover:text-white bg-transparent group-hover:bg-[#D50000] border-[1.8px] lg:rounded-xl md:rounded-xl rounded-lg border-[#D50000] transition-all duration-500 ease-in-out">Explore More</a>           
+                
+                </div>
         </section>
     )
 }
