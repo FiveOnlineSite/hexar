@@ -19,25 +19,25 @@ export default function Footer () {
                     <div className="grid grid-cols-2 gap-4" >
                         <ul className="pt-4">
                             <li className="list-none py-1 group">
-                                <Link href="props-weapons" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Props/ Weapon’s</Link>
+                                <Link href="/props-weapons" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Props/ Weapon’s</Link>
                             </li>
 
                              <li className="list-none py-1 group">
-                                <Link href="stylized-art" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Stylized Art</Link>
+                                <Link href="/stylized-art" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Stylized Art</Link>
                             </li>
                              <li className="list-none py-1 group">
-                                <Link href="concept-art" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Concept Art</Link>
+                                <Link href="/concept-art" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Concept Art</Link>
                             </li>
                         </ul>
                         <ul className="pt-4">
                             <li className="list-none py-1 group">
-                                <Link href="realtime-hair" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Realtime Hair</Link>
+                                <Link href="/realtime-hair" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Realtime Hair</Link>
                             </li>
                              <li className="list-none py-1 group">
-                                <Link href="3d-characters" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">3D Characters</Link>
+                                <Link href="/3d-characters" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">3D Characters</Link>
                             </li>
                              <li className="list-none py-1 group">
-                                <Link href="animation" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Animation</Link>
+                                <Link href="/animation" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Animation</Link>
                             </li>
                         </ul>
                     </div>
@@ -51,24 +51,24 @@ export default function Footer () {
                                 <Link href="/" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Home</Link>
                             </li>
                              <li className="list-none py-1 group">
-                                <Link href="about-us" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">About Us</Link>
+                                <Link href="/about-us" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">About Us</Link>
                             </li>
                              <li className="list-none py-1 group">
-                                <Link href="services" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Services</Link>
+                                <Link href="/services" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Services</Link>
                             </li>
                             <li className="list-none py-1 group">
-                                <Link href="blogs" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Blogs</Link>
+                                <Link href="/blogs" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Blogs</Link>
                             </li>
                         </ul>
                         <ul className="pt-4">
                             <li className="list-none py-1 group">
-                                <Link href="contact-us" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Contact Us</Link>
+                                <Link href="/contact-us" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Contact Us</Link>
                             </li>
                              <li className="list-none py-1 group">
-                                <Link href="portfolio" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Portfolio</Link>
+                                <Link href="/portfolio" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Portfolio</Link>
                             </li>
                              <li className="list-none py-1 group">
-                                <Link href="join-us" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Join Us</Link>
+                                <Link href="/join-us" className="text-[16px] duration-500 transition-all ease-in-out group-hover:text-[#D50000] text-[#0A0A0A] font-base leading-base">Join Us</Link>
                             </li>
                         </ul>
                     </div>
@@ -88,23 +88,23 @@ export default function Footer () {
 
                     <div className="social-links flex items-center justify-start mt-5">
                         <div className="group">
-<Link href="#" className="w-[30px] h-[30px] border-[1px] border-[#00000069] group-hover:border-transparent bg-white transition-all eas-in-out duration-500 group-hover:bg-[#0A0A0A] rounded-full flex justify-center items-center mr-2">
+<Link href="/" className="w-[30px] h-[30px] border-[1px] border-[#00000069] group-hover:border-transparent bg-white transition-all eas-in-out duration-500 group-hover:bg-[#0A0A0A] rounded-full flex justify-center items-center mr-2">
                             <FontAwesomeIcon icon={faInstagram}className=" text-black transition-all eas-in-out duration-500 group-hover:text-white"/>
                             </Link>    
                         </div>
                         <div className="group">
-<Link href="#" className="w-[30px] h-[30px] border-[1px] border-[#00000069] group-hover:border-transparent bg-white transition-all eas-in-out duration-500 group-hover:bg-[#0A0A0A] rounded-full flex justify-center items-center mr-2">
+<Link href="/" className="w-[30px] h-[30px] border-[1px] border-[#00000069] group-hover:border-transparent bg-white transition-all eas-in-out duration-500 group-hover:bg-[#0A0A0A] rounded-full flex justify-center items-center mr-2">
                             <FontAwesomeIcon icon={faYoutube} className=" text-black transition-all eas-in-out duration-500 group-hover:text-white"/>
                             </Link>    
                         </div>
                         
                         <div className="group">
-<Link href="#" className="w-[30px] h-[30px] border-[1px] border-[#00000069] group-hover:border-transparent bg-white transition-all eas-in-out duration-500 group-hover:bg-[#0A0A0A] rounded-full flex justify-center items-center mr-2">
+<Link href="/" className="w-[30px] h-[30px] border-[1px] border-[#00000069] group-hover:border-transparent bg-white transition-all eas-in-out duration-500 group-hover:bg-[#0A0A0A] rounded-full flex justify-center items-center mr-2">
                             <FontAwesomeIcon icon={faFacebookF} className=" text-black transition-all eas-in-out duration-500 group-hover:text-white"/>
                             </Link>    
                         </div>
                         <div className="group">
-<Link href="#" className="w-[30px] h-[30px] border-[1px] border-[#00000069] group-hover:border-transparent bg-white transition-all eas-in-out duration-500 group-hover:bg-[#0A0A0A] rounded-full flex justify-center items-center mr-2">
+<Link href="/" className="w-[30px] h-[30px] border-[1px] border-[#00000069] group-hover:border-transparent bg-white transition-all eas-in-out duration-500 group-hover:bg-[#0A0A0A] rounded-full flex justify-center items-center mr-2">
                             <FontAwesomeIcon icon={faXTwitter} className=" text-black transition-all eas-in-out duration-500 group-hover:text-white"/>
                             </Link>    
                         </div>

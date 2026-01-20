@@ -54,7 +54,7 @@ export default function PositonsAccordion({ position, isOpen, onToggle }: Positi
 
         </div>
         <div className="inline-flex justify-end w-full mb-5 group">
-        <button onClick={scrollToApply} className="group-hover:bg-transparent border group-hover:text-[#D50000] group-hover:border-[#D50000] border-transparent 3xl:text-[20px] 2xl:text-[18px] xl:text-[16px] lg:text-[16px] md:text-[16px] text-[14px] font-bold leading-base py-3 px-8 bg-[#D50000] text-white rounded-xl lg:mt-4 md:mt-4 mt-6 inline-block transition-all duration-500 ease-in-out">Apply Now</button>
+        <a href='mailto:career@hexarstudios.com' className="group-hover:bg-transparent border group-hover:text-[#D50000] group-hover:border-[#D50000] border-transparent 3xl:text-[20px] 2xl:text-[18px] xl:text-[16px] lg:text-[16px] md:text-[16px] text-[14px] font-bold leading-base py-3 px-8 bg-[#D50000] text-white rounded-xl lg:mt-4 md:mt-4 mt-6 inline-block transition-all duration-500 ease-in-out">Apply Now</a>
 
         </div>
       </div>
