@@ -212,11 +212,11 @@ export default function BlogSection({ id, ...rest }: BlogSectionProps) {
     >
       {/* LEFT TEXT */}
       <div className="lg:w-[40%] w-full px-8 lg:ps-16">
-        <h2 className="reveal lg:text-[56px] md:text-[40px] text-[36px] lg:mb-8 mb-4 text-white font-bold leading-tight">
+        <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] leading-base lg:mb-8 mb-4 text-white font-bold">
           News & <span className="text-[#D50000]">Blogs</span>
         </h2>
 
-        <p className="reveal lg:text-[22px] text-[20px] text-white">
+        <p className="reveal 3xl:text-[28px] 2xl:text-[24px] xl:text-[22px] md:text-[20px] text-[18px] leading-base text-white">
           Stay tuned for the latest company news, current trends from the world
           of game development
         </p>
@@ -228,7 +228,7 @@ export default function BlogSection({ id, ...rest }: BlogSectionProps) {
         {/* CUSTOM ARROWS */}
         <button
           id="custom-prev"
-          className="reveal absolute xl:top-[65%] lg:top-[85%] top-[5%] 
+          className="reveal absolute xl:top-[75%] lg:top-[85%] top-[5%] 
 lg:-left-[58%] left-[7%]
 rounded-full transition-all duration-700
 hover:shadow-[0_2px_20px_0_#FFFFFF40]"
@@ -238,7 +238,7 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
 
         <button
           id="custom-next"
-          className="reveal absolute xl:top-[65%] lg:top-[85%] top-[5%] 
+          className="reveal absolute xl:top-[75%] lg:top-[85%] top-[5%] 
    xl:-left-[50%] lg:-left-[45%] left-[20%]
   rounded-full transition-all duration-700
    hover:shadow-[0_2px_20px_0_#FFFFFF40]"

@@ -125,7 +125,7 @@ export default function Clients({ id, ...rest }: ClientsSectionProps) {
       id={id}
       className="clients-section px-0 lg:py-16 md:py-16 py-8 overflow-hidden"
     >
-      <h2 className="reveal lg:text-[56px] md:text-[40px] text-[36px] text-center lg:mb-16 mb-8 text-white font-bold leading-tight">
+      <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] leading-base text-center lg:mb-16 mb-8 text-white font-bold">
         Our Clients
       </h2>
 

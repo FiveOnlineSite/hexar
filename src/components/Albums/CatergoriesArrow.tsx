@@ -35,7 +35,7 @@ export default function CategoriesArrow({ categorySlug }: CategoriesArrowProps) 
       )}
 
     <div
-        className={`absolute bottom-0 left-0 w-full z-30 transition-all duration-500 bg-[#000000cc]
+        className={`absolute bottom-0 left-0 w-full z-10 transition-all duration-500 bg-[#000000cc]
         ${openCategories ? "3xl:h-[70%] 2xl:h-[70%] xl:h-[70%] lg:h-[60%] md:h-[60%] h-[60%]" : "h-0"}`}
       >
       {openCategories && (

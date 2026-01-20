@@ -65,7 +65,7 @@ export default function AlbumsArrow({ categorySlug, albums, currentAlbumSlug }: 
     <>
       {!openAlbums && (
         <button
-          className="side-arrow absolute top-1/2 right-[2%] z-20 -translate-y-1/2"
+          className="side-arrow absolute top-1/2 right-[2%] z-10 -translate-y-1/2"
           onClick={() => setOpenAlbums(true)}
         >
             <div className="relative bg-[#666666CC] w-10 h-10 p-2 rounded-full">
@@ -85,7 +85,7 @@ export default function AlbumsArrow({ categorySlug, albums, currentAlbumSlug }: 
   {/* CLOSE ARROW — NOT CLIPPED */}
   {openAlbums && (
     <button
-      className="absolute top-1/2 -left-5 -translate-y-1/2 z-20"
+      className="absolute top-1/2 -left-5 -translate-y-1/2 z-10"
       onClick={() => setOpenAlbums(false)}
     >
       <div className="bg-black w-10 h-10 rounded-full flex items-center justify-center">

@@ -13,16 +13,16 @@ import "swiper/css/navigation";
 export default function Trust() {
     return (
         <section className="trust-section bg-[#0A0A0A] lg-py-16 md:py-16 py-8">
-            <h2 className="reveal lg:text-[56px] md:text-[40px] text-[36px] lg:mb-8 mb-6 text-white font-bold leading-tight text-center">
+            <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] leading-base lg:mb-8 mb-6 text-white font-bold text-center">
                 Voices of <span className="text-[#D50000]">Trust</span>
             </h2>
-            <div className="w-full lg:pt-2 pt-20 relative">
+            <div className="w-full 3xl:pt-2 2xl:pt-2 xl:pt-2 lg:pt-2 md:pt-5 pt-20 relative">
 
         {/* CUSTOM ARROWS */}
         <button
           id="trust-custom-prev"
-          className="absolute xl:top-0 lg:top-0 md:top-0 top-[5%] 
-lg:right-[10%] md:right-[15%] right-[22%] z-20
+          className="absolute 3xl:-top-[20%] 2xl:-top-[20%] xl:-top-[20%] lg:-top-[19%] md:-top-[12%] top-0 
+lg:right-[10%] md:right-[15%] right-[80%] z-20
 rounded-full transition-all duration-700
 hover:shadow-[0_2px_20px_0_#FFFFFF40]"
         >
@@ -31,8 +31,8 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
 
         <button
           id="trust-custom-next"
-          className="absolute xl:top-0 lg:top-0 md:top-0 top-[5%] 
-   lg:right-[5%] md:right-[8%] right-[9%]
+          className="absolute 3xl:-top-[20%] 2xl:-top-[20%] xl:-top-[20%] lg:-top-[19%] md:-top-[12%] top-0 
+   lg:right-[5%] md:right-[8%] right-[65%]
   rounded-full transition-all duration-700 z-20
    hover:shadow-[0_2px_20px_0_#FFFFFF40]"
         >
@@ -70,7 +70,7 @@ hover:shadow-[0_2px_20px_0_#FFFFFF40]"
             1024: { slidesPerView: 3.4 },
 
           }}
-          className="mySwiper py-[80px] reveal-stagger"
+          className="mySwiper pb-[40px] reveal-stagger"
         >
         <SwiperSlide>
               <div className="bg-[#000000] p-6 rounded-xl">

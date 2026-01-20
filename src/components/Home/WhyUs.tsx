@@ -165,11 +165,11 @@ export default function WhyUs({ id, ...rest }: WhyUsProps) {
     >
       {/* Heading + Paragraph */}
       <div className="lg:px-16 md:px-16 px-8 pb-16">
-        <h2 className="reveal lg:text-[56px] md:text-[40px] text-[36px] text-white font-bold leading-tight mb-5">
+        <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] text-white font-bold leading-base mb-5">
           Why Us?
         </h2>
 
-        <p className="reveal lg:w-[50%] w-full text-[22px] leading-tight font-base text-white">
+        <p className="reveal lg:w-[50%] w-full 3xl:text-[28px] 2xl:text-[24px] xl:text-[22px] lg:text-[22px] md:text-[20px] text-[18px] leading-base text-white">
           Artistic mastery, reliable delivery, and complete production trust — all in one place.
         </p>
       </div>

@@ -265,7 +265,7 @@ export default function Timeline() {
   return (
       <section className="our-timeline-section relative h-auto lg:p-16 md:p-16 p-8 flex flex-col items-center">
         <div className="text-left w-full mb-8">
-            <h2 className="reveal lg:text-[56px] md:text-[40px] text-[36px] text-white font-bold lg:leading-tight md:leading-tight leading-[40px] ">The Hexar <span className="text-[#D50000]">Timeline</span></h2>
+            <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] leading-base text-white font-bold">The Hexar <span className="text-[#D50000]">Timeline</span></h2>
 
         </div>
         {cards.map((card, index) => (

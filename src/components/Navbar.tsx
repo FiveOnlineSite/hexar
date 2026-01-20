@@ -68,7 +68,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setOpen(false)}
-            className="text-[30px] font-bold text-white"
+            className="3xl:text-[30px] 2xl:text-[30px] xl:text-[30px] lg:text-[30px] md:text-[25px] text-[20px] font-bold text-white"
           >
             ✕
           </button>

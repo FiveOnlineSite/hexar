@@ -16,8 +16,8 @@ export default function ContactSection ({ id, ...rest }: ContactSectionProps){
     p-8 lg:p-16 bg-fixed border-white border-b
   "
 >
-    <div className="w-full flex flex-col items-start justify-center lg:h-[590px] h-full">
-        <h2 className="reveal xl:text-[58px] lg:text-[58px] md:text-[45px] text-[33px] text-white font-bold leading-base">
+    <div className="w-full flex flex-col items-start justify-center h-full">
+        <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] leading-tight text-white font-bold">
             Say <span className="text-[#D50000]">Hello</span>! &<br /> Let’s Create Together
         </h2>
 
