@@ -309,7 +309,7 @@ export default function CategoriesCard({
           `}
         >
           {/* SVG LINE */}
-          <svg className="absolute 3xl:block 2xl:block xl:block lg:block md:block hidden 3xl:top-[43%] 2xl:top-[43%] xl:top-[46%] lg:top-[48%] md:top-[58%] top-[65%] left-1/2 -translate-x-1/2 w-full h-full pointer-events-none z-0" 
+          <svg className="absolute 3xl:block 2xl:block xl:block lg:block md:hidden hidden 3xl:top-[43%] 2xl:top-[43%] xl:top-[46%] lg:top-[48%] md:top-[58%] top-[65%] left-1/2 -translate-x-1/2 w-full h-full pointer-events-none z-0" 
           viewBox="0 0 1000 3400" 
           preserveAspectRatio="none" > 
           <path d=" M 350, 150 C 350, 300 650, 400 650, 550 C 650, 700 350, 800 350, 950 C 350, 1100 650, 1200 650, 1350 " 
@@ -319,6 +319,28 @@ export default function CategoriesCard({
           strokeDasharray="15 15" /* This creates the dashed effect */
           className={`transition-opacity duration-500 ${ isOpen ? "opacity-100 animate-process-line" : "opacity-0" }`} />
            </svg>
+
+           <svg
+  className="absolute 3xl:hidden 2xl:hidden xl:hidden lg:hidden md:block block top-[56%] -left-[3%] w-full h-full pointer-events-none z-0"
+  viewBox="-200 -200 1600 4200"
+  preserveAspectRatio="none"
+>
+  <path
+    d="
+      M 350 180
+      C 350 350 950 450 950 600
+      C 950 750 350 850 350 1000
+      C 350 1150 950 1250 950 1400
+    "
+    fill="none"
+    stroke="white"
+    strokeWidth="1"
+    strokeDasharray="8 10"
+      className={`transition-opacity duration-500 ${ isOpen ? "opacity-100 animate-process-line" : "opacity-0" }`}            
+
+  />
+</svg>
+
 
           <h3 className="lg:text-[36px] md:text-[30px] text-[25px] font-semibold leading-base lg:ms-8 ms-0">
             The Process

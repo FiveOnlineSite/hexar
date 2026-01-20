@@ -21,13 +21,13 @@ export default function Contribution({ id, ...rest }: ContributionProps){
              
                 {projects.map((project, index) => (
                    
-                <a key={index}  href="#" className="relative group my-2 block overflow-hidden">
+                <a key={index}  href="#" className="relative group my-2 block overflow-hidden rounded-xl">
 
-                <div className="overflow-hidden lg:py-[40px] lg:-my-[40px] relative rounded">
+                <div className="overflow-hidden lg:py-[40px] lg:-my-[40px] relative rounded-xl">
                     <img 
                     src={project.image}
                     alt={project.title}
-                                      className="rounded-xl object-contain transition-transform duration-700 group-hover:scale-110 w-full h-full relative z-20"
+                                      className=" overflow-hidden rounded-xl object-contain transition-transform duration-700 group-hover:scale-110 w-full h-full relative z-20"
 />
                 </div>
 {/* 
