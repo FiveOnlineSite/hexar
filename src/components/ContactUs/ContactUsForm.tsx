@@ -69,10 +69,7 @@ setTimeout(() => setSuccess(false), 3000);
 }finally{
   recaptchaRef.current?.reset();
   setLoading(false);
-}
-
-  };
-
+}};
 
   return (
     <section className='contact-form-section bg-[url("/images/contact-page-bg.png")] bg-contain bg-right bg-no-repeat lg:p-16 md:p-16 p-8'>
