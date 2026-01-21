@@ -215,6 +215,8 @@ body {
 }
 
 .animate-process-line {
+  
+  stroke-dasharray: 3000;
   stroke-dashoffset: 3000;
   animation: drawLine 5s ease-in-out forwards;
   animation-delay: 0.5s; /* Wait for the container to open slightly */
