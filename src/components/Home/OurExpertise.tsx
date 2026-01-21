@@ -48,9 +48,9 @@ export default function OurExpertise({ id, ...rest }: OurExpertiseProps){
                 <h2
                     className="
                     absolute inset-0
-                    z-20
+                    z-20 text-center
                     flex items-center justify-center
-                    text-white 3xl:text-[40px] 2xl:text-[30px] xl:text-[25px] lg:text-[25px] md:text-[20px] text-[16px] font-bold
+                    text-white 3xl:text-[40px] 2xl:text-[30px] xl:text-[25px] lg:text-[25px] md:text-[20px] text-[16px] 3xl:font-bold 2xl:font-bold lxl:font-bold lg:font-bold md:font-bold font-base
                     transition-transform duration-[700ms]
                     ease-[cubic-bezier(0.65,0,0.35,1)]
                     group-hover:translate-y-[380px]
