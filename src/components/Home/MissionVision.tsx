@@ -108,7 +108,7 @@ export default function MissionVision({ id, ...rest }: MissionVisionProps) {
 
         <div className="lg:pt-10 md:pt-8 pt-6">
             <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] leading-base font-bold mb-5">Our Vision</h2>
-            <p className="reveal lg:text-[16px] text-[16px] lg:font-base font-light lg:leading-[24px] leading-tight">Inspire and empower through transformative 3D arts. We aim to be a trusted partner known for our visionary approach, technical expertise, and commitment to excellence. By embracing creativity and staying at the forefront of technology, we shape the future and leave a lasting impact in the industry.</p>
+            <p className="reveal lg:text-[16px] text-[16px] lg:font-base font-light lg:leading-[24px] leading-tight">Inspire and empower through transformative 3D arts. We aim to be a trusted partner known for our visionary approach, technical expertise,and commitment to excellence. By embracing creativity and staying at the forefront of technology, we shape the future and leave a lasting impact in the industry.</p>
         </div>
         
     </div>

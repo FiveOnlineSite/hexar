@@ -167,6 +167,7 @@
 //     </div>
 //   );
 // }
+
 "use client";
 
 import { useEffect, useRef } from "react";
@@ -178,6 +179,7 @@ gsap.registerPlugin(ScrollTrigger);
 type CategoriesCardProps = {
   id: number;
   title: string;
+  description: string;
   image: string;
   isOpen: boolean;
   onToggle: () => void;
@@ -186,6 +188,7 @@ type CategoriesCardProps = {
 export default function CategoriesCard({
   id,
   title,
+  description,
   image,
   isOpen,
   onToggle,
@@ -236,7 +239,7 @@ export default function CategoriesCard({
 
 
   return (
-    <div
+<div
       ref={cardRef}
       className="category-card border-[#FFFFFF14] border-[3px] rounded-2xl relative group xl:mt-40 lg:mt-26 mt-5 xl:mb-10 lg:mb-10 mb-5"
     >
@@ -250,9 +253,7 @@ export default function CategoriesCard({
             </h2>
 
             <p className="3xl:text-[22px] 2xl:text-[20px] xl:text-[18px] lg:text-[18px] md:text-[18px] text-[16px] pb-10 mb-10 font-normal leading-base">
-              From realistic humans to stylized heroes, we deliver detailed,
-              production-ready character models tailored to your project’s style
-              and pipeline
+             {description}
             </p>
 
             <div className="flex items-center w-full mt-6">
@@ -342,8 +343,6 @@ vectorEffect="non-scaling-stroke"
 
   />
 </svg>
-
-
           <h3 className="lg:text-[36px] md:text-[30px] text-[25px] font-semibold leading-base lg:ms-8 ms-0">
             The Process
           </h3>
@@ -400,5 +399,6 @@ vectorEffect="non-scaling-stroke"
         </div>
       </div>
     </div>
+    
   );
 }

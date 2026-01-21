@@ -142,6 +142,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
+import { whyus } from "@/src/data/whyus";
 
 type WhyUsProps = {
   id: string;
@@ -176,11 +177,11 @@ export default function WhyUs({ id, ...rest }: WhyUsProps) {
 
       {/* Swiper Slider */}
       <Swiper
-      modules={[Autoplay]}
-        autoplay={{
-          delay: 1500,
-          disableOnInteraction: false,
-        }}
+      // modules={[Autoplay]}
+      //   autoplay={{
+      //     delay: 1500,
+      //     disableOnInteraction: false,
+      //   }}
         spaceBetween={20}
         slidesPerView={2.4}
         breakpoints={{
@@ -190,32 +191,25 @@ export default function WhyUs({ id, ...rest }: WhyUsProps) {
         }}
         className="px-4"
       >
-        {/* CARD 1 */}
-        <SwiperSlide>
-        <div className="group relative bg-[#000] rounded-lg overflow-hidden xl:h-[494px] h-full transition-all duration-700 mx-2 "> 
+        {whyus.map((item, index) => (
+        <SwiperSlide key={index}>
+        <div className="group relative bg-[#000] rounded-lg overflow-hidden 3xl:min-h-[400px] 2xl:min-h-[400px] xl:min-h-[410px] h-full transition-all duration-700 mx-2 "> 
           <div className="overflow-hidden"> 
-            <img src="./images/why-us-2.png" className="reveal w-full object-cover xl:h-[420px] h-full xl:scale-110 scale-100 xl:group-hover:h-[300px] origin-center transition-all duration-700 ease-out " /> 
-          </div> 
-          <div className="xl:absolute relative 3xl:-bottom-[25%] 2xl:-bottom-[23%] xl:-bottom-[21%] bottom-0 3xl:group-hover:bottom-[1%] 2xl:group-hover:bottom-[1%] xl:group-hover:bottom-[5%] transition-all duration-700 ease-out py-2 pl-4 lg:pr-8 md:pr-6 pr-4"> 
-            <h2 className="text-white 3xl:text-[42px] 2xl:text-[38px] lg:text-[32px] md:text-[25px] text-[20px] font-semibold leading-tight py-2"> 
-              Artistic Mastery 
+            <img src={item.image} className="reveal w-full object-cover xl:h-[420px] h-full xl:scale-110 scale-100 xl:group-hover:h-[300px] origin-center transition-all duration-700 ease-out " /> 
+          </div>  
+          <div className="xl:absolute relative 3xl:-bottom-[25%] 2xl:-bottom-[23%] xl:-bottom-[22%] bottom-0 3xl:group-hover:bottom-02xl:group-hover:bottom-0 xl:group-hover:bottom-0 transition-all duration-700 ease-out py-2 pl-4 lg:pr-8 md:pr-6 pr-4 flex flex-col items-start justify-start 3xl:min-h-0 2xl:min-h-0 xl:min-h-[100px] lg:min-h-[210px] md:min-h-[220px] min-h-[220px] bg-[linear-gradient(89.16deg,#0A0A0A_1.81%,#03010E_99.03%)] w-full"> 
+            <h2 className="text-white 3xl:text-[32px] 2xl:text-[30px] lg:text-[28px] md:text-[24px] text-[20px] font-semibold leading-tight py-2"> 
+              {item.title}
               </h2> 
-              <p className="3xl:text-[22px] 2xl:text-[20px] lg:text-[18px] md:text-[16px] text-[14px] font-light leading-base pb-4"> 
-                Our team blends world-class artistry with deep technical expertise, delivering 3D work that is both visually stunning and production-ready. 
+              <p className="3xl:text-[20px] 2xl:text-[18px] xl:text-[14px] lg:text-[16px] md:text-[14px] text-[14px] font-light min-h-[75px] leading-base pb-4"> 
+                {item.content}
                 </p> 
               </div> 
             </div>
         </SwiperSlide>
+        ))}
 
-        {/* CARD 2 */}
-         <SwiperSlide>
-        <div className="group relative bg-[#000] rounded-lg overflow-hidden xl:h-[494px] h-full transition-all duration-700 mx-2 "> <div className="overflow-hidden"> <img src="./images/why-us-2.png" className="reveal w-full object-cover xl:h-[420px] h-full xl:scale-110 scale-100 xl:group-hover:h-[300px] origin-center transition-all duration-700 ease-out " /> </div> <div className=" xl:absolute relative 3xl:-bottom-[25%] 2xl:-bottom-[23%] xl:-bottom-[21%] bottom-0 3xl:group-hover:bottom-[1%] 2xl:group-hover:bottom-[1%] xl:group-hover:bottom-[5%] transition-all duration-700 ease-out py-2 pl-4 lg:pr-8 md:pr-6 pr-4"> <h2 className="3xl:text-[42px] 2xl:text-[38px] lg:text-[32px] md:text-[25px] text-[20px] font-semibold leading-tight py-2"> Artistic Mastery </h2> <p className="3xl:text-[22px] 2xl:text-[20px] lg:text-[18px] md:text-[16px] text-[14px] font-light leading-base pb-4"> Our team blends world-class artistry with deep technical expertise, delivering 3D work that is both visually stunning and production-ready. </p> </div> </div>
-        </SwiperSlide>
-
-        {/* CARD 3 */}
-         <SwiperSlide>
-        <div className="group relative bg-[#000] rounded-lg overflow-hidden xl:h-[494px] h-full transition-all duration-700 mx-2 "> <div className="overflow-hidden"> <img src="./images/why-us-2.png" className="reveal w-full object-cover xl:h-[420px] h-full xl:scale-110 scale-100 xl:group-hover:h-[300px] origin-center transition-all duration-700 ease-out " /> </div> <div className=" xl:absolute relative 3xl:-bottom-[25%] 2xl:-bottom-[23%] xl:-bottom-[21%] bottom-0 3xl:group-hover:bottom-[1%] 2xl:group-hover:bottom-[1%] xl:group-hover:bottom-[5%] transition-all duration-700 ease-out py-2 pl-4 lg:pr-8 md:pr-6 pr-4"> <h2 className="3xl:text-[42px] 2xl:text-[38px] lg:text-[32px] md:text-[25px] text-[20px] font-semibold leading-tight py-2"> Artistic Mastery </h2> <p className="3xl:text-[22px] 2xl:text-[20px] lg:text-[18px] md:text-[16px] text-[14px] font-light leading-base pb-4"> Our team blends world-class artistry with deep technical expertise, delivering 3D work that is both visually stunning and production-ready. </p> </div> </div>
-        </SwiperSlide>
+      
       </Swiper>
     </section>
   );

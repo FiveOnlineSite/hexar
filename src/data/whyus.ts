@@ -1,0 +1,44 @@
+
+export const whyus = [
+    {
+        title: "Artistic Mastery",
+        image: "/images/portfolio-1.png",
+        content: "Our team blends world-class artistry with deep technical expertise, delivering 3D work that is both visually stunning and production-ready.",
+     },
+     {
+        title: "Proven Global Track Record",
+        image: "/images/portfolio-2.png",
+        content: "Trusted by leading studios, game developers, and production houses worldwide for consistently high-quality 3D art.",
+     },
+     {
+        title: "Timely Deliveries, Every Time",
+        image: "/images/portfolio-3.png",
+        content: "We take deadlines seriously — our workflow is designed to deliver on time, on spec, and beyond expectation.",
+     },
+     {
+        title: "Consistent Output",
+        image: "/images/portfolio-4.png",
+        content: "Every asset is created with the same Hexar quality benchmark, ensuring uniform excellence across large and small projects alike.",
+     },
+     {
+        title: "Transparent Production Process",
+        image: "/images/portfolio-4.png",
+        content: "Clear communication, progress tracking, and regular updates keep you informed at every stage of production.",
+     },
+     {
+        title: "Secure & TPN-Certified",
+        image: "/images/portfolio-4.png",
+        content: "Your assets are handled in an encrypted environment with Trusted Partner Network compliance — meeting the highest industry security standards.",
+     },
+     {
+        title: "Scalable & Flexible Teams",
+        image: "/images/portfolio-4.png",
+        content: "From boutique art requests to large-scale pipelines, our teams scale and adapt to your project needs without compromising quality.",
+     },
+     {
+        title: "Complete Project Ownership",
+        image: "/images/portfolio-4.png",
+        content: "We take responsibility from concept to final delivery, ensuring a seamless, end-to-end experience with zero hand-off gaps.",
+     },
+    
+]

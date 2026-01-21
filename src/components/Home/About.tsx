@@ -108,18 +108,12 @@ export default function About() {
           {/* Text */}
           <div className="lg:w-[40%] px-8 lg:px-16 pt-8">
             <p className="mb-3 text-[15px] font-light reveal">
-              Welcome to Hexar Studios — the unified force created through the
-              strategic integration of Head Hoppers Studios and Ares Visual
-              Effects Studio.
+              Welcome to Hexar Studios — the unified force created through the strategic integration of Head Hoppers Studios and Ares Visual Effects Studio.
             </p>
             <p className="mb-3 text-[15px] font-light reveal">
-              We bring together exceptional creative talent, advanced production
-              pipelines, and world-class IT infrastructure to deliver stunning
-              visuals.
-            </p>
+             We bring together exceptional creative talent, advanced production pipelines, and world-class IT infrastructure to deliver stunning 3D visuals for games, films, advertising, and immersive experiences.</p>
             <p className="text-[15px] font-light reveal">
-              From games to films to immersive experiences — we create impact.
-            </p>
+              With Hexar, you’re not just working with a studio — you’re partnering with a creative powerhouse trusted by global brands.</p>
           </div>
 
           {/* Connector */}
