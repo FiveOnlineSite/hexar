@@ -17,7 +17,7 @@ export default function OurExpertise({ id, ...rest }: OurExpertiseProps){
                     <a href="#" className="reveal inline-block 3xl:text-[22px] 2xl:text-[20px] xl:text-[18px] lg:text-[18px] md:text-[18px] text-[16px] leading-tight font-semibold lg:py-4 lg:px-14 py-3 px-5 mb-8 text-[#D50000] group-hover:text-white bg-transparent group-hover:bg-[#D50000] border-[1.8px] lg:rounded-xl md:rounded-xl rounded-lg border-[#D50000] transition-all duration-500 ease-in-out">Explore</a>           
                 </div>
             </div>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 gap-4 reveal-stagger">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 lg:gap-4 md:gap-4 gap-2 reveal-stagger">
              
                 {categories.map((category, index) => (
                    
