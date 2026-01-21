@@ -13,7 +13,7 @@ import "swiper/css/navigation";
 export default function Trust() {
     return (
         <section className="trust-section bg-[#0A0A0A] lg-py-16 md:py-16 py-8">
-            <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] leading-base lg:mb-8 mb-6 text-white font-bold text-center">
+            <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] leading-tight lg:mb-8 mb-6 text-white font-bold text-center">
                 Voices of <span className="text-[#D50000]">Trust</span>
             </h2>
             <div className="w-full 3xl:pt-2 2xl:pt-2 xl:pt-2 lg:pt-2 md:pt-5 pt-20 relative">

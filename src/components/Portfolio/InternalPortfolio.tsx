@@ -33,7 +33,7 @@ export default function InternalPortfolio(){
     return (
         <section className="internal-portfolio-section lg:py-16 md:py-16 py-8 border-t border-white">
         <div>
-                <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] text-[#FFFFFF] leading-base font-bold text-center w-full mb-8 lg:px-16 md:px-16 px-8">Internal Portfolio</h2>
+                <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] text-[#FFFFFF] leading-tight font-bold text-center w-full mb-8 lg:px-16 md:px-16 px-8">Internal Portfolio</h2>
         </div>
         <Swiper
           spaceBetween={5}

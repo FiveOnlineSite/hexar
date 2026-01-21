@@ -212,7 +212,7 @@ export default function BlogSection({ id, ...rest }: BlogSectionProps) {
     >
       {/* LEFT TEXT */}
       <div className="lg:w-[40%] w-full px-8 lg:ps-16">
-        <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] leading-base lg:mb-8 mb-4 text-white font-bold">
+        <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] leading-tight lg:mb-8 mb-4 text-white font-bold">
           News & <span className="text-[#D50000]">Blogs</span>
         </h2>
 

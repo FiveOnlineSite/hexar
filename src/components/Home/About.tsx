@@ -93,7 +93,7 @@ export default function About() {
 
         {/* Content */}
         <div className="relative z-[2]">
-          <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] leading-base font-bold lg:px-16 lg:pt-16 px-8 pt-8">
+          <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] leading-tight font-bold lg:px-16 lg:pt-16 px-8 pt-8">
             About Hexar Family
           </h2>
 

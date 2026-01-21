@@ -10,7 +10,7 @@ export default function OurContributions() {
     <div className="our-contributions-section lg:p-16 md:p-16 p-8 bg-[#0A0A0A] border-white border-b border-t">
       <div>
         <div className="lg:flex block items-center justify-between w-full">
-          <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] leading-base lg:mb-8 mb-8 text-white font-bold">
+          <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] leading-tight lg:mb-8 mb-8 text-white font-bold">
             Our Contribution
           </h2>
           
