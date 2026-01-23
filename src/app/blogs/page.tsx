@@ -6,7 +6,7 @@ import React from 'react'
 const BlogsPage = () => {
   return (
     <>
-    <Banner title='News & Blog'/>
+    <Banner title='News & Blog' video="./videos/About Banner.mp4"/>
     <BlogsSection/>
     <FAQSection id='faq'/>
     </>

@@ -8,7 +8,7 @@ import Work from "@/src/components/JoinUs/Work";
 export default function JoinUsPage(){
     return (
         <>
-        <Banner title="Join The Journey"/>
+        <Banner title="Join The Journey" video="./videos/About Banner.mp4"/>
         <OpenPosition/>
         <Work/>
         <OurCulture/>

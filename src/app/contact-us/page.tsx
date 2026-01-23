@@ -5,7 +5,7 @@ import React from 'react'
 const ContactPage = () => {
   return (
     <>
-    <Banner title='Lets Build Together'/>
+    <Banner title='Lets Build Together' video="./videos/About Banner.mp4"/>
     <ContactUsForm/>
     </>
   )

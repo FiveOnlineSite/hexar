@@ -7,7 +7,7 @@ import PortfolioShowcase from "@/src/components/Portfolio/PortfolioShowcase";
 export default function PortfolioPage () {
     return (
         <>
-        <Banner title="Portfolio"/>
+        <Banner title="Portfolio" video="./videos/About Banner.mp4"/>
         <PortfolioShowcase/>
         <InternalPortfolio/>
         <FAQSection id="faq"/>

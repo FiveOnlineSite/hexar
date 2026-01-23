@@ -88,7 +88,7 @@ export default function About() {
         <div
           ref={bgDesktopRef}
           className="absolute inset-0 bg-right bg-no-repeat bg-contain pointer-events-none hidden lg:block"
-          style={{ backgroundImage: "url('/images/about-bg.png')" }}
+          style={{ backgroundImage: "url('/images/about-img.png')" }}
         />
 
         {/* Content */}
@@ -100,7 +100,7 @@ export default function About() {
           {/* Mobile Background */}
           <img
             ref={bgMobileRef}
-            src="/images/about-bg.png"
+            src="/images/about-img.png"
             alt="background"
             className="block lg:hidden w-full object-contain pointer-events-none"
           />

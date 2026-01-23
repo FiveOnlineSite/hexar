@@ -8,7 +8,7 @@ import Trust from "@/src/components/Services/Trust";
 export default function ServicesPage(){
     return (
         <>
-                <Banner title="Services"/>
+                <Banner title="Services" image="./images/Services Top Banner.jpg"/>
                 <Categories/>
                 <OurContributions/>
                 <Trust/>
