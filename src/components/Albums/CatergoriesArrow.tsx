@@ -65,7 +65,7 @@ export default function CategoriesArrow({ categorySlug }: CategoriesArrowProps) 
               >
                 <div className="overflow-hidden">
                     <img
-                  src={category.category_img}
+                  src={category.our_expertise_img}
                   alt={category.title}
                   className="w-full h-full object-cover transition-transform duration-500 origin-center scale-100 group-hover:scale-110 relative rounded-lg"
                 />

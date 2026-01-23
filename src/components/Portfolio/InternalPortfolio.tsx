@@ -54,7 +54,7 @@ export default function InternalPortfolio(){
                 <div className="portfolio group h-full">
         <div className="group-hover:shadow-[0px_16px_20px_0px_#D500001A] overflow-hidden shadow-[0_4px_16px_0_#00000033] relative rounded-lg h-full transition-all duration-700 mx-2 "> 
             <div className="overflow-hidden"> 
-                <img src={portfolio.category_img} className="w-full object-contain h-full scale-100 xl:group-hover:scale-150 origin-top transition-all duration-700 ease-out rounded-lg" /> 
+                <img src={portfolio.our_expertise_img} className="w-full object-contain h-full scale-100 xl:group-hover:scale-150 origin-top transition-all duration-700 ease-out rounded-lg" /> 
             </div> 
                 
             <div className="w-full inline-block xl:absolute relative 3xl:-bottom-[12%] 2xl:-bottom-[23%] xl:-bottom-[14%] bottom-0 group-hover:bottom-0 transition-all duration-700 ease-out py-2 px-4 bg-[linear-gradient(89.16deg,#0A0A0A_1.81%,#03010E_99.03%)]"> 
