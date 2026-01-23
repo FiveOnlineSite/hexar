@@ -237,6 +237,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { hero } from "@/src/data/hero";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -358,10 +359,10 @@ export default function Hero() {
 
       <Slider ref={sliderRef} {...settings} className="h-full w-full relative">
 
-        {/* ---------------- SLIDE 1 ---------------- */}
-        <div className="relative h-screen w-full">
+{hero.map((item, index) => (
+   <div key={index} className="relative h-screen w-full">
           <video
-            src="/videos/bg-video1.mp4"
+            src={item.video}
             playsInline
             autoPlay
             muted
@@ -370,7 +371,7 @@ export default function Hero() {
           />
 
           <h1 className="xl:text-[53px] lg:text-[48px] md:text-[40px] sm:text-[36px] text-[30px] leading-tight font-bold absolute top-[30%] lg:top-1/2 left-0 px-8 lg:px-16 w-full lg:w-[60%] -translate-y-1/2">
-            Predator Hunting Grounds
+            {item.title}
           </h1>
 
                <a
@@ -422,84 +423,15 @@ export default function Hero() {
     imageRefs.current[1] = el!;
   }}
 
-              src="/images/image-2.png"
+              src={item.image}
               alt="banner"
               className="lg:max-h-[90%] md:max-h-[90%] sm:max-h-[50%] max-h-[50%] object-contain"
             />
           </div>
         </div>
-
-        {/* ---------------- SLIDE 2 ---------------- */}
-        <div className="relative h-screen w-full">
-          <video
-            src="/videos/bg-video1.mp4"
-            playsInline
-            autoPlay
-            muted
-            loop
-            className="absolute inset-0 w-full h-full object-cover blur-md"
-          />
-
-          <h1 className="xl:text-[53px] lg:text-[48px] md:text-[40px] sm:text-[36px] text-[30px] leading-tight font-bold absolute top-[30%] lg:top-1/2 left-0 px-8 lg:px-16 w-full lg:w-[60%] -translate-y-1/2">
-            Predator Hunting Grounds
-          </h1>
-
-               <a
-              href="#"
-              className="group flex items-center xl:text-[22px] lg:text-[22px] md:text-[22px] sm:text-[20px] text-[18px] text-white leading-tight font-semibold absolute xl:bottom-[32%] lg:bottom-[32%] md:bottom-[32%] bottom-[58%] left-0 lg:px-16 px-8 overflow-hidden"
-            >
-          <span
-            className="
-              flex items-center
-              transition-all duration-500 ease-out
-              group-hover:-translate-x-10
-            "
-          >
-            <span
-              className="
-                inline-block w-[28px] h-px bg-white me-1
-                transition-all duration-300
-                group-hover:opacity-0
-              "
-            ></span>
-
-            <span
-              className="
-                transition-all duration-500 ease-out
-              "
-            >
-              Take A Look
-            </span>
-          </span>
-
-          <span
-          className="
-            relative inline-flex items-center
-            w-[30px] h-px bg-white
-            opacity-0 -translate-x-0
-            transition-all duration-500 ease-out ms-1
-            group-hover:opacity-100 group-hover:-translate-x-10
-            after:content-['.']
-            after:absolute after:-right-0
-            after:-top-1 after:-translate-y-1/2
-            after:text-white after:lg:text-[18px] after:3xl:text-[25px] after:2xl:text-[20px] after:leading-none
-          "
-        ></span>
-        </a>
-
-          {/* Stick image to bottom */}
-          <div className="absolute bottom-0 xl:right-[8%] right-0 h-full w-full flex items-end justify-end pointer-events-none">
-          <img ref={(el) => {
-    imageRefs.current[1] = el!;
-  }}
-
-              src="/images/image-2.png"
-              alt="banner"
-              className="lg:max-h-[90%] md:max-h-[90%] sm:max-h-[50%] max-h-[50%] object-contain"
-            />
-          </div>
-        </div>
-
+))
+}
+       
       </Slider>
     </section>
   );

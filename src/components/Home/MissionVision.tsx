@@ -89,7 +89,7 @@ export default function MissionVision({ id, ...rest }: MissionVisionProps) {
           mask="url(#diamondMask)"
         >
           <video
-            src="./videos/bg-video1.mp4"
+            src="./videos/Mission and Vision.mp4"
             autoPlay
             loop
             muted

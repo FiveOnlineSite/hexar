@@ -108,10 +108,8 @@ type ClientsSectionProps = {
 
 export default function Clients({ id, ...rest }: ClientsSectionProps) {
   const clients = [
-    "client-1","client-3","client-2","client-4","client-6",
-    "client-5","client-8","b820d0133687f283a3aedb2f0e217018a6f2992b","client-10","client-9",
-    "client-12","client-11","fddf469c0967626f76761424d8f583332ba18863","client-13",
-  ];
+    "Artifact", "Awe Interactive", "BBW", "BCC", "Enigmatrix", "Frontier", "HF", "Hutch", "Illfonic", "Liithos", "Obsidian", "Pathea", "Piomotion", "Plarium", "Rivet", "Romero", "Sulfuric", "Turtle Rock - 2", "Ubisoft", "Wolcen", "World Maker 2"
+   ];
 
   // Split into chunks of 2 (to simulate rows)
   const rows = [];
@@ -153,7 +151,7 @@ export default function Clients({ id, ...rest }: ClientsSectionProps) {
               {pair.map(
                 (client) =>
                   client && (
-                    <div key={client} className="border h-[172px] p-2 border-white/30 p-2 group">
+                    <div key={client} className="border h-[172px] border-white/30 p-2 group">
                       <img
                         src={`/images/clients/${client}.png`}
                         className="reveal w-full h-full object-contain transition-transform duration-700 ease-out group-hover:scale-50"

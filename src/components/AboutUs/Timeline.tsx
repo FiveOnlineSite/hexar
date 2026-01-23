@@ -255,10 +255,10 @@
 
 export default function Timeline() {
   const cards = [
-    { id: 1, title: "1963- “The Beginning”", text: "The merger of two creative houses, Head Hoppers Studios and Ares Visual Effects Studio, laid the foundation of Hexar Studios. Combined legacy of creative talent, production pipelines and technical infrastructure. Unified vision to deliver 3D-art & VFX solutions under one roof." },
-    { id: 2, title: "1970- “The Beginning”", text: "The merger of two creative houses, Head Hoppers Studios and Ares Visual Effects Studio, laid the foundation of Hexar Studios. Combined legacy of creative talent, production pipelines and technical infrastructure. Unified vision to deliver 3D-art & VFX solutions under one roof." },
-    { id: 3, title: "1975- “The Beginning”", text: "The merger of two creative houses, Head Hoppers Studios and Ares Visual Effects Studio, laid the foundation of Hexar Studios. Combined legacy of creative talent, production pipelines and technical infrastructure. Unified vision to deliver 3D-art & VFX solutions under one roof." },
-    { id: 4, title: "1980- “The Beginning”", text: "The merger of two creative houses, Head Hoppers Studios and Ares Visual Effects Studio, laid the foundation of Hexar Studios. Combined legacy of creative talent, production pipelines and technical infrastructure. Unified vision to deliver 3D-art & VFX solutions under one roof." },
+    { id: 1, image:"./images/timeline/01. Neolibyan.png", title: "1963- “The Beginning”", text: "The merger of two creative houses, Head Hoppers Studios and Ares Visual Effects Studio, laid the foundation of Hexar Studios. Combined legacy of creative talent, production pipelines and technical infrastructure. Unified vision to deliver 3D-art & VFX solutions under one roof." },
+    { id: 2, image:"./images/timeline/02. Marshal.png", title: "1970- “The Beginning”", text: "The merger of two creative houses, Head Hoppers Studios and Ares Visual Effects Studio, laid the foundation of Hexar Studios. Combined legacy of creative talent, production pipelines and technical infrastructure. Unified vision to deliver 3D-art & VFX solutions under one roof." },
+    { id: 3, image:"./images/timeline/03. Porkman-1.png", title: "1975- “The Beginning”", text: "The merger of two creative houses, Head Hoppers Studios and Ares Visual Effects Studio, laid the foundation of Hexar Studios. Combined legacy of creative talent, production pipelines and technical infrastructure. Unified vision to deliver 3D-art & VFX solutions under one roof." },
+    { id: 4, image:"./images/timeline/04. Todman-1.png", title: "1980- “The Beginning”", text: "The merger of two creative houses, Head Hoppers Studios and Ares Visual Effects Studio, laid the foundation of Hexar Studios. Combined legacy of creative talent, production pipelines and technical infrastructure. Unified vision to deliver 3D-art & VFX solutions under one roof." },
     
   ];
 
@@ -288,12 +288,12 @@ export default function Timeline() {
           >
             <div className="reveal-stagger w-full flex lg:flex-row md:flex-row flex-col-reverse items-center justify-between">
               <div className="lg:w-[80%] md:w-[80%] w-full">
-    <h2 className="text-white lg:text-[40px] md:text-[35px] text-[25px] font-bold lg:mb-16 md:mb-10 mb-8">{card.title}</h2>
-     <p className="text-white lg:text-[20px] md:text-[18px] text-[16px]">{card.text}</p>
- </div>
-  <div className="lg:w-[20%] md:w-[20%] w-full lg:mb-0 md:mb-0 mb-5 inline-block">
-  <img src="./images/timeline.png" alt="timeline" className="w-full lg:h-[380px] md:h-[300px] h-[250px] object-contain" />
-  </div>
+                  <h2 className="text-white lg:text-[40px] md:text-[35px] text-[25px] font-bold lg:mb-16 md:mb-10 mb-8">{card.title}</h2>
+                  <p className="text-white lg:text-[20px] md:text-[18px] text-[16px]">{card.text}</p>
+              </div>
+                <div className="lg:w-[20%] md:w-[20%] w-full lg:mb-0 md:mb-0 mb-5 inline-block">
+                <img src={card.image} alt="timeline" className="w-full lg:h-[380px] md:h-[300px] h-[250px] object-contain" />
+                </div>
               </div>
           </div>
         ))}

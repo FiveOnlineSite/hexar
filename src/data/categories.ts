@@ -4,8 +4,8 @@ export const categories = [
         title: "Concept Art",
         slug: "concept-art",
         description: "We craft high-quality concept designs that capture mood, style, and storytelling, laying a strong foundation for production-ready assets.",
-        category_img: "/images/internal-portfolio-1.png",
-        image: "/images/services-category1.png",
+        our_expertise_img: "/images/our-expertise/Concept.jpg",
+        services_img: "/images/services-cards/Concept.png",
         albums: [
             {
                 id: 1,
@@ -117,41 +117,14 @@ export const categories = [
             ],
         },
         ],
-       }, {
-        id:2,
-        title: "3D Character Art",
-        description: "From realistic humans to stylized heroes, we deliver detailed, production-ready character models tailored to your project’s style and pipeline.",
-        slug: "3d-character-art",
-        category_img: "/images/internal-portfolio-2.png",
-         image: "/images/services-category2.png",
-        albums: [
-            {
-                id: 1,
-                slug: "album-1",
-            album_img: "/images/album.png",
-             images: [
-                "/images/album.png",
-                "/images/album.png",
-            ],
-        },
-        {
-                id: 2,
-            album_img: "/images/album.png",
-            slug: "album-2",
-            images: [
-                "/images/album.png",
-                "/images/album.png",
-            ],
-            },
-        ],
        },{
-        id:3,
+        id:2,
         title: "Character",
         description: "Character is visual design used to inspire media development and storytelling.",
-         image: "/images/services-category3.png",
+         services_img: "/images/services-cards/Characters.png",
         
         slug: "character",
-        category_img: "/images/internal-portfolio-1.png",
+        our_expertise_img: "/images/our-expertise/Characters.jpg",
         albums: [
             {
                 id: 1,
@@ -173,13 +146,41 @@ export const categories = [
             },
         ],
        },{
-        id:4,
+        id:3,
         title: "Realtime Hair",
         description: "Specialized hair creation optimized for real-time engines, combining realism, performance, and visual appeal.",
-         image: "/images/services-category3.png",
+         services_img: "/images/services-cards/Hair.png",
         
         slug: "realtime-hair",
-        category_img: "/images/internal-portfolio-1.png",
+        our_expertise_img: "/images/our-expertise/Hairs.jpg",
+        albums: [
+            {
+                id: 1,
+            album_img: "/images/album.png",
+            slug: "album-1",
+             images: [
+                "/images/album.png",
+                "/images/album.png",
+            ],
+        },
+        {
+                id: 2,
+            album_img: "/images/album.png",
+            slug: "album-2",
+            images: [
+                "/images/album.png",
+                "/images/album.png",
+            ],
+            },
+        ],
+       }, {
+        id:4,
+        title: "Props",
+        description: "Game-ready props of all sizes—crafted with precision to enhance environments and storytelling while staying optimized for performance.",
+         services_img: "/images/services-cards/Props.png",
+        
+        slug: "props",
+        our_expertise_img: "/images/our-expertise/Props.jpg",
         albums: [
             {
                 id: 1,
@@ -202,40 +203,12 @@ export const categories = [
         ],
        }, {
         id:5,
-        title: "Props",
-        description: "Game-ready props of all sizes—crafted with precision to enhance environments and storytelling while staying optimized for performance.",
-         image: "/images/services-category1.png",
-        
-        slug: "props",
-        category_img: "/images/internal-portfolio-1.png",
-        albums: [
-            {
-                id: 1,
-            album_img: "/images/album.png",
-            slug: "album-1",
-             images: [
-                "/images/album.png",
-                "/images/album.png",
-            ],
-        },
-        {
-                id: 2,
-            album_img: "/images/album.png",
-            slug: "album-2",
-            images: [
-                "/images/album.png",
-                "/images/album.png",
-            ],
-            },
-        ],
-       }, {
-        id:6,
         title: "Weapons",
         description: "From fantasy blades to modern firearms, we design and model weapons with striking detail, accuracy, and gameplay-readiness.",
-         image: "/images/services-category2.png",
+         services_img: "/images/services-cards/Weapons.png",
         
         slug: "weapons",
-        category_img: "/images/internal-portfolio-1.png",
+        our_expertise_img: "/images/our-expertise/Weapons.jpg",
         albums: [
             {
                 id: 1,
@@ -257,14 +230,43 @@ export const categories = [
             },
         ],
        },
+        {
+        id:6,
+        title: "Vehicles",
+        description: "High-quality vehicle models, from realistic cars to futuristic mechs, designed for both realism and gameplay functionality.",
+         services_img: "/images/services-cards/Vehicles.png",
+        
+        slug: "vehicles",
+        our_expertise_img: "/images/our-expertise/Vehicles.jpg",
+        albums: [
+            {
+                id: 1,
+            album_img: "/images/album.png",
+            slug: "album-1",
+             images: [
+                "/images/album.png",
+                "/images/album.png",
+            ],
+        },
+        {
+                id: 2,
+            album_img: "/images/album.png",
+            slug: "album-2",
+            images: [
+                "/images/album.png",
+                "/images/album.png",
+            ],
+            },
+        ],
+       }, 
        {
         id:7,
         title: "Hardsurface Modeling",
         description: "Clean, optimized hardsurface assets built with technical precision—perfect for vehicles, machinery, and intricate mechanical designs.",
-         image: "/images/services-category1.png",
+         services_img: "/images/services-cards/HardSurface.png",
         
         slug: "hardsurface-modeling",
-        category_img: "/images/internal-portfolio-1.png",
+        our_expertise_img: "/images/our-expertise/HardSurface.jpg",
         albums: [
             {
                 id: 1,
@@ -289,10 +291,10 @@ export const categories = [
         id:8,
         title: "Creatures",
         description: "Unique, believable, and production-ready creature models, blending anatomy knowledge with creative imagination.",
-         image: "/images/services-category2.png",
+         services_img: "/images/services-cards/Creatures.png",
         
         slug: "creatures",
-        category_img: "/images/internal-portfolio-1.png",
+        our_expertise_img: "/images/our-expertise/Creatures.jpg",
         albums: [
             {
                 id: 1,
@@ -313,14 +315,15 @@ export const categories = [
             ],
             },
         ],
-       }, {
+       }, 
+      {
         id:9,
-        title: "Vehicles",
-        description: "High-quality vehicle models, from realistic cars to futuristic mechs, designed for both realism and gameplay functionality.",
-         image: "/images/services-category3.png",
+        title: "Stylized Art",
+        description: "Vibrant, personality-driven stylized characters and assets that bring a distinct creative vision to life.",
+         services_img: "/images/services-cards/Stylized.png",
         
-        slug: "vehicles",
-        category_img: "/images/internal-portfolio-1.png",
+        slug: "stylized-art",
+        our_expertise_img: "/images/our-expertise/Stylized.jpg",
         albums: [
             {
                 id: 1,
@@ -343,12 +346,12 @@ export const categories = [
         ],
        }, {
         id:10,
-        title: "Stylized Art",
-        description: "Vibrant, personality-driven stylized characters and assets that bring a distinct creative vision to life.",
-         image: "/images/services-category1.png",
+        title: "Technical Art",
+        description: "We bridge the gap between art and technology—building shaders, optimizing assets, and creating tools that ensure smooth performance and seamless integration into your pipeline.",
+         services_img: "/images/services-cards/Tech.png",
         
-        slug: "stylized-art",
-        category_img: "/images/internal-portfolio-1.png",
+        slug: "technical-art",
+        our_expertise_img: "/images/our-expertise/Technical Art.jpg",
         albums: [
             {
                 id: 1,
@@ -371,40 +374,12 @@ export const categories = [
         ],
        }, {
         id:11,
-        title: "Technical Art",
-        description: "We bridge the gap between art and technology—building shaders, optimizing assets, and creating tools that ensure smooth performance and seamless integration into your pipeline.",
-         image: "/images/services-category2.png",
-        
-        slug: "technical-art",
-        category_img: "/images/internal-portfolio-1.png",
-        albums: [
-            {
-                id: 1,
-            album_img: "/images/album.png",
-            slug: "album-1",
-             images: [
-                "/images/album.png",
-                "/images/album.png",
-            ],
-        },
-        {
-                id: 2,
-            album_img: "/images/album.png",
-            slug: "album-2",
-            images: [
-                "/images/album.png",
-                "/images/album.png",
-            ],
-            },
-        ],
-       }, {
-        id:12,
         title: "Animation",
         description: "Smooth, expressive animations that give life and emotion to characters, creatures, and environments.",
-         image: "/images/services-category3.png",
+         services_img: "/images/services-cards/Animation.png",
         
         slug: "animation",
-        category_img: "/images/internal-portfolio-1.png",
+        our_expertise_img: "/images/our-expertise/Animation.jpg",
         albums: [
             {
                 id: 1,
@@ -429,10 +404,10 @@ export const categories = [
         id:13,
         title: "VFX / Cinematics",
         description: "High-impact visual effects and cinematic sequences designed to elevate storytelling and immerse audiences.",
-         image: "/images/services-category1.png",
+         services_img: "/images/services-cards/Cinematic.png",
         
         slug: "vfx-cinematics",
-        category_img: "/images/internal-portfolio-1.png",
+        our_expertise_img: "/images/our-expertise/Cinematic.jpg",
         albums: [
             {
                 id: 1,

@@ -24,7 +24,7 @@ export default function OurExpertise({ id, ...rest }: OurExpertiseProps){
                 <div key={index}  className="relative overflow-hidden rounded-2xl border border-white hover:border-transparent transition-all duration-500 group">
 
                 <img
-                    src={category.category_img}
+                    src={category.our_expertise_img}
                     alt={category.title}
                     className="relative z-0 w-full 3xl:h-[500px] 2xl:h-[500px] xl:h-[500px] lg:h-[400px] md:h-[400px] h-[200px] object-cover rounded-2xl"
                 />

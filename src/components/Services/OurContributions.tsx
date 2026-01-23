@@ -81,7 +81,7 @@ export default function OurContributions() {
             <SwiperSlide>
               <div className="rounded-xl overflow-hidden m-2">
                 <img
-                  src="./images/services-contribution.png"
+                  src="./images/work/Predators.jpg"
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -90,7 +90,7 @@ export default function OurContributions() {
             <SwiperSlide>
               <div className="rounded-xl overflow-hidden m-2">
                 <img
-                  src="./images/services-contribution.png"
+                  src="./images/work/B4B.jpg"
                   className="h-full w-full object-cover"
                 />
               </div>

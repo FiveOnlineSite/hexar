@@ -16,7 +16,7 @@ export default function PortfolioShowcase(){
                     <img src={project.image} alt={project.title} className="relative h-full w-full object-cover rounded-lg" />
 
                     <div className="absolute 3xl:-bottom-[140%] 3xl:-bottom-[140%] 2xl:-bottom-[140%] xl:-bottom-[140%] lg:-bottom-[140%] bottom-0 left-0 3xl:h-[130vh] 2xl:h-[130vh] xl:h-[600px] md:h-[500px] sm:h-[500px] h-[480px] w-full bg-[#00000099] rounded-lg 3xl:group-hover:bottom-0 2xl:group-hover:bottom-0 xl:group-hover:bottom-0 lg:group-hover:bottom-0 transition-all duration-700 3xl:px-8 2xl:px-8 xl:px-8 lg:px-8 md:px-8 px-4 py-4 flex flex-col items-center justify-end">
-                        <h5 className="capitalize text-center 3xl:text-[40px] 2xl:text-[30px] xl:text-[25px] lg:text-[25px] md:text-[20px] text-[16px] font-bold lg:leading-base leading-tight mb-2">{project.title}</h5>
+                        <h5 className="uppercase text-center 3xl:text-[40px] 2xl:text-[30px] xl:text-[25px] lg:text-[25px] md:text-[20px] text-[16px] font-bold lg:leading-base leading-tight mb-2">{project.title}</h5>
                         <p className="capitalize font-light text-center 3xl:text-[22px] 2xl:text-[20px] xl:text-[16px] lg:text-[16px] md:text-[14px] text-[12px] leading-tight">{project.content}</p>
                     </div>
                 </div>

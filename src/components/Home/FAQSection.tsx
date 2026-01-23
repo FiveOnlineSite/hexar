@@ -90,7 +90,7 @@ export default function FAQSection ({ id, ...rest }: FAQSectionProps) {
             <div className="lg:flex block items-start justify-center">
                 <div className="lg:w-[40%] w-full">
                     <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] leading-tight lg:mb-8 mb-4 text-white font-bold">Frequently Asked Question</h2>
-                    <img ref={imageRef} src="./images/faq-bg.png" alt="faq-bg" className="w-full h-[420px] object-contain" />
+                    <img ref={imageRef} src="./images/FAQs.png" alt="faq-bg" className="w-full h-[420px] object-contain" />
                 </div>
                 <div className="lg:w-[60%] w-full px-4 reveal-stagger">
                     {faqs.map((faq, i) => (

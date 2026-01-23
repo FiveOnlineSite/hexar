@@ -180,7 +180,7 @@ type CategoriesCardProps = {
   id: number;
   title: string;
   description: string;
-  image: string;
+  services_img: string;
   isOpen: boolean;
   onToggle: () => void;
 };
@@ -189,7 +189,7 @@ export default function CategoriesCard({
   id,
   title,
   description,
-  image,
+  services_img,
   isOpen,
   onToggle,
 }: CategoriesCardProps) {
@@ -287,7 +287,7 @@ export default function CategoriesCard({
                 : "lg:absolute relative lg:group-hover:right-[8%] right-0 bottom-0"
             }`}
           >
-            <img src={image} className="h-full w-full object-contain" />
+            <img src={services_img} className="xl:h-[450px] lg:h-[380px] md:h-[300px] h-[400px] w-full object-contain" />
           </div>
         </div>
 
