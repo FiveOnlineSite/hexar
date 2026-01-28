@@ -272,10 +272,10 @@ export default function Timeline() {
           <div
             key={card.id}
             className={`
-              sticky top-20 
-              lg:p-16 md:p-16 p-8
+              sticky top-10 
+              p-8
               w-full h-full bg-black
-              rounded-3xl border border-white shadow-[0_16px_20px_0_#D500001A]
+              rounded-3xl border border-[#ffffff66] shadow-[0_16px_20px_0_#D500001A]
               flex items-center justify-center
               lg:mb-[5vh] md:mb-[10vh] mb-[5vh]
             `}
@@ -287,12 +287,12 @@ export default function Timeline() {
             }}
           >
             <div className="reveal-stagger w-full flex lg:flex-row md:flex-row flex-col-reverse items-center justify-between">
-              <div className="lg:w-[80%] md:w-[80%] w-full">
-                  <h2 className="text-white lg:text-[40px] md:text-[35px] text-[25px] font-bold lg:mb-16 md:mb-10 mb-8">{card.title}</h2>
+              <div className="lg:w-[70%] md:w-[70%] w-full">
+                  <h2 className="text-white lg:text-[40px] md:text-[35px] text-[25px] font-bold lg:mb-16 md:mb-10 mb-8 leading-tight">{card.title}</h2>
                   <p className="text-white lg:text-[20px] md:text-[18px] text-[16px]">{card.text}</p>
               </div>
-                <div className="lg:w-[20%] md:w-[20%] w-full lg:mb-0 md:mb-0 mb-5 inline-block">
-                <img src={card.image} alt="timeline" className="w-full lg:h-[380px] md:h-[300px] h-[250px] object-contain" />
+                <div className="lg:w-[30%] md:w-[30%] w-full lg:mb-0 md:mb-0 mb-5 inline-block">
+                <img src={card.image} alt="timeline" className="w-full lg:h-[580px] md:h-[500px] h-[250px] object-contain" />
                 </div>
               </div>
           </div>

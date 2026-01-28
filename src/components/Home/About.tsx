@@ -7,7 +7,7 @@ import BracketConnector from "../BracketConnector";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function About() {
+export default function About({image}: {image: string}) {
   const sectionRef = useRef<HTMLElement | null>(null);
 
   // Background refs
@@ -80,7 +80,7 @@ export default function About() {
   return (
     <section
       ref={sectionRef}
-      className="about-section inline-block w-full border-b border-white"
+      className="about-section inline-block w-full border-b border-[#ffffff66]"
     >
       <div className="relative w-full inline-block">
 
@@ -88,7 +88,7 @@ export default function About() {
         <div
           ref={bgDesktopRef}
           className="absolute inset-0 bg-right bg-no-repeat bg-contain pointer-events-none hidden lg:block"
-          style={{ backgroundImage: "url('/images/about-img.png')" }}
+          style={{ backgroundImage: `url(${image})` }}
         />
 
         {/* Content */}
@@ -100,7 +100,7 @@ export default function About() {
           {/* Mobile Background */}
           <img
             ref={bgMobileRef}
-            src="/images/about-img.png"
+            src={image}
             alt="background"
             className="block lg:hidden w-full object-contain pointer-events-none"
           />

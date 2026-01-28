@@ -247,7 +247,7 @@ function NextArrow({ onClick }: any) {
     <button
       onClick={onClick}
       className="
-        absolute xl:bottom-[15%] lg:bottom-[15%] md:bottom-[15%] bottom-[57%]
+        absolute xl:bottom-[15%] lg:bottom-[40%] md:bottom-[40%] bottom-[57%]
         3xl:left-[6%] xl:left-[10%] lg:left-[15%] md:left-[12%] left-[75%]
          rounded-full
         transition-all duration-700 z-20
@@ -271,7 +271,7 @@ function PrevArrow({ onClick }: any) {
     <button
       onClick={onClick}
       className="
-         absolute xl:bottom-[15%] lg:bottom-[15%] md:bottom-[15%] bottom-[57%]
+         absolute xl:bottom-[15%] lg:bottom-[40%] md:bottom-[40%] bottom-[57%]
         xl:left-[0%] lg:left-[0%] md:left-[0%] left-[55%]
         lg:mx-16 mx-8 rounded-full
         transition-all duration-700 z-20
@@ -370,13 +370,13 @@ export default function Hero() {
             className="absolute inset-0 w-full h-full object-cover blur-md"
           />
 
-          <h1 className="xl:text-[53px] lg:text-[48px] md:text-[40px] sm:text-[36px] text-[30px] leading-tight font-bold absolute top-[30%] lg:top-1/2 left-0 px-8 lg:px-16 w-full lg:w-[60%] -translate-y-1/2">
+          <h1 className="xl:text-[53px] lg:text-[48px] md:text-[40px] sm:text-[36px] text-[30px] leading-tight font-bold absolute xl:top-1/2 top-[30%] lg:top-[30%] left-0 px-8 lg:px-16 w-full lg:w-[60%] -translate-y-1/2">
             {item.title}
           </h1>
 
                <a
               href="#"
-              className="group flex items-center xl:text-[22px] lg:text-[22px] md:text-[22px] sm:text-[20px] text-[18px] text-white leading-tight font-semibold absolute xl:bottom-[32%] lg:bottom-[32%] md:bottom-[32%] bottom-[58%] left-0 lg:px-16 px-8 overflow-hidden"
+              className="group flex items-center xl:text-[22px] lg:text-[22px] md:text-[22px] sm:text-[20px] text-[18px] text-white leading-tight font-semibold absolute xl:bottom-[32%] lg:bottom-[32%] md:bottom-1/2 bottom-[58%] left-0 lg:px-16 px-8 overflow-hidden"
             >
           <span
             className="
@@ -418,7 +418,7 @@ export default function Hero() {
         </a>
 
           {/* Stick image to bottom */}
-          <div className="absolute bottom-0 xl:right-[8%] right-0 h-full w-full flex items-end justify-end pointer-events-none">
+          <div className="absolute bottom-0 right-0 h-full w-full flex items-end justify-end pointer-events-none">
           <img ref={(el) => {
     imageRefs.current[1] = el!;
   }}

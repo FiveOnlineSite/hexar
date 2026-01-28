@@ -2,7 +2,7 @@ import React from 'react'
 
 const Hire = () => {
   return (
-    <section className='hire-seciton lg:p-16 md:p-16 p-8 border-t'>
+    <section className='hire-seciton lg:p-16 md:p-16 p-8 border-[#ffffff66] border-t'>
         <h2 className='reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] leading-tight text-left font-bold'>How We Hire?</h2>
         <div className='reveal-stagger grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-5 mt-8'>
             <div className='mb-5'>

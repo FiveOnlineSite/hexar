@@ -6,6 +6,11 @@ export const whyus = [
         content: "Our team blends world-class artistry with deep technical expertise, delivering 3D work that is both visually stunning and production-ready.",
      },
      {
+        title: "Seamless Pipeline Integration",
+        image: "/images/Seamless Pipeline Integration.jpeg",
+        content: "Our artists integrate effortlessly into your tools, workflows, and production pipelines — ensuring smooth collaboration with zero friction or rework.",
+     },
+     {
         title: "Proven Global Track Record",
         image: "/images/why-us/artistic.png",
         content: "Trusted by leading studios, game developers, and production houses worldwide for consistently high-quality 3D art.",

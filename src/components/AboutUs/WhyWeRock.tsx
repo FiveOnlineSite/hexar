@@ -2,7 +2,7 @@ import { whyus } from "@/src/data/whyus";
 
 export default function WhyWeRock() {
     return (
-        <section className="bg-[#0A0A0A] why-we-rock-section lg:p-16 md:p-16 p-8 border-white border-t">
+        <section className="bg-[#0A0A0A] why-we-rock-section lg:p-16 md:p-16 p-8 border-[#ffffff66] border-t">
             <div className="lg:w-[50%] w-full">
                <h2 className="reveal 3xl:text-[70px] 2xl:text-[65px] xl:text-[56px] lg:text-[56px] md:text-[48px] text-[30px] leading-tight text-white font-bold mb-5">
           Why We <span className="text-[#D50000]">Stand Out</span>

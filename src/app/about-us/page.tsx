@@ -11,7 +11,7 @@ export default function AboutUsPage () {
     return (
         <>
         <Banner title="About Us" video="./videos/About Banner.mp4"/>
-        <About/>
+        <About image={"/images/about-bg.png" }/>
         <Timeline/>
         <CreativeForce/>
         <WhyWeRock/>
